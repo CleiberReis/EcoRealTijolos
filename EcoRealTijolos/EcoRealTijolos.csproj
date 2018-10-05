@@ -117,6 +117,8 @@
   <ItemGroup>
     <Folder Include="App_Code\Classes\" />
     <Folder Include="App_Code\Persistencia\" />
+    <Folder Include="Content\sql\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
