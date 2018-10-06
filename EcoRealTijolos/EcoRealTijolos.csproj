@@ -105,7 +105,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
     <Content Include="Pages\CadastrarMatPrima.aspx" />
-    <Content Include="Pages\teste.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -161,13 +160,6 @@
     </Compile>
     <Compile Include="Pages\CadastrarMatPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\teste.aspx.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\teste.aspx.designer.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
