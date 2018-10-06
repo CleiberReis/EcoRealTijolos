@@ -77,6 +77,7 @@
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Compile Include="App_Code\Classes\MateriaPrima.cs" />
+    <Content Include="App_Code\Classes\Pedido.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\roslyn\csc.exe" />
@@ -105,6 +106,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
     <Content Include="Pages\CadastrarMatPrima.aspx" />
+    <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
+    <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
+    <Content Include="Pages\Pedidos\ListarPedido.aspx" />
     <Content Include="Pages\teste.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -157,12 +161,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
+    <Content Include="App_Code\Persistencia\PedidoBD.cs" />
     <Compile Include="Pages\CadastrarMatPrima.aspx.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\CadastrarMatPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
+      <DependentUpon>AlterarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pedidos\AlterarPedido.aspx.designer.cs">
+      <DependentUpon>AlterarPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pedidos\CadastrarPedido.aspx.cs">
+      <DependentUpon>CadastrarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pedidos\CadastrarPedido.aspx.designer.cs">
+      <DependentUpon>CadastrarPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pedidos\ListarPedido.aspx.cs">
+      <DependentUpon>ListarPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pedidos\ListarPedido.aspx.designer.cs">
+      <DependentUpon>ListarPedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\teste.aspx.cs">
       <DependentUpon>teste.aspx</DependentUpon>
