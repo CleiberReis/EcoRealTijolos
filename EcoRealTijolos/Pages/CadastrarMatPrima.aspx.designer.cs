@@ -58,13 +58,13 @@ namespace EcoRealTijolos.Pages {
         protected global::System.Web.UI.WebControls.Label txtQuantiMateria;
         
         /// <summary>
-        /// Controle QuantMateria.
+        /// Controle QuantiMateria.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox QuantMateria;
+        protected global::System.Web.UI.WebControls.TextBox QuantiMateria;
         
         /// <summary>
         /// Controle btnSalvar.

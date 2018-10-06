@@ -17,7 +17,7 @@
             <asp:TextBox ID="nomeMateria" runat="server"></asp:TextBox>
         </p>
         <asp:Label ID="txtQuantiMateria" runat="server" Font-Names="Arial" Text="Quantidade: "></asp:Label>
-        <asp:TextBox ID="QuantMateria" runat="server"></asp:TextBox>
+        <asp:TextBox ID="QuantiMateria" runat="server"></asp:TextBox>
         <p>
             <asp:Button ID="btnSalvar" runat="server" BackColor="#000099" BorderStyle="Solid" Font-Bold="True" ForeColor="White" OnClick="btnSalvar_Click" Text="Salvar" />
         </p>
