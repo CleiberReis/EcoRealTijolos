@@ -104,6 +104,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
+    <Content Include="Pages\CadastrarMatPrima.aspx" />
     <Content Include="Pages\teste.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -154,6 +155,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
+    <Compile Include="Pages\CadastrarMatPrima.aspx.cs">
+      <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CadastrarMatPrima.aspx.designer.cs">
+      <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\teste.aspx.cs">
       <DependentUpon>teste.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
