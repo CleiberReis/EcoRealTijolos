@@ -72,23 +72,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\MateriaPrima.cs" />
+    <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\EcoRealTijolos.dll" />
+    <Content Include="bin\EcoRealTijolos.dll.config" />
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
-    <Compile Include="App_Code\Classes\MateriaPrima.cs" />
-    <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
-    <Compile Include="bin\MySql.Data.dll" />
     <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\csi.rsp" />
     <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
     <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
     <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
     <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\System.AppContext.dll" />
     <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
     <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
@@ -96,7 +101,10 @@
     <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
     <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -154,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
+    <Content Include="bin\MySql.Data.dll" />
     <Compile Include="Pages\CadastrarMatPrima.aspx.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,15 +173,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\EcoRealTijolos.dll.config" />
-    <Content Include="bin\roslyn\csc.exe.config" />
-    <Content Include="bin\roslyn\csc.rsp" />
-    <Content Include="bin\roslyn\csi.rsp" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\vbc.exe.config" />
-    <Content Include="bin\roslyn\vbc.rsp" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="packages.config" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
