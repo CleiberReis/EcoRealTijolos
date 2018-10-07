@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages {
+namespace EcoRealTijolos.Master {
     
     
     public partial class Home {

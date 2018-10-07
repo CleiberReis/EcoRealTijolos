@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EcoRealTijolos.Pages
+namespace EcoRealTijolos.Content.Master
 {
     public partial class Home : System.Web.UI.MasterPage
     {

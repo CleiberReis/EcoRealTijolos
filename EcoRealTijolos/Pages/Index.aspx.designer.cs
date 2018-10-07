@@ -7,9 +7,9 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages.Index {
+namespace EcoRealTijolos.Pages {
     
     
-    public partial class aspx {
+    public partial class Index {
     }
 }
