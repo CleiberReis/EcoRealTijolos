@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -104,8 +106,165 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
-    <Content Include="Pages\CadastrarMatPrima.aspx" />
+    <Content Include="Content\css\AdminLTE.css" />
+    <Content Include="Content\css\bootstrap-slider\slider.css" />
+    <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
+    <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="Content\css\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="Content\css\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="Content\css\datatables\dataTables.bootstrap.css" />
+    <Content Include="Content\css\datatables\images\sort_asc.png" />
+    <Content Include="Content\css\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Content\css\datatables\images\sort_both.png" />
+    <Content Include="Content\css\datatables\images\sort_desc.png" />
+    <Content Include="Content\css\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Content\css\datepicker\datepicker3.css" />
+    <Content Include="Content\css\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Content\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\iCheck\all.css" />
+    <Content Include="Content\css\iCheck\flat\aero%402x.png" />
+    <Content Include="Content\css\iCheck\flat\aero.css" />
+    <Content Include="Content\css\iCheck\flat\aero.png" />
+    <Content Include="Content\css\iCheck\flat\blue%402x.png" />
+    <Content Include="Content\css\iCheck\flat\blue.css" />
+    <Content Include="Content\css\iCheck\flat\blue.png" />
+    <Content Include="Content\css\iCheck\flat\flat%402x.png" />
+    <Content Include="Content\css\iCheck\flat\flat.css" />
+    <Content Include="Content\css\iCheck\flat\flat.png" />
+    <Content Include="Content\css\iCheck\flat\green%402x.png" />
+    <Content Include="Content\css\iCheck\flat\green.css" />
+    <Content Include="Content\css\iCheck\flat\green.png" />
+    <Content Include="Content\css\iCheck\flat\grey%402x.png" />
+    <Content Include="Content\css\iCheck\flat\grey.css" />
+    <Content Include="Content\css\iCheck\flat\grey.png" />
+    <Content Include="Content\css\iCheck\flat\orange%402x.png" />
+    <Content Include="Content\css\iCheck\flat\orange.css" />
+    <Content Include="Content\css\iCheck\flat\orange.png" />
+    <Content Include="Content\css\iCheck\flat\pink%402x.png" />
+    <Content Include="Content\css\iCheck\flat\pink.css" />
+    <Content Include="Content\css\iCheck\flat\pink.png" />
+    <Content Include="Content\css\iCheck\flat\purple%402x.png" />
+    <Content Include="Content\css\iCheck\flat\purple.css" />
+    <Content Include="Content\css\iCheck\flat\purple.png" />
+    <Content Include="Content\css\iCheck\flat\red%402x.png" />
+    <Content Include="Content\css\iCheck\flat\red.css" />
+    <Content Include="Content\css\iCheck\flat\red.png" />
+    <Content Include="Content\css\iCheck\flat\yellow%402x.png" />
+    <Content Include="Content\css\iCheck\flat\yellow.css" />
+    <Content Include="Content\css\iCheck\flat\yellow.png" />
+    <Content Include="Content\css\iCheck\flat\_all.css" />
+    <Content Include="Content\css\iCheck\futurico\futurico%402x.png" />
+    <Content Include="Content\css\iCheck\futurico\futurico.css" />
+    <Content Include="Content\css\iCheck\futurico\futurico.png" />
+    <Content Include="Content\css\iCheck\line\aero.css" />
+    <Content Include="Content\css\iCheck\line\blue.css" />
+    <Content Include="Content\css\iCheck\line\green.css" />
+    <Content Include="Content\css\iCheck\line\grey.css" />
+    <Content Include="Content\css\iCheck\line\line%402x.png" />
+    <Content Include="Content\css\iCheck\line\line.css" />
+    <Content Include="Content\css\iCheck\line\line.png" />
+    <Content Include="Content\css\iCheck\line\orange.css" />
+    <Content Include="Content\css\iCheck\line\pink.css" />
+    <Content Include="Content\css\iCheck\line\purple.css" />
+    <Content Include="Content\css\iCheck\line\red.css" />
+    <Content Include="Content\css\iCheck\line\yellow.css" />
+    <Content Include="Content\css\iCheck\line\_all.css" />
+    <Content Include="Content\css\iCheck\minimal\aero%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\aero.css" />
+    <Content Include="Content\css\iCheck\minimal\aero.png" />
+    <Content Include="Content\css\iCheck\minimal\blue%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\blue.css" />
+    <Content Include="Content\css\iCheck\minimal\blue.png" />
+    <Content Include="Content\css\iCheck\minimal\green%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\green.css" />
+    <Content Include="Content\css\iCheck\minimal\green.png" />
+    <Content Include="Content\css\iCheck\minimal\grey%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\grey.css" />
+    <Content Include="Content\css\iCheck\minimal\grey.png" />
+    <Content Include="Content\css\iCheck\minimal\minimal%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\minimal.css" />
+    <Content Include="Content\css\iCheck\minimal\minimal.png" />
+    <Content Include="Content\css\iCheck\minimal\orange%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\orange.css" />
+    <Content Include="Content\css\iCheck\minimal\orange.png" />
+    <Content Include="Content\css\iCheck\minimal\pink%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\pink.css" />
+    <Content Include="Content\css\iCheck\minimal\pink.png" />
+    <Content Include="Content\css\iCheck\minimal\purple%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\purple.css" />
+    <Content Include="Content\css\iCheck\minimal\purple.png" />
+    <Content Include="Content\css\iCheck\minimal\red%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\red.css" />
+    <Content Include="Content\css\iCheck\minimal\red.png" />
+    <Content Include="Content\css\iCheck\minimal\yellow%402x.png" />
+    <Content Include="Content\css\iCheck\minimal\yellow.css" />
+    <Content Include="Content\css\iCheck\minimal\yellow.png" />
+    <Content Include="Content\css\iCheck\minimal\_all.css" />
+    <Content Include="Content\css\iCheck\polaris\polaris%402x.png" />
+    <Content Include="Content\css\iCheck\polaris\polaris.css" />
+    <Content Include="Content\css\iCheck\polaris\polaris.png" />
+    <Content Include="Content\css\iCheck\square\aero%402x.png" />
+    <Content Include="Content\css\iCheck\square\aero.css" />
+    <Content Include="Content\css\iCheck\square\aero.png" />
+    <Content Include="Content\css\iCheck\square\blue%402x.png" />
+    <Content Include="Content\css\iCheck\square\blue.css" />
+    <Content Include="Content\css\iCheck\square\blue.png" />
+    <Content Include="Content\css\iCheck\square\green%402x.png" />
+    <Content Include="Content\css\iCheck\square\green.css" />
+    <Content Include="Content\css\iCheck\square\green.png" />
+    <Content Include="Content\css\iCheck\square\grey%402x.png" />
+    <Content Include="Content\css\iCheck\square\grey.css" />
+    <Content Include="Content\css\iCheck\square\grey.png" />
+    <Content Include="Content\css\iCheck\square\orange%402x.png" />
+    <Content Include="Content\css\iCheck\square\orange.css" />
+    <Content Include="Content\css\iCheck\square\orange.png" />
+    <Content Include="Content\css\iCheck\square\pink%402x.png" />
+    <Content Include="Content\css\iCheck\square\pink.css" />
+    <Content Include="Content\css\iCheck\square\pink.png" />
+    <Content Include="Content\css\iCheck\square\purple%402x.png" />
+    <Content Include="Content\css\iCheck\square\purple.css" />
+    <Content Include="Content\css\iCheck\square\purple.png" />
+    <Content Include="Content\css\iCheck\square\red%402x.png" />
+    <Content Include="Content\css\iCheck\square\red.css" />
+    <Content Include="Content\css\iCheck\square\red.png" />
+    <Content Include="Content\css\iCheck\square\square%402x.png" />
+    <Content Include="Content\css\iCheck\square\square.css" />
+    <Content Include="Content\css\iCheck\square\square.png" />
+    <Content Include="Content\css\iCheck\square\yellow%402x.png" />
+    <Content Include="Content\css\iCheck\square\yellow.css" />
+    <Content Include="Content\css\iCheck\square\yellow.png" />
+    <Content Include="Content\css\iCheck\square\_all.css" />
+    <Content Include="Content\css\images\animated-overlay.gif" />
+    <Content Include="Content\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\css\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\css\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\css\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\css\ionicons.min.css" />
+    <Content Include="Content\css\ionslider\ion.rangeSlider.css" />
+    <Content Include="Content\css\ionslider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Content\css\ionslider\ion.rangeSlider.skinNice.css" />
+    <Content Include="Content\css\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\css\morris\morris.css" />
+    <Content Include="Content\css\timepicker\bootstrap-timepicker.css" />
+    <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\MateriaPrima\CadastrarMatPrima.aspx" />
+    <Content Include="Pages\MateriaPrima\ListarMatPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
     <Content Include="Pages\Pedidos\ListarPedido.aspx" />
@@ -132,6 +291,15 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Pages\Home.Master" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\css\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -162,12 +330,33 @@
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
     <Content Include="App_Code\Persistencia\PedidoBD.cs" />
-    <Compile Include="Pages\CadastrarMatPrima.aspx.cs">
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MateriaPrima\CadastrarMatPrima.aspx.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\CadastrarMatPrima.aspx.designer.cs">
+    <Compile Include="Pages\MateriaPrima\CadastrarMatPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MateriaPrima\ListarMatPrima.aspx.cs">
+      <DependentUpon>ListarMatPrima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MateriaPrima\ListarMatPrima.aspx.designer.cs">
+      <DependentUpon>ListarMatPrima.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
       <DependentUpon>AlterarPedido.aspx</DependentUpon>
