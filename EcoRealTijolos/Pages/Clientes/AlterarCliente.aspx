@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarCliente.aspx.cs" Inherits="EcoRealTijolos.Pages.Clientes.CadastrarCliente" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlterarCliente.aspx.cs" Inherits="EcoRealTijolos.Pages.Clientes.AlterarCliente" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cadastro de Clientes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Alterar Cadastro de Clientes</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container-fluid">
-            <asp:Label runat="server" Text="Cadastro de Clientes"></asp:Label>
+            <asp:Label runat="server" Text="Alteração de Cliente"></asp:Label>
             <br />
             <asp:Label runat="server" Text="Nome:"></asp:Label>
             <br />

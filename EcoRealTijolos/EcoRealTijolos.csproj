@@ -271,7 +271,9 @@
     <Content Include="Content\css\timepicker\bootstrap-timepicker.css" />
     <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Pages\Clientes\AlterarCliente.aspx" />
     <Content Include="Pages\Clientes\CadastrarCliente.aspx" />
+    <Content Include="Pages\Clientes\ListarCliente.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx" />
     <Content Include="Pages\MateriasPrimas\ListarMatPrima.aspx" />
@@ -480,12 +482,26 @@
     <Compile Include="Content\Master\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Clientes\AlterarCliente.aspx.cs">
+      <DependentUpon>AlterarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Clientes\AlterarCliente.aspx.designer.cs">
+      <DependentUpon>AlterarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Clientes\CadastrarCliente.aspx.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Clientes\CadastrarCliente.aspx.designer.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Clientes\ListarCliente.aspx.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Clientes\ListarCliente.aspx.designer.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
