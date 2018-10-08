@@ -275,12 +275,12 @@
     <Content Include="Pages\Clientes\CadastrarCliente.aspx" />
     <Content Include="Pages\Clientes\ListarCliente.aspx" />
     <Content Include="Pages\Index.aspx" />
-    <Content Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx" />
-    <Content Include="Pages\MateriasPrimas\ListarMatPrima.aspx" />
+    <Content Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx" />
+    <Content Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx" />
+    <Content Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
     <Content Include="Pages\Pedidos\ListarPedido.aspx" />
-    <Content Include="Pages\teste.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -510,19 +510,26 @@
     <Compile Include="Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx.cs">
-      <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+    <Compile Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx.cs">
+      <DependentUpon>AlterarMateriaPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx.designer.cs">
-      <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
+    <Compile Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx.designer.cs">
+      <DependentUpon>AlterarMateriaPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\ListarMatPrima.aspx.cs">
-      <DependentUpon>ListarMatPrima.aspx</DependentUpon>
+    <Compile Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx.cs">
+      <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\ListarMatPrima.aspx.designer.cs">
-      <DependentUpon>ListarMatPrima.aspx</DependentUpon>
+    <Compile Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx.designer.cs">
+      <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.cs">
+      <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.designer.cs">
+      <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
       <DependentUpon>AlterarPedido.aspx</DependentUpon>
@@ -544,13 +551,6 @@
     </Compile>
     <Compile Include="Pages\Pedidos\ListarPedido.aspx.designer.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\teste.aspx.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\teste.aspx.designer.cs">
-      <DependentUpon>teste.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

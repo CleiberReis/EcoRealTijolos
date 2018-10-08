@@ -7,14 +7,13 @@ using System.Web.UI.WebControls;
 using EcoRealTijolos.App_Code.Persistencia;
 using System.Data;
 
-namespace EcoRealTijolos.Pages.Clientes
+namespace EcoRealTijolos.Pages.MateriasPrimas
 {
-    public partial class ListarCliente : System.Web.UI.Page
+    public partial class ListarMateriaPrima : System.Web.UI.Page
     {
-
         private void Carrega()
         {
-            ClienteBD bd = new ClienteBD();
+            MateriaPrimaBD bd = new MateriaPrimaBD();
             DataSet ds = bd.SelectAll();
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
@@ -33,11 +32,11 @@ namespace EcoRealTijolos.Pages.Clientes
                 case "Alterar":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     Session["ID"] = codigo;
-                    Response.Redirect("AlterarCliente.aspx");
+                    Response.Redirect("AlterarMateriaPrima.aspx");
                     break;
                 case "Deletar":
                     codigo = Convert.ToInt32(e.CommandArgument);
-                    ClienteBD bd = new ClienteBD();
+                    MateriaPrimaBD bd = new MateriaPrimaBD();
                     bd.Delete(codigo);
                     Carrega();
                     break;
@@ -45,6 +44,5 @@ namespace EcoRealTijolos.Pages.Clientes
                     break;
             }
         }
-
     }
 }

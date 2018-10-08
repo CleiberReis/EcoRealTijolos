@@ -10,7 +10,7 @@
 namespace EcoRealTijolos.Pages.MateriasPrimas {
     
     
-    public partial class CadastrarMatPrima {
+    public partial class CadastrarMateriaPrima {
         
         /// <summary>
         /// Controle form1.
@@ -37,43 +37,16 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtNomeMateria;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeMateria;
         
         /// <summary>
-        /// Controle nomeMateria.
+        /// Controle txtQuantidadeMateria.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nomeMateria;
-        
-        /// <summary>
-        /// Controle txtQuantiMateria.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtQuantiMateria;
-        
-        /// <summary>
-        /// Controle QuantiMateria.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox QuantiMateria;
-        
-        /// <summary>
-        /// Controle BtnSalvar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSalvar;
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
         
         /// <summary>
         /// Controle lblMensagem.
@@ -83,5 +56,14 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// Controle BtnSalvar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnSalvar;
     }
 }

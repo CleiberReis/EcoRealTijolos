@@ -74,7 +74,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
-                obj = new Cliente(); obj.Id = Convert.ToInt32(objDataReader["cli_id"]);
+                obj = new Cliente();
+                obj.Id = Convert.ToInt32(objDataReader["cli_id"]);
                 obj.Nome = Convert.ToString(objDataReader["cli_nome"]);
                 obj.Cpf = Convert.ToString(objDataReader["cli_cpf"]);
                 obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);

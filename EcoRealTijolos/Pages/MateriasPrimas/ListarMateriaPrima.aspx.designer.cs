@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages.MateriaPrima {
+namespace EcoRealTijolos.Pages.MateriasPrimas {
     
     
-    public partial class ListarMatPrima {
+    public partial class ListarMateriaPrima {
         
         /// <summary>
         /// Controle form1.
@@ -22,12 +22,12 @@ namespace EcoRealTijolos.Pages.MateriaPrima {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle TabelaMatPrima.
+        /// Controle GridView1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView TabelaMatPrima;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
