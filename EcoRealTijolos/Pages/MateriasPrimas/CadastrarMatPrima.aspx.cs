@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using EcoRealTijolos.App_Code.Persistencia;
 using EcoRealTijolos.App_Code.Classes;
 
-namespace EcoRealTijolos.Pages.MateriaPrimas
+namespace EcoRealTijolos.Pages.MateriasPrimas
 {
     public partial class CadastrarMatPrima : System.Web.UI.Page
     {
