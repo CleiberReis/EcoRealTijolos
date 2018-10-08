@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using EcoRealTijolos.App_Code.Classes;
 using EcoRealTijolos.App_Code.Persistencia;
 
-namespace EcoRealTijolos.Pages
+namespace EcoRealTijolos.Pages.MateriaPrima
 {
     public partial class CadastrarMatPrima : System.Web.UI.Page
     {
