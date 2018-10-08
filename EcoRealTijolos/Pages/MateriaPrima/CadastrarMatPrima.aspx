@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarMatPrima.aspx.cs" Inherits="EcoRealTijolos.Pages.CadastrarMatPrima" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarMatPrima.aspx.cs" Inherits="EcoRealTijolos.CadastrarMatPrima" %>
 
 <!DOCTYPE html>
 

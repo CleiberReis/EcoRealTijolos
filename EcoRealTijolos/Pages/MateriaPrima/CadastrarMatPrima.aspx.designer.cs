@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages {
+namespace EcoRealTijolos {
     
     
     public partial class CadastrarMatPrima {
