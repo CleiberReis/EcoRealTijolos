@@ -1,10 +1,11 @@
-﻿using System;
-using FATEC;
-using EcoRealTijolos.App_Code.Classes;
-using System.Data;
-using System.Linq;
-using System.Collections.Generic;
+﻿using FATEC; //para acesso a classe Mapped
+using System;
 using System.Web;
+using EcoRealTijolos.App_Code.Classes; //para acesso a classe Cliente
+using System.Data; //para uso de DataSet
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace EcoRealTijolos.App_Code.Persistencia
 {

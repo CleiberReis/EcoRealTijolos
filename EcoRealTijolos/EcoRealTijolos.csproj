@@ -76,8 +76,10 @@
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Classes\MateriaPrima.cs" />
     <Content Include="App_Code\Classes\Pedido.cs" />
+    <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\roslyn\csc.exe" />
@@ -269,9 +271,10 @@
     <Content Include="Content\css\timepicker\bootstrap-timepicker.css" />
     <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Pages\Clientes\CadastrarCliente.aspx" />
     <Content Include="Pages\Index.aspx" />
-    <Content Include="Pages\MateriaPrima\CadastrarMatPrima.aspx" />
-    <Content Include="Pages\MateriaPrima\ListarMatPrima.aspx" />
+    <Content Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx" />
+    <Content Include="Pages\MateriasPrimas\ListarMatPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
     <Content Include="Pages\Pedidos\ListarPedido.aspx" />
@@ -477,6 +480,13 @@
     <Compile Include="Content\Master\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Clientes\CadastrarCliente.aspx.cs">
+      <DependentUpon>CadastrarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Clientes\CadastrarCliente.aspx.designer.cs">
+      <DependentUpon>CadastrarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -484,18 +494,18 @@
     <Compile Include="Pages\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriaPrima\CadastrarMatPrima.aspx.cs">
+    <Compile Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriaPrima\CadastrarMatPrima.aspx.designer.cs">
+    <Compile Include="Pages\MateriasPrimas\CadastrarMatPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMatPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriaPrima\ListarMatPrima.aspx.cs">
+    <Compile Include="Pages\MateriasPrimas\ListarMatPrima.aspx.cs">
       <DependentUpon>ListarMatPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriaPrima\ListarMatPrima.aspx.designer.cs">
+    <Compile Include="Pages\MateriasPrimas\ListarMatPrima.aspx.designer.cs">
       <DependentUpon>ListarMatPrima.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
