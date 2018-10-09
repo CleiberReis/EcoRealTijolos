@@ -7,7 +7,7 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages {
+namespace EcoRealTijolos.Pages.Pedidos {
     
     
     public partial class CadastrarPedido {
@@ -103,6 +103,15 @@ namespace EcoRealTijolos.Pages {
         protected global::System.Web.UI.WebControls.Label lblEstado;
         
         /// <summary>
+        /// Controle txtEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+        
+        /// <summary>
         /// Controle lblCidade.
         /// </summary>
         /// <remarks>
@@ -139,58 +148,40 @@ namespace EcoRealTijolos.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtComplemento;
         
         /// <summary>
-        /// Controle lblTijolo.
+        /// Controle lblDtPedido.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTijolo;
+        protected global::System.Web.UI.WebControls.Label lblDtPedido;
         
         /// <summary>
-        /// Controle txtTijolo.
+        /// Controle calPedido.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTijolo;
+        protected global::System.Web.UI.WebControls.Calendar calPedido;
         
         /// <summary>
-        /// Controle lblPalha.
+        /// Controle lblObsPedido.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPalha;
+        protected global::System.Web.UI.WebControls.Label lblObsPedido;
         
         /// <summary>
-        /// Controle txtPalha.
+        /// Controle txtObsPedido.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPalha;
-        
-        /// <summary>
-        /// Controle lblPaver.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPaver;
-        
-        /// <summary>
-        /// Controle txtPaver.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPaver;
+        protected global::System.Web.UI.WebControls.TextBox txtObsPedido;
         
         /// <summary>
         /// Controle btnSalvar.

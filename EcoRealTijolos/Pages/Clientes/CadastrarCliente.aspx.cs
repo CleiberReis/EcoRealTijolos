@@ -14,9 +14,10 @@ namespace EcoRealTijolos.Pages.Clientes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
