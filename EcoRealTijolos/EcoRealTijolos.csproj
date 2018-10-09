@@ -78,7 +78,7 @@
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Classes\MateriaPrima.cs" />
-    <Content Include="App_Code\Classes\Pedido.cs" />
+    <Compile Include="App_Code\Classes\Pedido.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\MySql.Data.dll" />
@@ -475,7 +475,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
-    <Content Include="App_Code\Persistencia\PedidoBD.cs" />
+    <Compile Include="App_Code\Persistencia\PedidoBD.cs" />
     <Compile Include="Content\Master\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

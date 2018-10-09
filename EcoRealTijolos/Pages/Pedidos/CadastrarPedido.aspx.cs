@@ -64,7 +64,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             pedido.Complemento = Convert.ToString(txtComplemento.Text);
             pedido.Data = Convert.ToDateTime(calPedido);
             pedido.Observacao = Convert.ToString(txtObsPedido.Text);
-            pedido.Cliente = pedido;
+            pedido.Cliente = cliente;
 
             PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);

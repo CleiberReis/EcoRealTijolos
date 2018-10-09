@@ -184,13 +184,13 @@ namespace EcoRealTijolos.Pages.Pedidos {
         protected global::System.Web.UI.WebControls.TextBox txtObsPedido;
         
         /// <summary>
-        /// Controle btnSalvar.
+        /// Controle BtnSalvar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSalvar;
+        protected global::System.Web.UI.WebControls.Button BtnSalvar;
         
         /// <summary>
         /// Controle lblMensagem.

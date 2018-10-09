@@ -64,7 +64,7 @@
             <asp:TextBox ID="txtObsPedido" runat="server" Width="192px"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnSalvar" runat="server" OnClick="btnSalvar_Click" Text="Salvar" />
+            <asp:Button ID="BtnSalvar" runat="server" OnClick="BtnSalvar_Click" Text="Salvar" />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
         </div>
