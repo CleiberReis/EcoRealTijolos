@@ -19,22 +19,31 @@
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-    <div>
-        <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand">
-            <Columns>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("mat_id")%>'>Alterar</asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CommandArgument='<%# Bind("mat_id")%>'>Excluir</asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
+    <!-- Datatable Part -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Lista de Matéria Prima</h3>
+                </div>
+                <div class="box-body table-responsive">
+                    <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" OnRowCommand="GridView1_RowCommand">
+                        <Columns>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-primary" CommandName="Alterar" CommandArgument='<%# Bind("mat_id")%>'>Alterar</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lbDeletar" runat="server" CssClass="btn btn-danger" CommandName="Deletar" CommandArgument='<%# Bind("mat_id")%>'>Excluir</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
     </div>
-    <br />
-    <a href="CadastrarMateriaPrima.aspx">Cadastrar Matéria Prima</a>
+    <!-- End Datatable -->
 </asp:Content>
