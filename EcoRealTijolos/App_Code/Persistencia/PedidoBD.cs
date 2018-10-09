@@ -15,8 +15,11 @@ namespace EcoRealTijolos.App_Code.Persistencia
     {
         //métodos
         //insert
-        public bool Insert(Pedido pedido)
+        public int Insert(Pedido pedido)
         {
+            int retorno = 0;
+            try
+            {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             string sql = "INSERT INTO tbl_pedido (ped_data, ped_rua, ped_obs, ped_cep, ped_numero, ped_estado, ped_complemento, ped_cidade, ped_idCliente) VALUES (?data, ?rua, ?observacao, ?cep, ?numero, ?estado, ?complemento, ?cidade, ?idCliente)";
@@ -30,12 +33,21 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?estado", pedido.Observacao));
             objCommand.Parameters.Add(Mapped.Parameter("?complemento", pedido.Observacao));
             objCommand.Parameters.Add(Mapped.Parameter("?cidade", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?idCliente", pedido.cliente.Id));
+            objCommand.Parameters.Add(Mapped.Parameter("?idCliente", pedido.Cliente.Id));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
-            return true;
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                retorno = -1;
+            }
+            catch (Exception)
+            {
+                retorno = -2;
+            }
+            return retorno;
         }
 
         //selectall

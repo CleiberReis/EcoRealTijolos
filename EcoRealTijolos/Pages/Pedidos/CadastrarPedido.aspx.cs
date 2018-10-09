@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using FATEC;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -51,12 +50,12 @@ namespace EcoRealTijolos.Pages.Pedidos
             ddlCliente.Items[0].Selected = true;
         }
 
-        protected void btnSalvar_Click(object sender, EventArgs e)
+        protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             ClienteBD clienteBD = new ClienteBD();
             Cliente cliente = clienteBD.Select(Convert.ToInt32(ddlCliente.SelectedItem.Value));
 
-            Pedido pedido = new PedidoBD();
+            Pedido pedido = new Pedido();
             pedido.Cep = Convert.ToString(txtCep.Text);
             pedido.Rua = Convert.ToString(txtRua.Text);
             pedido.Numero = Convert.ToString(txtNumero.Text);
@@ -67,7 +66,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             pedido.Observacao = Convert.ToString(txtObsPedido.Text);
             pedido.Cliente = pedido;
 
-            pedido pedidoBD = new PedidoBD();
+            PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);
             switch (retorno)
             {
@@ -87,5 +86,6 @@ namespace EcoRealTijolos.Pages.Pedidos
                 default:
                     break;
             }
+        }
     }
 }

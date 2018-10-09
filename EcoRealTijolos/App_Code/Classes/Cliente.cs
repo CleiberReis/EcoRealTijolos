@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Data;
+using FATEC;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using EcoRealTijolos.App_Code.Classes;
+using EcoRealTijolos.App_Code.Persistencia;
+
 
 namespace EcoRealTijolos.App_Code.Classes
 {
@@ -13,7 +18,6 @@ namespace EcoRealTijolos.App_Code.Classes
         public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-
 
         //construtor
         public Cliente()
