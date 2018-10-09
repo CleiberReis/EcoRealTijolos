@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using EcoRealTijolos.App_Code.Classes;
 using EcoRealTijolos.App_Code.Persistencia;
 
@@ -14,7 +13,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
@@ -34,7 +33,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             }
             else
             {
-                lblMensagem.Text = "Erro ao salvar";
+                lblMensagem.Text = "Erro ao Salvar";
             }
         }
     }
