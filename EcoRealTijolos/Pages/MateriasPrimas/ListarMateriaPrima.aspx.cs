@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EcoRealTijolos.App_Code.Persistencia;
 using System.Data;
+using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos.Pages.MateriasPrimas
 {
@@ -18,12 +18,10 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             Carrega();
         }
-
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int codigo = 0;
