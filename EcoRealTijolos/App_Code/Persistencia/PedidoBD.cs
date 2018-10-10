@@ -28,12 +28,13 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?rua", pedido.Rua));
             objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?cep", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?numero", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?estado", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?complemento", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?cidade", pedido.Observacao));
+            objCommand.Parameters.Add(Mapped.Parameter("?cep", pedido.Cep));
+            objCommand.Parameters.Add(Mapped.Parameter("?numero", pedido.Numero));
+            objCommand.Parameters.Add(Mapped.Parameter("?estado", pedido.Estado));
+            objCommand.Parameters.Add(Mapped.Parameter("?complemento", pedido.Complemento));
+            objCommand.Parameters.Add(Mapped.Parameter("?cidade", pedido.Cidade));
             objCommand.Parameters.Add(Mapped.Parameter("?idCliente", pedido.Cliente.Id));
+
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -109,11 +110,11 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?rua", pedido.Rua));
             objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?cep", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?numero", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?estado", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?complemento", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?cidade", pedido.Observacao));
+            objCommand.Parameters.Add(Mapped.Parameter("?cep", pedido.Cep));
+            objCommand.Parameters.Add(Mapped.Parameter("?numero", pedido.Numero));
+            objCommand.Parameters.Add(Mapped.Parameter("?estado", pedido.Estado));
+            objCommand.Parameters.Add(Mapped.Parameter("?complemento", pedido.Complemento));
+            objCommand.Parameters.Add(Mapped.Parameter("?cidade", pedido.Cidade));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();

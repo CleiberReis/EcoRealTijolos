@@ -157,13 +157,13 @@ namespace EcoRealTijolos.Pages.Pedidos {
         protected global::System.Web.UI.WebControls.Label lblDtPedido;
         
         /// <summary>
-        /// Controle calPedido.
+        /// Controle txtData.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calPedido;
+        protected global::System.Web.UI.WebControls.TextBox txtData;
         
         /// <summary>
         /// Controle lblObsPedido.

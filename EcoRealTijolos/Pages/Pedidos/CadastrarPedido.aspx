@@ -12,6 +12,10 @@
     <form id="form1" runat="server">
         <div>
 
+            CADASTRAR PEDIDOS<br />
+            <br />
+            <br />
+
             <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
             <asp:DropDownList ID="ddlCliente" runat="server">
             </asp:DropDownList>
@@ -56,7 +60,8 @@
             <br />
             <asp:Label ID="lblDtPedido" runat="server" Text="Data de Entrega: "></asp:Label>
             <br />
-            <asp:Calendar ID="calPedido" runat="server"></asp:Calendar>
+            <asp:TextBox ID="txtData" runat="server" Width="112px"></asp:TextBox>
+            <br />
             <br />
             
             <asp:Label ID="lblObsPedido" runat="server" Text="Observação: "></asp:Label>

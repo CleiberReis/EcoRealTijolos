@@ -39,6 +39,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             txtNumero.Text = "";
             txtEstado.Text = "";
             txtCidade.Text = "";
+            txtData.Text = "";
             txtComplemento.Text = "";
             txtObsPedido.Text = "";
             //remove seleção do ddl
@@ -62,7 +63,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             pedido.Estado = Convert.ToString(txtEstado.Text);
             pedido.Cidade = Convert.ToString(txtCidade.Text);
             pedido.Complemento = Convert.ToString(txtComplemento.Text);
-            pedido.Data = Convert.ToDateTime(calPedido);
+            pedido.Data = Convert.ToDateTime(txtData.Text);
             pedido.Observacao = Convert.ToString(txtObsPedido.Text);
             pedido.Cliente = cliente;
 

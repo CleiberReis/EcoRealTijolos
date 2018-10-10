@@ -278,7 +278,6 @@
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx" />
     <Content Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx" />
-    <Content Include="Pages\MateriasPrimas\IndexMateriaPrima.aspx" />
     <Content Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
@@ -525,13 +524,6 @@
     </Compile>
     <Compile Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MateriasPrimas\IndexMateriaPrima.aspx.cs">
-      <DependentUpon>IndexMateriaPrima.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\MateriasPrimas\IndexMateriaPrima.aspx.designer.cs">
-      <DependentUpon>IndexMateriaPrima.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.cs">
       <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
