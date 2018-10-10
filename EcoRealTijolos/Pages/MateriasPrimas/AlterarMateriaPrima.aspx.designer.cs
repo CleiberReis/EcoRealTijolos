@@ -13,31 +13,13 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
     public partial class AlterarMateriaPrima {
         
         /// <summary>
-        /// Controle Label1.
+        /// Controle ddlNomeMateria.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// Controle txtNomeMateria.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomeMateria;
-        
-        /// <summary>
-        /// Controle txtQuantidadeMateria.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
+        protected global::System.Web.UI.WebControls.DropDownList ddlNomeMateria;
         
         /// <summary>
         /// Controle lblMensagem.
@@ -47,6 +29,15 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// Controle txtQuantidadeMateria.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
         
         /// <summary>
         /// Controle BtnSalvar.

@@ -18,24 +18,34 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             {
                 MateriaPrimaBD bd = new MateriaPrimaBD();
                 MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
-                txtNomeMateria.Text = materia.Nome;
                 txtQuantidadeMateria.Text = materia.Quantidade;
+
+                CarregaMateriaPrima();
+                ddlNomeMateria.Focus();
             }
+        }
+        private void CarregaMateriaPrima()
+        {
+            MateriaPrimaBD bd = new MateriaPrimaBD();
+            DataSet ds = bd.SelectAll();
+            ddlNomeMateria.DataSource = ds.Tables[0].DefaultView;
+            ddlNomeMateria.DataTextField = "mat_nome";
+            ddlNomeMateria.DataValueField = "mat_id";
+            ddlNomeMateria.DataBind();
+            ddlNomeMateria.Items.Insert(0, "Selecione");
         }
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             MateriaPrimaBD bd = new MateriaPrimaBD();
             MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
-            materia.Nome = txtNomeMateria.Text;
             materia.Quantidade = txtQuantidadeMateria.Text;
 
             if (bd.Update(materia))
             {
                 lblMensagem.Text = "Matéria Prima alterada com sucesso";
-                txtNomeMateria.Text = "";
                 txtQuantidadeMateria.Text = "";
-                txtNomeMateria.Focus();
+                txtQuantidadeMateria.Focus();
             }
             else
             {
