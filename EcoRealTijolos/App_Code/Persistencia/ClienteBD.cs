@@ -68,7 +68,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_cliente WHERE cli_id = ?id", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_cliente WHERE cli_id=?id", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?id", id));
 
             objDataReader = objCommand.ExecuteReader();

@@ -29,7 +29,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             ddlCliente.DataTextField = "cli_nome";
             ddlCliente.DataValueField = "cli_id";
             ddlCliente.DataBind();
-            ddlCliente.Items.Insert(0, "Selecione");
+            ddlCliente.Items.Insert(0, "Selecione um cliente");
         }
 
         private void LimparCampos()
@@ -57,14 +57,14 @@ namespace EcoRealTijolos.Pages.Pedidos
             Cliente cliente = clienteBD.Select(Convert.ToInt32(ddlCliente.SelectedItem.Value));
 
             Pedido pedido = new Pedido();
-            pedido.Cep = Convert.ToString(txtCep.Text);
-            pedido.Rua = Convert.ToString(txtRua.Text);
-            pedido.Numero = Convert.ToString(txtNumero.Text);
-            pedido.Estado = Convert.ToString(txtEstado.Text);
-            pedido.Cidade = Convert.ToString(txtCidade.Text);
-            pedido.Complemento = Convert.ToString(txtComplemento.Text);
+            pedido.Cep = txtCep.Text;
+            pedido.Rua = txtRua.Text;
+            pedido.Numero = txtNumero.Text;
+            pedido.Estado = txtEstado.Text;
+            pedido.Cidade = txtCidade.Text;
+            pedido.Complemento = txtComplemento.Text;
             pedido.Data = Convert.ToDateTime(txtData.Text);
-            pedido.Observacao = Convert.ToString(txtObsPedido.Text);
+            pedido.Observacao = txtObsPedido.Text;
             pedido.Cliente = cliente;
 
             PedidoBD pedidobd = new PedidoBD();
