@@ -8,14 +8,15 @@
     <link href="../../Content/css/AdminLTE.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
     <!-- DataTables -->
-    <link href="../../Content/css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
-    <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="../../Scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="../../Scripts/js/jquery-ui.min.js" type="text/javascript"></script>
     <script src="../../Scripts/js/AdminLTE/app.js" type="text/javascript"></script>
     <script src="../../Content/jAlert/jquery.alerts.js" type="text/javascript"></script>
     <script src="../../Scripts/js/jquery.ui.draggable.js" type="text/javascript"></script>
     <script src="../../Scripts/js/plugins/datatables/jquery.dataTables.js"></script>
+    <link href="../../Content/css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <a href="http://localhost:52917/Pages/Clientes/">http://localhost:52917/Pages/Clientes/</a>
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 
