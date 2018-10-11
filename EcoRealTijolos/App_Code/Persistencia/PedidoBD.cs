@@ -55,7 +55,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_pedido", objConexao);
-            objDataAdapter = Mapped.Adapter(objCommand);            objDataAdapter.Fill(ds);            objConexao.Close();
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
             return ds;
@@ -98,7 +100,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?enderecoEntrega", pedido.EnderecoEntrega));
             objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", pedido.Codigo));            objCommand.ExecuteNonQuery();
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", pedido.Codigo));
+            objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();

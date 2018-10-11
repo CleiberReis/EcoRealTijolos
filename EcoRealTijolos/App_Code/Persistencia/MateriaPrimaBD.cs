@@ -75,7 +75,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj = new MateriaPrima();
                 obj.Id = Convert.ToInt32(objDataReader["mat_id"]);
                 obj.Nome = Convert.ToString(objDataReader["mat_nome"]);
-                obj.Quantidade = Convert.ToString(objDataReader["mat_quantidade"]);
+                obj.Quantidade = Convert.ToInt32(objDataReader["mat_quantidade"]);
 
             }
 
