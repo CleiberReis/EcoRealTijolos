@@ -12,43 +12,24 @@
     <form id="form1" runat="server">
         <div>
 
+            CADASTRAR PEDIDOS<br />
+            <br />
+            <br />
+
             <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
-            <asp:DropDownList ID="ddlCliente" runat="server">
+            <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px">
             </asp:DropDownList>
             <br />
             <br />
             ENDEREÇO PARA ENTREGA:<br />
-            <br />
-            <asp:Label ID="lblCep" runat="server" Text="CEP: "></asp:Label>
-            <br />
-            <asp:TextBox ID="txtCep" runat="server"></asp:TextBox>
 
             <br />
-            <asp:Label ID="lblRua" runat="server" Text="Rua: "></asp:Label>
+            <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>
             <br />
-            <asp:TextBox ID="txtRua" runat="server" Width="393px"></asp:TextBox>
+            <asp:TextBox ID="txtEndereco" runat="server" Width="562px" Height="24px"></asp:TextBox>
             
             <br />
-            <asp:Label ID="lblNumero" runat="server" Text="Numero: "></asp:Label>
-            <br />
-            <asp:TextBox ID="txtNumero" runat="server"></asp:TextBox>
-
-            <br />
-            <asp:Label ID="lblEstado" runat="server" Text="Estado: "></asp:Label>
-            <br />
-            <asp:TextBox ID="txtEstado" runat="server"></asp:TextBox>
-
-            <br />
-            <asp:Label ID="lblCidade" runat="server" Text="Cidade: "></asp:Label>
-            <br />
-            <asp:TextBox ID="txtCidade" runat="server" Width="192px"></asp:TextBox>
-
-            <br />
-            <asp:Label ID="lblComplemento" runat="server" Text="Complemento: "></asp:Label>
-            <br />
-            <asp:TextBox ID="txtComplemento" runat="server" Width="192px"></asp:TextBox>
-            
-            <br />
+            <asp:Label ID="lblObsEndereco" runat="server" Font-Size="Smaller" Text="Ex:  (Rua xxxx, 00, Bairro xxx - Cidade (UF))"></asp:Label>
             <br />
             <br />
             FINALIZAR ENTREGA:<br />
@@ -56,12 +37,13 @@
             <br />
             <asp:Label ID="lblDtPedido" runat="server" Text="Data de Entrega: "></asp:Label>
             <br />
-            <asp:Calendar ID="calPedido" runat="server"></asp:Calendar>
+            <asp:TextBox ID="txtData" runat="server" Width="114px" Height="21px"></asp:TextBox>
+            <br />
             <br />
             
-            <asp:Label ID="lblObsPedido" runat="server" Text="Observação: "></asp:Label>
+            <asp:Label ID="lblObsPedido" runat="server" Text="Observação do Pedido: "></asp:Label>
             <br />
-            <asp:TextBox ID="txtObsPedido" runat="server" Width="192px"></asp:TextBox>
+            <asp:TextBox ID="txtObsPedido" runat="server" Width="406px" Height="21px"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="BtnSalvar" runat="server" OnClick="BtnSalvar_Click" Text="Salvar" />

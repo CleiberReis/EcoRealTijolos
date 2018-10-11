@@ -13,7 +13,11 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Estoque - Matéria Prima";
+            }
         }
 
         protected void BtnSalvar_Click(object sender, EventArgs e)

@@ -19,21 +19,52 @@
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-    <div>
-        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Arial" Text="Cadastro de Matéria Prima"></asp:Label>
-        <br />
-        <asp:Label runat="server" Font-Names="Arial" Text="Nome: "></asp:Label>
-        <br />
-        <asp:TextBox ID="txtNomeMateria" runat="server"></asp:TextBox>
-        <br />
-        <asp:Label runat="server" Font-Names="Arial" Text="Quantidade: "></asp:Label>
-        <br />
-        <asp:TextBox ID="txtQuantidadeMateria" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
-        <br />
-        <asp:Button ID="BtnSalvar" runat="server" OnClick="BtnSalvar_Click" Text="Salvar" />
+    <section class="content-header">
+        <h1 style="text-align: center">CADASTRO DE MATÉRIA PRIMA</h1>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>DESCRIÇÃO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtNomeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>QUANTIDADE</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtQuantidadeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
         <br />
         <br />
         <a href="ListarMateriaPrima.aspx">Listar Matéria Prima</a>

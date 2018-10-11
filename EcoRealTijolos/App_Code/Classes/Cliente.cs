@@ -19,6 +19,8 @@ namespace EcoRealTijolos.App_Code.Classes
         public string Telefone { get; set; }
         public string Email { get; set; }
 
+        public Pedido Pedido { get; set; }
+
         //construtor
         public Cliente()
         {
