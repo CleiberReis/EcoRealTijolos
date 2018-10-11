@@ -34,13 +34,7 @@ namespace EcoRealTijolos.Pages.Pedidos
 
         private void LimparCampos()
         {
-            txtCep.Text = "";
-            txtRua.Text = "";
-            txtNumero.Text = "";
-            txtEstado.Text = "";
-            txtCidade.Text = "";
-            txtData.Text = "";
-            txtComplemento.Text = "";
+            txtEndereco.Text = "";
             txtObsPedido.Text = "";
             //remove seleção do ddl
             for (int i = 0; i < ddlCliente.Items.Count; i++)
@@ -57,14 +51,11 @@ namespace EcoRealTijolos.Pages.Pedidos
             Cliente cliente = clienteBD.Select(Convert.ToInt32(ddlCliente.SelectedItem.Value));
 
             Pedido pedido = new Pedido();
-            pedido.Cep = txtCep.Text;
-            pedido.Rua = txtRua.Text;
-            pedido.Numero = txtNumero.Text;
-            pedido.Estado = txtEstado.Text;
-            pedido.Cidade = txtCidade.Text;
-            pedido.Complemento = txtComplemento.Text;
+
+            pedido.EnderecoEntrega = Convert.ToString(txtEndereco.Text);
             pedido.Data = Convert.ToDateTime(txtData.Text);
-            pedido.Observacao = txtObsPedido.Text;
+            pedido.Observacao = Convert.ToString(txtObsPedido.Text);
+
             pedido.Cliente = cliente;
 
             PedidoBD pedidobd = new PedidoBD();
