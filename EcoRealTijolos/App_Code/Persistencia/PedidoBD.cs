@@ -63,6 +63,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objConexao.Dispose();
             return ds;
         }
+
         //select
         public Pedido Select(int id)
         {
@@ -89,6 +90,12 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objDataReader.Dispose();
             return obj;
         }
+
+        //Select GET ID
+        //public int GetId()
+        //{
+            
+        //}
 
         //update
         public bool Update(Pedido pedido)

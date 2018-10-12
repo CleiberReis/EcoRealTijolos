@@ -35,7 +35,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_produto", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto ORDER BY prod_nome", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
