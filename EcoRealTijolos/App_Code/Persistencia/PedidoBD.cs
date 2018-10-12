@@ -35,8 +35,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Dispose();
             objConexao.Dispose();
             }
-            catch (MySql.Data.MySqlClient.MySqlException)
+            catch (MySql.Data.MySqlClient.MySqlException /*ex*/)
             {
+                //.Write(ex.ToString());
                 retorno = -1;
             }
             catch (Exception)
@@ -76,7 +77,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             while (objDataReader.Read())
             {
                 obj = new Pedido();
-                obj.Codigo = Convert.ToInt32(objDataReader["ped_codigo"]);
+                obj.Codigo = Convert.ToInt32(objDataReader["ped_id"]);
                 obj.Data = Convert.ToDateTime(objDataReader["ped_data"]);
                 obj.EnderecoEntrega = Convert.ToString(objDataReader["ped_endereco"]);
                 obj.Observacao = Convert.ToString(objDataReader["ped_obs"]);

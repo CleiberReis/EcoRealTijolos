@@ -30,12 +30,12 @@ namespace EcoRealTijolos.Pages.Pedidos
                 int codigo = 0;
                 switch (e.CommandName)
                 {
-                    case "Alterar Pedido":
+                    case "Alterar":
                         codigo = Convert.ToInt32(e.CommandArgument);
                         Session["ID"] = codigo;
                         Response.Redirect("AlterarPedido.aspx");
                         break;
-                    case "Excluir Pedido":
+                    case "Excluir":
                         codigo = Convert.ToInt32(e.CommandArgument);
                         PedidoBD bd = new PedidoBD();
                         bd.Delete(codigo);

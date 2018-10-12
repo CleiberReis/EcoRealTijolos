@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages.Pedidos {
+namespace EcoRealTijolos.Pages.Produtos {
     
     
-    public partial class CadastrarPedido {
+    public partial class AlterarProduto {
         
         /// <summary>
         /// Controle form1.
@@ -22,94 +22,67 @@ namespace EcoRealTijolos.Pages.Pedidos {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle lblCliente.
+        /// Controle lblNome.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCliente;
+        protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// Controle ddlCliente.
+        /// Controle lblValor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCliente;
+        protected global::System.Web.UI.WebControls.Label lblValor;
         
         /// <summary>
-        /// Controle lblEndereco.
+        /// Controle txtNome.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEndereco;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// Controle txtEndereco.
+        /// Controle txtValor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEndereco;
+        protected global::System.Web.UI.WebControls.TextBox txtValor;
         
         /// <summary>
-        /// Controle lblObsEndereco.
+        /// Controle lblQuantidade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblObsEndereco;
+        protected global::System.Web.UI.WebControls.Label lblQuantidade;
         
         /// <summary>
-        /// Controle lblDtPedido.
+        /// Controle txtQuantidade.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDtPedido;
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
         
         /// <summary>
-        /// Controle txtData.
+        /// Controle BtnAlterar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtData;
-        
-        /// <summary>
-        /// Controle lblObsPedido.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblObsPedido;
-        
-        /// <summary>
-        /// Controle txtObsPedido.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtObsPedido;
-        
-        /// <summary>
-        /// Controle BtnSalvar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSalvar;
+        protected global::System.Web.UI.WebControls.Button BtnAlterar;
         
         /// <summary>
         /// Controle lblMensagem.
@@ -119,14 +92,5 @@ namespace EcoRealTijolos.Pages.Pedidos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
-        
-        /// <summary>
-        /// Controle hlSelecaoProdutos.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlSelecaoProdutos;
     }
 }

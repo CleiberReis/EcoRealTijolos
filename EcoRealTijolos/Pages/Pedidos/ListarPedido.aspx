@@ -16,19 +16,18 @@
                 <Columns>
                     <asp:BoundField DataField="ped_id" HeaderText="ID do Pedido" />
                     <asp:BoundField DataField="ped_idCliente" HeaderText="ID do Cliente" />
-                    <asp:BoundField DataField="ped_idProduto" HeaderText="ID do Produto" />
                     <asp:BoundField DataField="ped_endereco" HeaderText="Endereço de Entrega" />
                     <asp:BoundField DataField="ped_data" HeaderText="Data de Entrega" />
                     <asp:BoundField DataField="ped_obs" HeaderText="Observações do Pedido" />
                     <asp:TemplateField HeaderText="Alteração">
                         <ItemTemplate>
-                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar Pedido"
+                            <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
                                 CommandArgument='<%#Bind("ped_id")%>'>Alterar</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Exclusão">
                         <ItemTemplate>
-                            <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir Pedido"
+                            <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir"
                                 CommandArgument='<%#Bind("ped_id")%>'>Excluir</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
