@@ -284,7 +284,9 @@
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedProduto.aspx" />
     <Content Include="Pages\Pedidos\ListarPedido.aspx" />
+    <Content Include="Pages\Produtos\AlterarProduto.aspx" />
     <Content Include="Pages\Produtos\CadastrarProduto.aspx" />
+    <Content Include="Pages\Produtos\ListarProduto.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -564,12 +566,26 @@
     <Compile Include="Pages\Pedidos\ListarPedido.aspx.designer.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Produtos\AlterarProduto.aspx.cs">
+      <DependentUpon>AlterarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Produtos\AlterarProduto.aspx.designer.cs">
+      <DependentUpon>AlterarProduto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Produtos\CadastrarProduto.aspx.cs">
       <DependentUpon>CadastrarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Produtos\CadastrarProduto.aspx.designer.cs">
       <DependentUpon>CadastrarProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Produtos\ListarProduto.aspx.cs">
+      <DependentUpon>ListarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Produtos\ListarProduto.aspx.designer.cs">
+      <DependentUpon>ListarProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
