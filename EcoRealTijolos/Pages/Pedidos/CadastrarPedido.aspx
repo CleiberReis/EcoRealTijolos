@@ -49,7 +49,10 @@
             <asp:Button ID="BtnSalvar" runat="server" OnClick="BtnSalvar_Click" Text="Salvar" />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+            <br />
+            <br />
         </div>
+        <asp:HyperLink ID="hlSelecaoProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/CadastrarPedProduto.aspx">Seleção de Produtos</asp:HyperLink>
     </form>
 </body>
 </html>

@@ -79,6 +79,7 @@
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Classes\MateriaPrima.cs" />
     <Compile Include="App_Code\Classes\Pedido.cs" />
+    <Content Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\MySql.Data.dll" />
@@ -281,7 +282,9 @@
     <Content Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
+    <Content Include="Pages\Pedidos\CadastrarPedProduto.aspx" />
     <Content Include="Pages\Pedidos\ListarPedido.aspx" />
+    <Content Include="Pages\Produtos\CadastrarProduto.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -476,6 +479,7 @@
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Persistencia\PedidoBD.cs" />
+    <Content Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="Content\Master\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -546,12 +550,26 @@
     <Compile Include="Pages\Pedidos\CadastrarPedido.aspx.designer.cs">
       <DependentUpon>CadastrarPedido.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Pedidos\CadastrarPedProduto.aspx.cs">
+      <DependentUpon>CadastrarPedProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pedidos\CadastrarPedProduto.aspx.designer.cs">
+      <DependentUpon>CadastrarPedProduto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Pedidos\ListarPedido.aspx.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Pedidos\ListarPedido.aspx.designer.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Produtos\CadastrarProduto.aspx.cs">
+      <DependentUpon>CadastrarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Produtos\CadastrarProduto.aspx.designer.cs">
+      <DependentUpon>CadastrarProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

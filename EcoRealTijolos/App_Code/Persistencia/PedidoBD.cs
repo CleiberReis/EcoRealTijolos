@@ -35,8 +35,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Dispose();
             objConexao.Dispose();
             }
-            catch (MySql.Data.MySqlClient.MySqlException)
+            catch (MySql.Data.MySqlClient.MySqlException /*ex*/)
             {
+                //.Write(ex.ToString());
                 retorno = -1;
             }
             catch (Exception)
@@ -55,7 +56,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_pedido", objConexao);
-            objDataAdapter = Mapped.Adapter(objCommand);            objDataAdapter.Fill(ds);            objConexao.Close();
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
             return ds;
@@ -74,7 +77,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             while (objDataReader.Read())
             {
                 obj = new Pedido();
-                obj.Codigo = Convert.ToInt32(objDataReader["ped_codigo"]);
+                obj.Codigo = Convert.ToInt32(objDataReader["ped_id"]);
                 obj.Data = Convert.ToDateTime(objDataReader["ped_data"]);
                 obj.EnderecoEntrega = Convert.ToString(objDataReader["ped_endereco"]);
                 obj.Observacao = Convert.ToString(objDataReader["ped_obs"]);
@@ -98,7 +101,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
             objCommand.Parameters.Add(Mapped.Parameter("?enderecoEntrega", pedido.EnderecoEntrega));
             objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", pedido.Codigo));            objCommand.ExecuteNonQuery();
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", pedido.Codigo));
+            objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
             objConexao.Dispose();
