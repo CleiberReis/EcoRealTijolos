@@ -16,16 +16,16 @@ namespace EcoRealTijolos.Pages.Produtos
 
         }
 
-        protected void BtnSalvar_Click(object sender, EventArgs e)
+        protected void btnSalvar_Click(object sender, EventArgs e)
         {
             Produto produto = new Produto();
             produto.Nome = txtNome.Text;
             produto.ValorUnitario = Convert.ToDouble(txtValor.Text);
-            produto.Quantidade = txtQuantidade.Text;
+            produto.QuantidadeTotal = Convert.ToInt32(txtQuantidade.Text);
             ProdutoBD bd = new ProdutoBD();
             if (bd.Insert(produto))
             {
-                lblMensagem.Text = "Funcionário cadastrado com sucesso";
+                lblMensagem.Text = "Produto cadastrado com sucesso";
                 txtNome.Text = "";
                 txtValor.Text = "";
                 txtQuantidade.Text = "";
@@ -35,6 +35,7 @@ namespace EcoRealTijolos.Pages.Produtos
             {
                 lblMensagem.Text = "Erro ao salvar.";
             }
+
         }
     }
 }

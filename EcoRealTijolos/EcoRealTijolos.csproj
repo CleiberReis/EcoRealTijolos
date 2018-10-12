@@ -79,7 +79,7 @@
     <Compile Include="App_Code\Classes\Cliente.cs" />
     <Compile Include="App_Code\Classes\MateriaPrima.cs" />
     <Compile Include="App_Code\Classes\Pedido.cs" />
-    <Content Include="App_Code\Classes\Produto.cs" />
+    <Compile Include="App_Code\Classes\Produto.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Compile Include="App_Code\Persistencia\MateriaPrimaBD.cs" />
     <Content Include="bin\MySql.Data.dll" />
@@ -481,7 +481,7 @@
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Persistencia\PedidoBD.cs" />
-    <Content Include="App_Code\Persistencia\ProdutoBD.cs" />
+    <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="Content\Master\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 </head>
 <body>
@@ -12,22 +12,32 @@
         <div>
             LISTA DE PRODUTOS<br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand">
+            <br />
+            
+            <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
+            <br />
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False">
                 <Columns>
+                    <asp:BoundField DataField="prod_id" HeaderText="ID do Produto" />
+                    <asp:BoundField DataField="prod_nome" HeaderText="Nome do Produto" />
+                    <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário" />
+                    <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                CommandArgument='<%# Bind("pro_id")%>'>Alterar</asp:LinkButton>
+                                CommandArgument='<%# Bind("prod_id")%>'>Alterar</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar"
-                                CommandArgument='<%# Bind("pro_id")%>'>Excluir</asp:LinkButton>
+                            <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir"
+                                CommandArgument='<%# Bind("prod_id")%>'>Excluir</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+            <br /><br />
+            <asp:HyperLink ID="hlCadastrar" runat="server" NavigateUrl="~/Pages/Produtos/CadastrarProduto.aspx">Cadastrar um Novo Produtos</asp:HyperLink>
         </div>
     </form>
 </body>

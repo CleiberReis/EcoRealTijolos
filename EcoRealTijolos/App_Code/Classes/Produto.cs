@@ -12,6 +12,11 @@ namespace EcoRealTijolos.App_Code.Classes
         public int QuantidadeTotal { get; set; }
         public Double ValorUnitario { get; set; }
 
-
+        public Produto()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
     }
 }
