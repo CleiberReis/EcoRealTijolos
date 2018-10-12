@@ -23,13 +23,61 @@ namespace EcoRealTijolos.Pages.Pedidos
 
         private void Carregar()
         {
-            ProdutoBD bd = new ProdutoBD();
-            DataSet ds = bd.SelectAll();
-            ddlProduto.DataSource = ds.Tables[0].DefaultView;
+            ProdutoBD produtobd = new ProdutoBD();
+            DataSet produtods = produtobd.SelectAll();
+            ddlProduto.DataSource = produtods.Tables[0].DefaultView;
             ddlProduto.DataTextField = "prod_nome";
             ddlProduto.DataValueField = "prod_id";
             ddlProduto.DataBind();
             ddlProduto.Items.Insert(0, "Selecione um produto");
+
+        }
+
+        private void LimparCampos()
+        {
+            txtQuantidade.Text = "";
+            txtSubtotal.Text = "";
+            lblMensagem.Text = "";
+            //remove seleção do ddl
+            for (int i = 0; i < ddlProduto.Items.Count; i++)
+            {
+                ddlProduto.Items[i].Selected = false;
+            }
+            //coloca o "Selecione" selecionado
+            ddlProduto.Items[0].Selected = true;
+        }
+        protected void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            ProdutoBD produtobd = new ProdutoBD();
+            Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
+
+            PedidoProduto pedidoproduto = new PedidoProduto();
+            pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
+            pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
+
+            pedidoproduto.Produto = produto;
+
+            PedidoProdutoBD pedidoprodutobd = new PedidoProdutoBD();
+            int retorno = pedidoprodutobd.Insert(pedidoproduto);
+
+            switch (retorno)
+            {
+                case 0:
+                    LimparCampos();
+                    ddlProduto.Focus();
+                    lblMensagem.Text = "Pedido Finalizado com sucesso";
+                    break;
+                case 1:
+                    //Erro no banco de dados
+                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    break;
+                case 2:
+                    //Erro geral
+                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

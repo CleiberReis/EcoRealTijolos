@@ -60,6 +60,11 @@ namespace EcoRealTijolos.Pages.Pedidos
 
             PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);
+
+            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id);
+            Session["pedidoID"] = pedidoID;
+            Response.Redirect("CadastrarPedProduto.aspx");
+
             switch (retorno)
             {
                 case 0:

@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             CADASTRAR PEDIDO - ETAPA PRODUTO<br />
-            <br />
+            &nbsp;<br />
             <asp:Label ID="lblProduto" runat="server" Text="Produto:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade:"></asp:Label>
@@ -24,10 +24,10 @@
             <br />
             <asp:Label ID="lblSubTotal" runat="server" Text="SubTotal R$:"></asp:Label>
             <br />
-            <asp:Label ID="lblSubValor" runat="server"></asp:Label>
+            <asp:TextBox ID="txtSubtotal" runat="server" Width="106px"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="btnFinalizar" runat="server" Text="Finalizar Pedido" />
+            <asp:Button ID="btnFinalizar" runat="server" Text="Finalizar Pedido" OnClick="btnFinalizar_Click" />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
             <br />

@@ -12,6 +12,8 @@ namespace EcoRealTijolos.App_Code.Classes
         public int QuantidadeTotal { get; set; }
         public Double ValorUnitario { get; set; }
 
+        public PedidoProduto PedidoProduto { get; set; }
+
         public Produto()
         {
             //

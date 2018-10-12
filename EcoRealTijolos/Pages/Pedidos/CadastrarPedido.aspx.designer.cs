@@ -121,12 +121,12 @@ namespace EcoRealTijolos.Pages.Pedidos {
         protected global::System.Web.UI.WebControls.Label lblMensagem;
         
         /// <summary>
-        /// Controle hlSelecaoProdutos.
+        /// Controle hlListarProdutos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlSelecaoProdutos;
+        protected global::System.Web.UI.WebControls.HyperLink hlListarProdutos;
     }
 }

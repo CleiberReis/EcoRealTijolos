@@ -482,7 +482,7 @@
   <ItemGroup>
     <Compile Include="App_Code\Mapped.cs" />
     <Compile Include="App_Code\Persistencia\PedidoBD.cs" />
-    <Content Include="App_Code\Persistencia\PedidoProdutoBD.cs" />
+    <Compile Include="App_Code\Persistencia\PedidoProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="Content\Master\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>

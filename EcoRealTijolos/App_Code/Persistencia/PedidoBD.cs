@@ -47,6 +47,30 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return retorno;
         }
 
+        public int GetID(DateTime data, int clienteID)
+        {
+            int pedidoID = 0;
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataReader objDataReader;
+            objConexao = Mapped.Connection();
+            //os campos abaixo são de exemplo. Você pode adicionar mais campos.
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedido WHERE ped_idCliente=?codigo and ped_data=?data ORDER BY ped_id DESC LIMIT 1", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", clienteID));
+            objCommand.Parameters.Add(Mapped.Parameter("?data", data));
+            objDataReader = objCommand.ExecuteReader();
+            while (objDataReader.Read())
+            {
+                pedidoID = Convert.ToInt32(objDataReader["ped_id"]);
+            }
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
+            return pedidoID;
+        }
+
         //selectall
         public DataSet SelectAll()
         {

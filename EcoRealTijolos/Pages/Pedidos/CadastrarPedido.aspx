@@ -49,7 +49,7 @@
             <br />
             <br />
         </div>
-        <asp:HyperLink ID="hlSelecaoProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/CadastrarPedProduto.aspx">Seleção de Produtos</asp:HyperLink>
+        <asp:HyperLink ID="hlListarProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Seleção de Produtos</asp:HyperLink>
     </form>
 </body>
 </html>
