@@ -18,7 +18,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             {
                 MateriaPrimaBD bd = new MateriaPrimaBD();
                 MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
-                txtQuantidadeMateria.Text = materia.Quantidade;
+                materia.Quantidade = Convert.ToInt32(txtQuantidadeMateria.Text);
 
                 CarregaMateriaPrima();
                 ddlNomeMateria.Focus();
@@ -39,7 +39,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
         {
             MateriaPrimaBD bd = new MateriaPrimaBD();
             MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
-            materia.Quantidade = txtQuantidadeMateria.Text;
+            materia.Quantidade = Convert.ToInt32(txtQuantidadeMateria.Text);
 
             if (bd.Update(materia))
             {

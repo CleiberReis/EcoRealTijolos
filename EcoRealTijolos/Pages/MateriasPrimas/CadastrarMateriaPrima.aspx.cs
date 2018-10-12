@@ -24,7 +24,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
         {
             MateriaPrima materia = new MateriaPrima();
             materia.Nome = txtNomeMateria.Text;
-            materia.Quantidade = txtQuantidadeMateria.Text;
+            materia.Quantidade = Convert.ToInt32(txtQuantidadeMateria.Text);
 
             MateriaPrimaBD bd = new MateriaPrimaBD();
             if (bd.Insert(materia))
