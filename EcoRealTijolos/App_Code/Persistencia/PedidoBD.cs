@@ -20,20 +20,20 @@ namespace EcoRealTijolos.App_Code.Persistencia
             int retorno = 0;
             try
             {
-            System.Data.IDbConnection objConexao;
-            System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_pedido(ped_data, ped_endereco, ped_obs, ped_idCliente) VALUES (?data, ?enderecoEntrega, ?observacao, ?idCliente)";
-            objConexao = Mapped.Connection();
-            objCommand = Mapped.Command(sql, objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
-            objCommand.Parameters.Add(Mapped.Parameter("?enderecoEntrega", pedido.EnderecoEntrega));
-            objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
-            objCommand.Parameters.Add(Mapped.Parameter("?idCliente", pedido.Cliente.Id));
+                System.Data.IDbConnection objConexao;
+                System.Data.IDbCommand objCommand;
+                string sql = "INSERT INTO tbl_pedido(ped_data, ped_endereco, ped_obs, ped_idCliente) VALUES (?data, ?enderecoEntrega, ?observacao, ?idCliente)";
+                objConexao = Mapped.Connection();
+                objCommand = Mapped.Command(sql, objConexao);
+                objCommand.Parameters.Add(Mapped.Parameter("?data", pedido.Data));
+                objCommand.Parameters.Add(Mapped.Parameter("?enderecoEntrega", pedido.EnderecoEntrega));
+                objCommand.Parameters.Add(Mapped.Parameter("?observacao", pedido.Observacao));
+                objCommand.Parameters.Add(Mapped.Parameter("?idCliente", pedido.Cliente.Id));
 
-            objCommand.ExecuteNonQuery();
-            objConexao.Close();
-            objCommand.Dispose();
-            objConexao.Dispose();
+                objCommand.ExecuteNonQuery();
+                objConexao.Close();
+                objCommand.Dispose();
+                objConexao.Dispose();
             }
             catch (MySql.Data.MySqlClient.MySqlException /*ex*/)
             {
@@ -91,11 +91,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return obj;
         }
 
-        //Select GET ID
-        //public int GetId()
-        //{
-            
-        //}
 
         //update
         public bool Update(Pedido pedido)
