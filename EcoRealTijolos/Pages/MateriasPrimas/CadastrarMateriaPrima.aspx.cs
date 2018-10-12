@@ -40,5 +40,10 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
                 lblMensagem.Text = "Erro ao Salvar";
             }
         }
+
+        protected void BtnListar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarMateriaPrima.aspx");
+        }
     }
 }

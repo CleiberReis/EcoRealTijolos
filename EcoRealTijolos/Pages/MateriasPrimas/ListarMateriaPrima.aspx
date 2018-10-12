@@ -49,6 +49,18 @@
     </div>
     <!-- End Datatable -->
     <div>
+        <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" Text="ALterar" OnClick="BtnAlterar_Click" />
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <asp:Button ID="BtnExcluir" runat="server" CssClass="btn btn-primary" Width="200px" Text="Excluir" OnClick="BtnExcluir_Click" />
+                </td>
+            </tr>
+        </table>
     </div>
     <br />
     <a href="CadastrarMateriaPrima.aspx">Cadastrar Matéria Prima</a>

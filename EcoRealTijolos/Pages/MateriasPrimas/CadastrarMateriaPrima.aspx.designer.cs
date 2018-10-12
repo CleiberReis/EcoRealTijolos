@@ -22,15 +22,6 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.TextBox txtNomeMateria;
         
         /// <summary>
-        /// Controle lblMensagem.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensagem;
-        
-        /// <summary>
         /// Controle txtQuantidadeMateria.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
         
         /// <summary>
+        /// Controle lblMensagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
         /// Controle BtnSalvar.
         /// </summary>
         /// <remarks>
@@ -47,5 +47,23 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSalvar;
+        
+        /// <summary>
+        /// Controle BtnIncluirPerda.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnIncluirPerda;
+        
+        /// <summary>
+        /// Controle BtnListar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnListar;
     }
 }

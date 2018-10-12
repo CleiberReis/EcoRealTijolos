@@ -33,9 +33,6 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtNomeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -54,6 +51,9 @@
         </div>
     </section>
     <div align="center">
+        <div class="form-group">
+            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+        </div>
         <table>
             <tr>
                 <td>
@@ -61,12 +61,15 @@
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td>
-
+                    <asp:Button ID="BtnIncluirPerda" runat="server" CssClass="btn btn-dark" Width="200px" Text="Incluir Perda" />
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <asp:Button ID="BtnListar" runat="server" CssClass="btn btn-danger" Width="200px" Text="Listar" OnClick="BtnListar_Click" />
                 </td>
             </tr>
         </table>
         <br />
         <br />
-        <a href="ListarMateriaPrima.aspx">Listar Matéria Prima</a>
     </div>
 </asp:Content>
