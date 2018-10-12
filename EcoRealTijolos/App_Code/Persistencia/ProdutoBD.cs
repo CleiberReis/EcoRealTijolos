@@ -1,10 +1,10 @@
-﻿using System;
+﻿using FATEC; //para acesso a classe Mapped
+using System;
+using System.Web;
+using EcoRealTijolos.App_Code.Classes; //para acesso a classe MateriaPrima
+using System.Data; //para uso de DataSet
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using EcoRealTijolos.App_Code.Classes;
-using System.Data;
-using FATEC;
 
 namespace EcoRealTijolos.App_Code.Persistencia
 {
@@ -14,7 +14,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_produto(pro_id, pro_nome, pro_quantidade, pro_valorUnitario) VALUES (?id, ?nome, ?quantidade, ?valorUnitario)";
+            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario) VALUES (?id, ?nome, ?quantidade, ?valorUnitario)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?id", produto.Id));
@@ -35,7 +35,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_produto", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto ORDER BY prod_nome", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
@@ -51,16 +51,16 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_produto WHERE pro_id=?codigo", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto WHERE prod_id=?codigo", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
                 obj = new Produto();
-                obj.Id = Convert.ToInt32(objDataReader["pro_id"]);
-                obj.Nome = Convert.ToString(objDataReader["pro_nome"]);
-                obj.QuantidadeTotal = Convert.ToInt32(objDataReader["pro_quantidade"]);
-                obj.ValorUnitario = Convert.ToDouble(objDataReader["pro_valorUnitario"]);
+                obj.Id = Convert.ToInt32(objDataReader["prod_id"]);
+                obj.Nome = Convert.ToString(objDataReader["prod_nome"]);
+                obj.QuantidadeTotal = Convert.ToInt32(objDataReader["prod_quantTotal"]);
+                obj.ValorUnitario = Convert.ToDouble(objDataReader["prod_valorUnitario"]);
             }
             objDataReader.Close();
             objConexao.Close();
@@ -75,12 +75,13 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_produto SET pro_nome=?nome, pro_quantidade=?quantidade, pro_valorUnitario WHERE pro_id=?codigo";
+            string sql = "UPDATE tbl_produto SET prod_nome=?nome, prod_quantTotal=?quantidade, prod_valorUnitario=?valor WHERE prod_id=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
-            objCommand.Parameters.Add(Mapped.Parameter("?valorUnitario", produto.ValorUnitario));
+            objCommand.Parameters.Add(Mapped.Parameter("?valor", produto.ValorUnitario));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", produto.Id));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -92,7 +93,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "DELETE FROM tbl_produto WHERE pro_id=?codigo";
+            string sql = "DELETE FROM tbl_produto WHERE prod_id=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));

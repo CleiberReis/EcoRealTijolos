@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.CadastrarPedido" %>
+﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.CadastrarPedido" %>
 
 <!DOCTYPE html>
 
@@ -21,7 +21,7 @@
             </asp:DropDownList>
             <br />
             <br />
-            ENDEREÇO PARA ENTREGA:<br />
+            DADOS DA ENTREGA:<br />
 
             <br />
             <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>
@@ -31,9 +31,6 @@
             <br />
             <asp:Label ID="lblObsEndereco" runat="server" Font-Size="Smaller" Text="Ex:  (Rua xxxx, 00, Bairro xxx - Cidade (UF))"></asp:Label>
             <br />
-            <br />
-            FINALIZAR ENTREGA:<br />
-            
             <br />
             <asp:Label ID="lblDtPedido" runat="server" Text="Data de Entrega: "></asp:Label>
             <br />

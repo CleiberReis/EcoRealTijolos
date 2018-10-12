@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Data;
 using System.Web.UI.WebControls;
+using EcoRealTijolos.App_Code.Classes;
+using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos.Pages.Produtos
 {
     public partial class ListarProduto : System.Web.UI.Page
     {
-        private void Carregar()
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Carregar();
+        }
+
+        protected void Carregar()
         {
             ProdutoBD bd = new ProdutoBD();
             DataSet ds = bd.SelectAll();
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
-        }
-
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Carregar();
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -30,9 +33,9 @@ namespace EcoRealTijolos.Pages.Produtos
                 case "Alterar":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     Session["ID"] = codigo;
-                    Response.Redirect("Alterar.aspx");
+                    Response.Redirect("AlterarProduto.aspx");
                     break;
-                case "Deletar":
+                case "Excluir":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     ProdutoBD bd = new ProdutoBD();
                     bd.Delete(codigo);
@@ -42,6 +45,5 @@ namespace EcoRealTijolos.Pages.Produtos
                     break;
             }
         }
-
     }
 }

@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-   <form id="form1" runat="server">
+    <form id="form1" runat="server">
         <div>
             ALTERAÇÃO DE PRODUTOS<br />
             <br />
@@ -28,9 +28,11 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="BtnAlterar" runat="server" Text="Alterar Produto" OnClick="BtnAlterar_Click" />
+            <asp:Button ID="btnAlterar" runat="server" Text="Alterar Produto" OnClick="btnAlterar_Click" />
             <br />
             <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+            <br />
+            <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
         </div>
     </form>
 </body>
