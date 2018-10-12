@@ -49,15 +49,5 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
                     break;
             }
         }
-
-        protected void BtnAlterar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AlterarMateriaPrima.aspx");
-        }
-
-        protected void BtnExcluir_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

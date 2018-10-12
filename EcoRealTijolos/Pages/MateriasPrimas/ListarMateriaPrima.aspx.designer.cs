@@ -31,12 +31,12 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.Button BtnAlterar;
         
         /// <summary>
-        /// Controle BtnExcluir.
+        /// Controle BtnNovo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnExcluir;
+        protected global::System.Web.UI.WebControls.Button BtnNovo;
     }
 }

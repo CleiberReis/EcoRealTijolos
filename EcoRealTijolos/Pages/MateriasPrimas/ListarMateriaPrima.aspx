@@ -34,13 +34,13 @@
                                     <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("mat_id")%>'>Alterar</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CommandArgument='<%# Bind("mat_id")%>'>Excluir</asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
                             <asp:BoundField DataField="mat_nome" HeaderText="Descrição" />
                             <asp:BoundField DataField="mat_quantidade" HeaderText="Quantidade" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("mat_id")%>'>Excluir</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                 </div>
@@ -53,15 +53,14 @@
         <table>
             <tr>
                 <td>
-                    <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" Text="ALterar" OnClick="BtnAlterar_Click" />
+                    <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Alterar" />
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td>
-                    <asp:Button ID="BtnExcluir" runat="server" CssClass="btn btn-primary" Width="200px" Text="Excluir" OnClick="BtnExcluir_Click" />
+                    <asp:Button ID="BtnNovo" runat="server" CssClass="btn btn-primary" Width="200px" Text="Novo Cadastro" />
                 </td>
             </tr>
         </table>
     </div>
     <br />
-    <a href="CadastrarMateriaPrima.aspx">Cadastrar Matéria Prima</a>
 </asp:Content>
