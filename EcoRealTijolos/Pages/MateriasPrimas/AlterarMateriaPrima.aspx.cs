@@ -10,7 +10,7 @@ using EcoRealTijolos.App_Code.Classes;
 
 namespace EcoRealTijolos.Pages.MateriasPrimas
 {
-    public partial class AlterarMateriaPrima : System.Web.UI.Page
+    /*public partial class AlterarMateriaPrima : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -52,5 +52,5 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
                 lblMensagem.Text = "Erro ao salvar.";
             }
         }
-    }
+    }*/
 }

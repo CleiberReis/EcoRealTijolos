@@ -56,6 +56,11 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+        internal static object getInstance()
+        {
+            throw new NotImplementedException();
+        }
+
         //select
         public MateriaPrima Select(int id)
         {

@@ -19,7 +19,8 @@
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-    <!-- Datatable Part -->
+    
+    <!-- Datatable Part 
     <section class="content-header">
         <h1 style="text-align: center">LISTA DE MATÉRIA PRIMA</h1>
     </section>
@@ -47,7 +48,7 @@
             </div>
         </div>
     </div>
-    <!-- End Datatable -->
+    <!-- End Datatable
     <div>
         <div align="center">
         <table>
@@ -62,5 +63,5 @@
             </tr>
         </table>
     </div>
-    <br />
+    <br /> -->
 </asp:Content>
