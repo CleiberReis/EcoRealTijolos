@@ -13,6 +13,10 @@ namespace EcoRealTijolos.App_Code.Persistencia
     public class MateriaPrimaBD
     {
         //métodos
+        internal static object getInstance()
+        {
+            throw new NotImplementedException();
+        }
 
         //insert
         public bool Insert(MateriaPrima materia)
@@ -34,6 +38,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
 
             return true;
         }
+        
         //selectall
         public DataSet SelectAll()
         {

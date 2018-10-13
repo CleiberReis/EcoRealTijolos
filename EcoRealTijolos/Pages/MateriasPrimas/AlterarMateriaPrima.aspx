@@ -34,9 +34,6 @@
                             <asp:DropDownList ID="ddlNomeMateria" runat="server" CssClass="form-control">
                             </asp:DropDownList>
                         </div>
-                        <div class="form-group">
-                            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -55,13 +52,18 @@
         </div>
     </section>
     <div align="center">
+        <div class="form-group">
+            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+        </div>
         <table>
             <tr>
                 <td>
-                    <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
+                    <asp:Button ID="BtnVoltarLista" runat="server" CssClass="btn btn-facebook" Width="80px" Text="Voltar" OnClick="BtnVoltarLista_Click" />
                 </td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td></td>
+                <td>
+                    <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
+                </td>
             </tr>
         </table>
         <br />

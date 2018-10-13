@@ -49,27 +49,30 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div align="center">
-        <div class="form-group">
-            <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+        <div align="center">
+            <div class="form-group">
+                <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:Button ID="BtnIncluirPerda" runat="server" CssClass="btn btn-dark" Width="200px" Text="Incluir Perda" />
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:Button ID="BtnLista" runat="server" CssClass="btn btn-danger" Width="200px" Text="Lista" OnClick="BtnLista_Click" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
         </div>
-        <table>
-            <tr>
-                <td>
-                    <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td>
-                    <asp:Button ID="BtnIncluirPerda" runat="server" CssClass="btn btn-dark" Width="200px" Text="Incluir Perda" />
-                </td>
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td>
-                    <asp:Button ID="BtnListar" runat="server" CssClass="btn btn-danger" Width="200px" Text="Listar" OnClick="BtnListar_Click" />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <br />
-    </div>
+    </section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
+
 </asp:Content>

@@ -11,7 +11,11 @@
     <form id="form1" runat="server">
         <div>
             CADASTRAR PEDIDO - ETAPA PRODUTO<br />
-            &nbsp;<br />
+            &nbsp;<asp:Label ID="lblPedido" runat="server" OnDataBinding="Page_Load" Visible="False"></asp:Label>
+            <br />
+            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False">
+            </asp:DropDownList>
+            <br />
             <asp:Label ID="lblProduto" runat="server" Text="Produto:"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade:"></asp:Label>

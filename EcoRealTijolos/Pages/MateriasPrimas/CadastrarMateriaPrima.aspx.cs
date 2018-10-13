@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using EcoRealTijolos.App_Code.Classes;
@@ -17,6 +18,7 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Estoque - Matéria Prima";
+
             }
         }
 
@@ -41,9 +43,9 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             }
         }
 
-        protected void BtnListar_Click(object sender, EventArgs e)
+        protected void BtnLista_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ListarMateriaPrima.aspx");
+            Response.Redirect("ListarMateriaPrima.aspx", false);
         }
     }
 }

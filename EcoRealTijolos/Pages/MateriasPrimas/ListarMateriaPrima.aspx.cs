@@ -49,5 +49,10 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
                     break;
             }
         }
+
+        protected void BtnNovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastrarMateriaPrima.aspx", false);
+        }
     }
 }

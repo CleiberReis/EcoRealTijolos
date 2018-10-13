@@ -60,17 +60,18 @@ namespace EcoRealTijolos.Pages.Pedidos
 
             PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);
-
-            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id);
+            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id, pedido.EnderecoEntrega, pedido.Observacao);
             Session["pedidoID"] = pedidoID;
             Response.Redirect("CadastrarPedProduto.aspx");
 
             switch (retorno)
             {
                 case 0:
+
                     LimparCampos();
                     ddlCliente.Focus();
                     lblMensagem.Text = "Pedido salvo com sucesso";
+                    Response.Redirect("CadastrarPedProduto.aspx");
                     break;
                 case 1:
                     //Erro no banco de dados

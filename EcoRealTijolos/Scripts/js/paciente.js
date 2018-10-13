@@ -21,7 +21,7 @@ function addRow() {
 var tabla, data;
 
 function addRowDT(data) {
-    tabla = $("#tbl_pacientes").DataTable({
+    tabla = $("#tbl_materia").DataTable({
         "aaSorting": [[0, 'desc']],
         "bSort": true,
         "aoColumns": [
@@ -39,14 +39,11 @@ function addRowDT(data) {
 
     for (var i = 0; i < data.length; i++) {
         tabla.fnAddData([
-            data[i].IdPaciente,
-            data[i].Nombres,
-            (data[i].ApPaterno + " " + data[i].ApMaterno),
-            ((data[i].Sexo == 'M')? "Masculino": "Femenino"),
-            data[i].Edad,
-            data[i].Direccion,
-            '<button type="button" value="Actualizar" title="Actualizar" class="btn btn-primary btn-edit" data-target="#imodal" data-toggle="modal"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>&nbsp;' +
-            '<button type="button" value="Eliminar" title="Eliminar" class="btn btn-danger btn-delete"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>'
+            data[i].Id,
+            data[i].Nome,
+            data[i].Quantidade,
+            '<button type="button" value="Atualizar" title="Atualizar" class="btn btn-primary btn-edit" data-target="#imodal" data-toggle="modal"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>&nbsp;' +
+            '<button type="button" value="Excluir" title="Excluir" class="btn btn-danger btn-delete"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>'
            
         ]);
     }
@@ -56,7 +53,7 @@ function addRowDT(data) {
 function sendDataAjax() {
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/ListarPacientes",
+        url: "CadastrarMateriaPrima.aspx/ListarMateriaPrima",
         data: {},
         contentType: 'application/json; charset=utf-8',
         error: function (xhr, ajaxOptions, thrownError) {
@@ -74,7 +71,7 @@ function updateDataAjax() {
 
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/ActualizarDatosPaciente",
+        url: "CadastrarMateriaPrima.aspx/AtualizarDadosMateria",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
@@ -83,9 +80,9 @@ function updateDataAjax() {
         },
         success: function (response) {
             if (response.d) {
-                alert("Registro actualizado de manera correcta.");
+                alert("Cadastro atualizado com sucesso.");
             } else {
-                alert("No se pudo actualizar el registro.");
+                alert("Não foi possível atualizar o cadastro.");
             }
         }
     });
@@ -97,7 +94,7 @@ function deleteDataAjax(data) {
 
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/EliminarDatosPaciente",
+        url: "CadastrarMateriaPrima.aspx/ExcluirDadosMateria",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
@@ -106,9 +103,9 @@ function deleteDataAjax(data) {
         },
         success: function (response) {
             if (response.d) {
-                alert("Registro eliminado de manera correcta.");
+                alert("Cadastro excluído com sucesso.");
             } else {
-                alert("No se pudo eliminar el registro.");
+                alert("Não foi possível excluir o cadastro.");
             }
         }
     });
@@ -143,12 +140,12 @@ $(document).on('click', '.btn-delete', function (e) {
 
 // cargar datos en el modal
 function fillModalData() {
-    $("#txtFullName").val(data[1] + " " + data[2]);
-    $("#txtModalDireccion").val(data[5]);
+    $("#txtDescricaoMateria").val(data[1] + " " + data[2]);
+    $("#txtQuantiMateria").val(data[5]);
 }
 
 // enviar la informacion al servidor
-$("#btnactualizar").click(function (e) {
+$("#btnatualizar").click(function (e) {
     e.preventDefault();
     updateDataAjax();
 });

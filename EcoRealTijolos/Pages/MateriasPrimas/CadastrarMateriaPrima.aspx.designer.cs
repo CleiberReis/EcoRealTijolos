@@ -58,12 +58,12 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.Button BtnIncluirPerda;
         
         /// <summary>
-        /// Controle BtnListar.
+        /// Controle BtnLista.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnListar;
+        protected global::System.Web.UI.WebControls.Button BtnLista;
     }
 }

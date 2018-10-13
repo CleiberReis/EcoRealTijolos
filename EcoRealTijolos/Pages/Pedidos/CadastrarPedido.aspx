@@ -1,27 +1,34 @@
-﻿<%@Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.CadastrarPedido" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="CadastrarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.CadastrarPedido" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    
-    <form id="form1" runat="server">
-        <div>
-
-            CADASTRAR PEDIDOS<br />
-            <br />
-            <br />
-
-            <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
-            <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px">
-            </asp:DropDownList>
-            <br />
-            <br />
-            DADOS DA ENTREGA:<br />
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- IonIcons -->
+    <link href="../../Content/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="../../Content/css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../Content/jAlert/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery.ui.draggable.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
+    <section class="content-header">
+        <h1 style="text-align: center">CADASTRO DE PEDIDOS</h1>
+    </section>
+    <div>
+        <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
+        <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px">
+        </asp:DropDownList>
+        <br />
+        <br />
+        DADOS DA ENTREGA:<br />
 
             <br />
             <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>

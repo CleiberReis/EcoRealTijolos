@@ -12,13 +12,17 @@
         <div>
             LISTA DE PEDIDOS
             <br /><br />
-            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+            <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="ped_id" HeaderText="ID do Pedido" />
                     <asp:BoundField DataField="ped_idCliente" HeaderText="ID do Cliente" />
+                    <asp:BoundField DataField="prod_id" HeaderText="ID do Produto" />
                     <asp:BoundField DataField="ped_endereco" HeaderText="Endereço de Entrega" />
                     <asp:BoundField DataField="ped_data" HeaderText="Data de Entrega" />
                     <asp:BoundField DataField="ped_obs" HeaderText="Observações do Pedido" />
+                    <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quant.Produto" />
+                    <asp:BoundField DataField="pedpro_subtotal" HeaderText="Subtotal Pedido" />
                     <asp:TemplateField HeaderText="Alteração">
                         <ItemTemplate>
                             <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
@@ -32,14 +36,16 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                <SortedDescendingHeaderStyle BackColor="#242121" />
+                <EditRowStyle BackColor="#999999" />
+                <FooterStyle BackColor="#5D7B9D" ForeColor="Black" />
+                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#284775" ForeColor="Black" HorizontalAlign="Right" />
+                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
         </div>
     </form>

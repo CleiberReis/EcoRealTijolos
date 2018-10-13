@@ -22,6 +22,15 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.DropDownList ddlNomeMateria;
         
         /// <summary>
+        /// Controle txtQuantidadeMateria.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
+        
+        /// <summary>
         /// Controle lblMensagem.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,13 @@ namespace EcoRealTijolos.Pages.MateriasPrimas {
         protected global::System.Web.UI.WebControls.Label lblMensagem;
         
         /// <summary>
-        /// Controle txtQuantidadeMateria.
+        /// Controle BtnVoltarLista.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQuantidadeMateria;
+        protected global::System.Web.UI.WebControls.Button BtnVoltarLista;
         
         /// <summary>
         /// Controle BtnSalvar.

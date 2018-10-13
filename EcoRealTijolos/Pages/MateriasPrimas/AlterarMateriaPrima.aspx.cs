@@ -16,12 +16,12 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
         {
             if (!Page.IsPostBack)
             {
-                MateriaPrimaBD bd = new MateriaPrimaBD();
-                MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
-                materia.Quantidade = Convert.ToInt32(txtQuantidadeMateria.Text);
-
                 CarregaMateriaPrima();
                 ddlNomeMateria.Focus();
+
+                /*MateriaPrimaBD bd = new MateriaPrimaBD();
+                MateriaPrima materia = bd.Select(Convert.ToInt32(Session["ID"]));
+                materia.Quantidade = Convert.ToInt32(txtQuantidadeMateria.Text);*/
             }
         }
         private void CarregaMateriaPrima()
@@ -51,6 +51,11 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             {
                 lblMensagem.Text = "Erro ao salvar.";
             }
+        }
+
+        protected void BtnVoltarLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarMateriaPrima.aspx", false);
         }
     }
 }
