@@ -20,16 +20,17 @@ namespace EcoRealTijolos.Pages.Pedidos
                 ddlProduto.Focus();
             }
         }
-
+    
         private void Carregar()
         {
+
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
             ddlProduto.DataSource = produtods.Tables[0].DefaultView;
             ddlProduto.DataTextField = "prod_nome";
             ddlProduto.DataValueField = "prod_id";
             ddlProduto.DataBind();
-            ddlProduto.Items.Insert(0, "Selecione um produto");
+            ddlProduto.Items.Insert(0, "selecione um produto");
 
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
@@ -40,49 +41,11 @@ namespace EcoRealTijolos.Pages.Pedidos
 
         }
 
-        private void gdvItens_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (e.ColumnIndex == 3)
-                {
-                    decimal cell1 = Convert.ToDecimal(gdvItens.CurrentRow.Cells[2].Value);
-                    decimal cell2 = Convert.ToDecimal(gdvItens.CurrentRow.Cells[3].Value);
-                    if (cell1.ToString() != "" && cell2.ToString() != "")
-                    {
-                        gdvItens.CurrentRow.Cells[4].Value = cell1 * cell2;
-                    }
-                }
-                decimal valorTotal = 0;
-                string valor = "";
-                if (gdvItens.CurrentRow.Cells[4].Value != null)
-                {
-                    valor = gdvItens.CurrentRow.Cells[4].Value.ToString();
-                    if (!valor.Equals(""))
-                    {
-                        for (int i = 0; i <= gdvItens.RowCount - 1; i++)
-                        {
-                            if (gdvItens.Rows[i].Cells[4].Value != null)
-                                valorTotal += Convert.ToDecimal(gdvItens.Rows[i].Cells[4].Value);
-                        }
-                        if (valorTotal == 0)
-                        {
-                            MessageBox.Show("Nenhum registro encontrado");
-                        }
-                        txtTotal.Text = valorTotal.ToString("C");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
         private void LimparCampos()
         {
             txtQuantidade.Text = "";
             txtSubtotal.Text = "";
+            txtValorUnitario.Text = "";
             lblMensagem.Text = "";
             //remove seleção do ddl
             for (int i = 0; i < ddlProduto.Items.Count; i++)
@@ -91,6 +54,12 @@ namespace EcoRealTijolos.Pages.Pedidos
             }
             //coloca o "Selecione" selecionado
             ddlProduto.Items[0].Selected = true;
+        }
+
+        protected void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double calcular = Convert.ToDouble(txtValorUnitario.Text) * Convert.ToInt32(txtQuantidade.Text);
+            txtSubtotal.Text = calcular.ToString();
         }
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
@@ -103,7 +72,6 @@ namespace EcoRealTijolos.Pages.Pedidos
 
 
             PedidoProduto pedidoproduto = new PedidoProduto();
-
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
 
@@ -112,7 +80,7 @@ namespace EcoRealTijolos.Pages.Pedidos
 
             PedidoProdutoBD pedidoprodutobd = new PedidoProdutoBD();
             int retorno = pedidoprodutobd.Insert(pedidoproduto);
-
+            
             switch (retorno)
             {
                 case 0:
@@ -132,6 +100,8 @@ namespace EcoRealTijolos.Pages.Pedidos
                     break;
             }
         }
+
+        
     }
 }
 
