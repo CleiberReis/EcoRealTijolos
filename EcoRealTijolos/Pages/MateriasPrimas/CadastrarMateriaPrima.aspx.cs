@@ -22,44 +22,6 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             }
         }
 
-        [WebMethod]
-        public static List<MateriaPrima> ListarMateriaPrima()
-        {
-            List<MateriaPrima> Lista = null;
-            try
-            {
-                Lista = MateriaPrimaBD.getInstance().ListarMateriaPrima();
-            }
-            catch (Exception ex)
-            {
-                Lista = new List<MateriaPrima>();
-            }
-            return Lista;
-        }
-
-        [WebMethod]
-        public static bool AtualizarDadosMateria(String nome, String quantidade)
-        {
-            MateriaPrima objPaciente = new MateriaPrima()
-            {
-                Nome = nome,
-                Quantidade = Convert.ToInt32(quantidade)
-            };
-
-            bool ok = MateriaPrimaBD.getInstance().Atualizar(objPaciente);
-            return ok;
-        }
-
-        [WebMethod]
-        public static bool ExcluirDadosMateria(String id)
-        {
-            Int32 idMateria = Convert.ToInt32(id);
-
-            bool ok = MateriaPrimaBD.getInstance().Excluir(idMateria);
-
-            return ok;
-
-        }
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             MateriaPrima materia = new MateriaPrima();
@@ -79,6 +41,11 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             {
                 lblMensagem.Text = "Erro ao Salvar";
             }
+        }
+
+        protected void BtnLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarMateriaPrima.aspx", false);
         }
     }
 }

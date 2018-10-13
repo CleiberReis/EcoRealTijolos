@@ -21,9 +21,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
+    <section class="content-header">
+        <h1 style="text-align: center">CADASTRO DE CLIENTES</h1>
+    </section>
     <div class="container-fluid">
-        <asp:Label runat="server" Text="Cadastro de Clientes"></asp:Label>
-        <br />
         <asp:Label runat="server" Text="Nome:"></asp:Label>
         <br />
         <asp:TextBox runat="server" ID="txtNome" Text=""></asp:TextBox>
