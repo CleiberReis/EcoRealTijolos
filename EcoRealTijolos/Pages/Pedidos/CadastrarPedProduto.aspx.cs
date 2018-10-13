@@ -20,16 +20,17 @@ namespace EcoRealTijolos.Pages.Pedidos
                 ddlProduto.Focus();
             }
         }
-
+    
         private void Carregar()
         {
+
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
             ddlProduto.DataSource = produtods.Tables[0].DefaultView;
             ddlProduto.DataTextField = "prod_nome";
             ddlProduto.DataValueField = "prod_id";
             ddlProduto.DataBind();
-            ddlProduto.Items.Insert(0, "Selecione um produto");
+            ddlProduto.Items.Insert(0, "selecione um produto");
 
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
@@ -44,6 +45,7 @@ namespace EcoRealTijolos.Pages.Pedidos
         {
             txtQuantidade.Text = "";
             txtSubtotal.Text = "";
+            txtValorUnitario.Text = "";
             lblMensagem.Text = "";
             //remove seleção do ddl
             for (int i = 0; i < ddlProduto.Items.Count; i++)
@@ -52,6 +54,12 @@ namespace EcoRealTijolos.Pages.Pedidos
             }
             //coloca o "Selecione" selecionado
             ddlProduto.Items[0].Selected = true;
+        }
+
+        protected void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double calcular = Convert.ToDouble(txtValorUnitario.Text) * Convert.ToInt32(txtQuantidade.Text);
+            txtSubtotal.Text = calcular.ToString();
         }
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
@@ -64,7 +72,6 @@ namespace EcoRealTijolos.Pages.Pedidos
 
 
             PedidoProduto pedidoproduto = new PedidoProduto();
-
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
 
@@ -73,7 +80,7 @@ namespace EcoRealTijolos.Pages.Pedidos
 
             PedidoProdutoBD pedidoprodutobd = new PedidoProdutoBD();
             int retorno = pedidoprodutobd.Insert(pedidoproduto);
-
+            
             switch (retorno)
             {
                 case 0:
@@ -93,6 +100,8 @@ namespace EcoRealTijolos.Pages.Pedidos
                     break;
             }
         }
+
+        
     }
 }
 

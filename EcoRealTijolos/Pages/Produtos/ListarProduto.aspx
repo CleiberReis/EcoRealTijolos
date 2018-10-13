@@ -12,10 +12,10 @@
         <div>
             LISTA DE PRODUTOS<br />
             <br />
-            <br />
             
             <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
-            <br />
+            <br /><br />
+            <asp:HyperLink ID="hlCadastrar" runat="server" NavigateUrl="~/Pages/Produtos/CadastrarProduto.aspx">Cadastrar um Novo Produto</asp:HyperLink>
             <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField DataField="prod_id" HeaderText="ID do Produto" />
@@ -36,8 +36,9 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
+            
             <br /><br />
-            <asp:HyperLink ID="hlCadastrar" runat="server" NavigateUrl="~/Pages/Produtos/CadastrarProduto.aspx">Cadastrar um Novo Produtos</asp:HyperLink>
+            <asp:HyperLink ID="hlProduto" runat="server" NavigateUrl="~/Pages/Pedidos/CadastrarPedProduto.aspx">Voltar para o pedido em andamento</asp:HyperLink>
         </div>
     </form>
 </body>

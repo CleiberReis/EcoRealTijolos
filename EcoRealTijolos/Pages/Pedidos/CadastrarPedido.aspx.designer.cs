@@ -74,7 +74,7 @@ namespace EcoRealTijolos.Pages.Pedidos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtData;
-           
+        
         /// <summary>
         /// Controle lblObsPedido.
         /// </summary>
@@ -119,6 +119,5 @@ namespace EcoRealTijolos.Pages.Pedidos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlListarProdutos;
-        
     }
 }
