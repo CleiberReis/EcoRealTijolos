@@ -31,6 +31,13 @@ namespace EcoRealTijolos.Pages.Pedidos
             ddlProduto.DataBind();
             ddlProduto.Items.Insert(0, "Selecione um produto");
 
+            PedidoBD pedidobd = new PedidoBD();
+            DataSet pedidods = pedidobd.SelectAllPedidos();
+            ddlPedido.DataSource = pedidods.Tables[0].DefaultView;
+            ddlPedido.DataTextField = "ped_id";
+            ddlPedido.DataValueField = "ped_id";
+            ddlPedido.DataBind();
+
         }
 
         private void LimparCampos()
@@ -51,15 +58,20 @@ namespace EcoRealTijolos.Pages.Pedidos
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
 
+            PedidoBD pedidobd = new PedidoBD();
+            Pedido pedido = pedidobd.Select(Convert.ToInt32(ddlPedido.SelectedItem.Value));
+
+
             PedidoProduto pedidoproduto = new PedidoProduto();
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
 
             pedidoproduto.Produto = produto;
+            pedidoproduto.Pedido = pedido;
 
             PedidoProdutoBD pedidoprodutobd = new PedidoProdutoBD();
             int retorno = pedidoprodutobd.Insert(pedidoproduto);
-
+            
             switch (retorno)
             {
                 case 0:

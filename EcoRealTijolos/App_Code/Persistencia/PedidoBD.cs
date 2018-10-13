@@ -47,7 +47,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return retorno;
         }
 
-        public int GetID(DateTime data, int clienteID)
+        public int GetID(DateTime data, int clienteID, String endereco, String observacao)
         {
             int pedidoID = 0;
             System.Data.IDbConnection objConexao;
@@ -55,9 +55,11 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
             //os campos abaixo são de exemplo. Você pode adicionar mais campos.
-            objCommand = Mapped.Command("SELECT * FROM tbl_pedido WHERE ped_idCliente=?codigo and ped_data=?data ORDER BY ped_id DESC LIMIT 1", objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", clienteID));
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedido WHERE ped_data=?data and ped_idCliente=?codigo and ped_endereco=?endereco and ped_obs=?observacao ORDER BY ped_id DESC LIMIT 1", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?data", data));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", clienteID));
+            objCommand.Parameters.Add(Mapped.Parameter("?endereco", endereco));
+            objCommand.Parameters.Add(Mapped.Parameter("?observacao", observacao));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
@@ -79,7 +81,29 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pedido", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN tbl_pedido ON tbl_pedido.ped_id = tbl_pedidoproduto.ped_id", objConexao);
+            //            ("SELECT * FROM tbl_produtofornecedor INNER JOIN
+            //tbl_produto ON tbl_produto.pro_codigo = tbl_produtofornecedor.pro_codigo INNER JOIN
+            //tbl_fornecedor ON tbl_fornecedor.for_codigo = tbl_produtofornecedor.for_codigo WHERE
+            //tbl_produto.pro_codigo =? produto ORDER BY for_nome; ", objConexao);
+            //objCommand.Parameters.Add(Mapped.Parameter("?pedido", pedido));
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+        //selectall Para A tela de PedidoProduto
+        public DataSet SelectAllPedidos()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedido ORDER BY ped_id DESC LIMIT 1", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
