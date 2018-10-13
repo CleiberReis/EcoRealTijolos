@@ -30,29 +30,6 @@
         <br />
         DADOS DA ENTREGA:<br />
 
-        <br />
-        <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>
-        <br />
-        <asp:TextBox ID="txtEndereco" runat="server" Width="562px" Height="24px"></asp:TextBox>
-
-        <br />
-        <asp:Label ID="lblObsEndereco" runat="server" Font-Size="Smaller" Text="Ex:  (Rua xxxx, 00, Bairro xxx - Cidade (UF))"></asp:Label>
-        <br />
-        <br />
-        <asp:Label ID="lblDtPedido" runat="server" Text="Data de Entrega: "></asp:Label>
-        <br />
-        <asp:TextBox ID="txtData" runat="server" Width="114px" Height="21px"></asp:TextBox>
-        <br />
-        <br />
-
-<<<<<<< HEAD
-            <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
-            <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px">
-            </asp:DropDownList>
-            <br />
-            <br />
-            DADOS DA ENTREGA:<br />
-
             <br />
             <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>
             <br />
@@ -79,24 +56,7 @@
             <br />
             <br />
         </div>
-        <asp:HyperLink ID="hlListarProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Lista de Produtos</asp:HyperLink>
+        <asp:HyperLink ID="hlListarProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Seleção de Produtos</asp:HyperLink>
     </form>
 </body>
 </html>
-=======
-        <asp:Label ID="lblObsPedido" runat="server" Text="Observação do Pedido: "></asp:Label>
-        <br />
-        <asp:TextBox ID="txtObsPedido" runat="server" Width="406px" Height="21px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Button ID="BtnSalvar" runat="server" OnClick="BtnSalvar_Click" Text="Salvar" />
-        <br />
-        <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-        <br />
-        <br />
-    </div>
-    <asp:HyperLink ID="hlListarProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Alteração de Produtos</asp:HyperLink>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
-</asp:Content>
->>>>>>> 026578511d18096bcdbf7f38b5c8c35376b20eb7
