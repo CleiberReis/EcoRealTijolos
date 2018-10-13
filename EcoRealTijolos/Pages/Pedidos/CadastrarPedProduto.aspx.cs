@@ -52,6 +52,7 @@ namespace EcoRealTijolos.Pages.Pedidos
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
 
             PedidoProduto pedidoproduto = new PedidoProduto();
+
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
 
