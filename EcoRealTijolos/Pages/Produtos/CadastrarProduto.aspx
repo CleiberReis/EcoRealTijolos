@@ -1,40 +1,98 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastrarProduto.aspx.cs" Inherits="EcoRealTijolos.Pages.Produtos.CadastrarProduto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="~/Content/Master/Home.Master" CodeBehind="CadastrarProduto.aspx.cs" Inherits="EcoRealTijolos.Pages.Produtos.CadastrarProduto" %>
 
-<!DOCTYPE html>
+<asp:content id="Content1" contentplaceholderid="head" runat="server">
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- IonIcons -->
+    <link href="../../Content/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <script src="../../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../Content/jAlert/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery.ui.draggable.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/plugins/datatables/jquery.dataTables.js"></script>
+    <link href="../../Content/css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
+</asp:content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            CADASTRO DE PRODUTOS<br />
-            <br />
-            <br />
-            <asp:Label ID="lblNome" runat="server" Text="Nome do Produto:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblValor" runat="server" Text="Valor Unitário do Produto:"></asp:Label>
-            <br />
-&nbsp;<asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade em Estoque:"></asp:Label>
-            <br />
-            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
-            <br />
-            <br />
-            <br />
-            <asp:Button ID="btnSalvar" runat="server" Text="Salvar Produto" OnClick="btnSalvar_Click" />
-            <br />
-            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-            <br />
+<asp:content id="Content2" contentplaceholderid="contentBody" runat="server">
+    <section class="content-header">
+        <h1 style="text-align: center">CADASTRO DE PRODUTOS</h1>
+    </section>
+
+        <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+
+                        <div class="form-group">
+                            <label>NOME DO PRODUTO</label>
+                        </div>
+                        <div class="form-group">
+                            &nbsp;<asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       </div>
+
+                        <div class="form-group">
+                            <label>VALOR UNITÁRIO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>QUANTIDADE</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="TextBox1" runat="server" Width="170px"></asp:TextBox>
+                        </div>
+
+                        <br />
+                        <div class="form-group">
+                             <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>QUANTIDADE</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div align="center">
+                <div class="form-group">
+                    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                </div>
+
+                <table>
+                    <tr>
+                      <td>
+                          <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Salvar Produto" OnClick="btnSalvar_Click" />
+                       </td>
+                    </tr>
+                </table>
+                </ div>
+                <br />
+                <br />
+                    <div class="form-group">
+                
             <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
-            <br />
-        </div>
-    </form>
-</body>
-</html>
+          
+                        </div>
+                <br />
+                <br />
+        
+            </section>
+
+ </asp:content>
+<asp:content id="Content3" contentplaceholderid="footer" runat="server">
+</asp:content>
