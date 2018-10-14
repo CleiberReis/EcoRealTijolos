@@ -22,7 +22,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <!-- Datatable Part -->
     <section class="content-header">
-        <h1 style="text-align: center">LISTAR CLIENTES</h1>
+        <h1 style="text-align: center">LISTA DE PRODUTOS</h1>
     </section>
     <div class="row">
         <div class="col-md-12">
@@ -59,7 +59,7 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Button ID="BtnNovoProduto" runat="server" Text="Novo Cadastro de Produto" OnClick="BtnNovoProduto_Click" />
+                        <asp:Button ID="BtnNovo" runat="server" CssClass="btn btn-primary" Width="200px" Text="Novo Produto" OnClick="BtnNovo_Click" />
                     </td>
                 </tr>
             </table>
