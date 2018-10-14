@@ -16,6 +16,9 @@ namespace EcoRealTijolos.Pages.Pedidos
         {
             if (!Page.IsPostBack)
             {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Pedidos";
+
                 CarregaClientes();
                 ddlCliente.Focus();
             }

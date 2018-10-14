@@ -57,8 +57,6 @@
             </table>
         </div>
     </div>
-    <br />
-    <a href="CadastrarCliente.aspx">Cadastro de Clientes</a>
 
     <!-- Scripts -->
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>

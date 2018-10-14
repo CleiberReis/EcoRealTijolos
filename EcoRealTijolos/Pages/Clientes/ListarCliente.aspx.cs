@@ -22,7 +22,13 @@ namespace EcoRealTijolos.Pages.Clientes
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Carrega();
+            if (!Page.IsPostBack)
+            {
+                Carrega();
+
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Clientes";
+            }
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)

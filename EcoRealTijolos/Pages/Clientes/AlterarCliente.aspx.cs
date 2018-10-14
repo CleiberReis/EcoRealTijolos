@@ -16,6 +16,10 @@ namespace EcoRealTijolos.Pages.Clientes
         {
             if (!Page.IsPostBack)
             {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Clientes";
+
+
                 ClienteBD bd = new ClienteBD();
                 Cliente cliente = bd.Select(Convert.ToInt32(Session["ID"]));
                 txtNome.Text = cliente.Nome;
@@ -47,6 +51,11 @@ namespace EcoRealTijolos.Pages.Clientes
             {
                 lblMensagem.Text = "Erro ao salvar.";
             }
+        }
+
+        protected void BtnLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarCliente.aspx", false);
         }
     }
 }

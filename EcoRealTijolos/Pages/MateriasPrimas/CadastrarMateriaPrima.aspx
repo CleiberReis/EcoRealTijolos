@@ -28,9 +28,7 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>DESCRIÇÃO</label>
-                        </div>
-                        <div class="form-group">
+                            <label>DESCRIÇÃO:</label>
                             <asp:TextBox ID="txtNomeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
@@ -40,9 +38,7 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>QUANTIDADE</label>
-                        </div>
-                        <div class="form-group">
+                            <label>QUANTIDADE:</label>
                             <asp:TextBox ID="txtQuantidadeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
