@@ -42,5 +42,10 @@ namespace EcoRealTijolos.Pages.Clientes
                 lblMensagem.Text = "Erro ao salvar.";
             }
         }
+
+        protected void BtnLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarCliente.aspx", false);
+        }
     }
 }

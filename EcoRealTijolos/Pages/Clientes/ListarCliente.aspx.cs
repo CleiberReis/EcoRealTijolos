@@ -46,5 +46,9 @@ namespace EcoRealTijolos.Pages.Clientes
             }
         }
 
+        protected void BtnNovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastrarCliente.aspx", false);
+        }
     }
 }
