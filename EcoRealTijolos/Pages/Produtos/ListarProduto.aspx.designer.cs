@@ -22,22 +22,13 @@ namespace EcoRealTijolos.Pages.Produtos {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Controle BtnNovoProduto.
+        /// Controle BtnCadastrarProduto.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnNovoProduto;
-        
-        /// <summary>
-        /// Controle hlProduto.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlProduto;
+        protected global::System.Web.UI.WebControls.Button BtnCadastrarProduto;
         
         /// <summary>
         /// Controle hlHome.
@@ -47,6 +38,15 @@ namespace EcoRealTijolos.Pages.Produtos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlHome;
+        
+        /// <summary>
+        /// Controle hlProduto.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlProduto;
         
         /// <summary>
         /// Controle hlCadastrar.

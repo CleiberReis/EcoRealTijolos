@@ -36,16 +36,10 @@
                             <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar"
-                                        CommandArgument='<%# Bind("prod_id")%>'>Alterar</asp:LinkButton>
+                                      <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton> CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="LinkButton1" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir"
-                                        CommandArgument='<%# Bind("prod_id")%>'>Excluir</asp:LinkButton>
-                                </ItemTemplate>
-                            </asp:TemplateField>
+    
                         </Columns>
                     </asp:GridView>
 
@@ -59,7 +53,9 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Button ID="BtnNovoProduto" runat="server" Text="Novo Cadastro de Produto" OnClick="BtnNovoProduto_Click" />
+                       
+                        <asp:Button ID="BtnCadastrarProduto" runat="server" CssClass="btn btn-primary" Width="200px" Text="Cadastrar Produto" OnClick="BtnCadastrarProduto_Click" />
+                       
                     </td>
                 </tr>
             </table>
@@ -69,10 +65,11 @@
     <br />
     <br />
 
-
+    <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
+    <br />
+    <br />
     <asp:HyperLink ID="hlProduto" runat="server" NavigateUrl="~/Pages/Pedidos/CadastrarPedProduto.aspx">Voltar para o pedido em andamento</asp:HyperLink>
     <br />
-    <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
     <br />
     <asp:HyperLink ID="hlCadastrar" runat="server" NavigateUrl="~/Pages/Produtos/CadastrarProduto.aspx">Cadastrar um Novo Produto</asp:HyperLink>
     <br />
