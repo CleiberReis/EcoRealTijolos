@@ -45,5 +45,10 @@ namespace EcoRealTijolos.Pages.Produtos
                     break;
             }
         }
+
+        protected void BtnNovoProduto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastrarProduto.aspx", false);
+        }
     }
 }
