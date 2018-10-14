@@ -24,6 +24,7 @@ namespace EcoRealTijolos.Pages.Clientes
                 txtEmail.Text = cliente.Email;
             }
         }
+        
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {

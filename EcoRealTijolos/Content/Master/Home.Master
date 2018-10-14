@@ -141,8 +141,8 @@
                         </a>
                         <ul class="treeview-menu">
                             <li>
-                                <a href="../../Pages/Clientes/CadastrarCliente.aspx"><i class="fa fa-angle-double-right"></i>Cadastro</a>
-                                <a href="../../Pages/Clientes/AlterarCliente.aspx"><i class="fa fa-angle-double-right"></i>Alterar</a>
+                                <a href="../../Pages/Clientes/CadastrarCliente.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar</a>
+                                <a href="../../Pages/Clientes/ListarCliente.aspx"><i class="fa fa-angle-double-right"></i>Listar</a>
                             </li>
                         </ul>
                     </li>
