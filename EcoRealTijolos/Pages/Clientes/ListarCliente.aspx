@@ -20,22 +20,44 @@
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-    <div class="container-fluid">
-        <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand">
-            <Columns>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("cli_id")%>'>Alterar</asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CommandArgument='<%# Bind("cli_id")%>'>Excluir</asp:LinkButton>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
+    <!-- Datatable Part -->
+    <section class="content-header">
+        <h1 style="text-align: center">LISTA DE MATÉRIA PRIMA</h1>
+    </section>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body table-responsive">
+                    <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" CssClass="table table-bordered table-hover col-md-12" AutoGenerateColumns="False">
+                        <Columns>
+                            <asp:BoundField DataField="cli_nome" HeaderText="Nome" />
+                            <asp:BoundField DataField="cli_cpf" HeaderText="CPF" />
+                            <asp:BoundField DataField="cli_telefone" HeaderText="Telefone" />
+                            <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- End Datatable -->
+    <div>
+        <div align="center">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="BtnNovo" runat="server" CssClass="btn btn-primary" Width="200px" Text="Novo Cadastro" OnClick="BtnNovo_Click" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
     <a href="CadastrarCliente.aspx">Cadastro de Clientes</a>
 
     <!-- Scripts -->
