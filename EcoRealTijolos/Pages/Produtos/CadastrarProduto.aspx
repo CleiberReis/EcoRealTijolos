@@ -24,7 +24,7 @@
         <h1 style="text-align: center">CADASTRO DE PRODUTOS</h1>
     </section>
 
-        <section class="content">
+        <section class="content ">
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-primary">
@@ -44,7 +44,14 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
                         </div>
-                        
+                        <br />
+                        <br />
+                          </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
                         <div class="form-group">
                             <label>QUANTIDADE</label>
                         </div>
@@ -52,7 +59,6 @@
                             <asp:TextBox ID="TextBox1" runat="server" Width="170px"></asp:TextBox>
                         </div>
 
-                        <br />
                         <div class="form-group">
                              <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
                         </div>
@@ -63,6 +69,7 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
                         </div>
+                      
                         </div>
                     </div>
                 </div>
