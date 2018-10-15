@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="AlterarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.AlterarPedido" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />

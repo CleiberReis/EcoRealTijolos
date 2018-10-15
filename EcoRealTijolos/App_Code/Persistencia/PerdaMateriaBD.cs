@@ -78,8 +78,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria WHERE mat_nome = ?nome", objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?nome", )); //parei aqui. Não sei continuar
+            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria", objConexao);
+            // objCommand.Parameters.Add(Mapped.Parameter("?nome", )); //parei aqui. Não sei continuar
 
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
@@ -93,7 +93,36 @@ namespace EcoRealTijolos.App_Code.Persistencia
         }
 
         //select
+        public PerdaMateria Select(int id)
+        {
+            PerdaMateria obj = null;
 
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataReader objDataReader;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria WHERE per_id=?id", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?id", id));
+
+            objDataReader = objCommand.ExecuteReader();
+            while (objDataReader.Read())
+            {
+                obj = new PerdaMateria();
+                obj.Codigo = Convert.ToInt32(objDataReader["per_id"]);
+                obj.Quantidade = Convert.ToInt32(objDataReader["per_quantidade"]);
+                obj.Observacao = Convert.ToString(objDataReader["per_observacao"]);
+            }
+
+            objDataReader.Close();
+            objConexao.Close();
+
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
+
+            return obj;
+        }
         //update
 
         //delete

@@ -18,9 +18,6 @@
     <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
-
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <section class="content-header">
         <h1 style="text-align: center">CADASTRO DE CLIENTES</h1>
@@ -31,16 +28,16 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>NOME</label>
-                        </div>
-                        <div class="form-group">
+                            <label>NOME:</label>
                             <asp:TextBox ID="txtNome" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>CPF</label>
+                            <label>CPF:</label>
+                            <asp:TextBox ID="txtCpf" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtCpf" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <label>TELEFONE:</label>
+                            <asp:TextBox ID="txtTelefone" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -49,32 +46,22 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>TELEFONE</label>
+                            <label>E-MAIL:</label>
+                            <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtTelefone" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <label>ENDEREÇO:</label>
+                            <asp:TextBox ID="txtEndereco" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>E-MAIL</label>
+                            <label>ESTADO:</label>
+                            <asp:DropDownList ID="ddlEstado" runat="server" Margin_left="30px" Height="17px" Width="170px" CssClass="form-control"></asp:DropDownList>&nbsp
+                            <label>CIDADE:</label>
+                            <asp:DropDownList ID="ddlCidade" runat="server" Height="17px" Width="170px" CssClass="form-control">
+                            </asp:DropDownList>
                         </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label>EndereçoL</label>
-                        </div>
-                        
                     </div>
                 </div>
-                &nbsp;Estado
-                <asp:DropDownList ID="ddlEstado" runat="server" Margin_left="30px" Height="17px" Width="170px" CssClass="form-control">
-                            </asp:DropDownList>
-                <br />
-                Cidade<asp:DropDownList ID="ddlCidade" runat="server" Height="17px" Width="170px"  CssClass="form-control">
-                            </asp:DropDownList>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                
-&nbsp;&nbsp;&nbsp;
             </div>
         </div>
         <div align="center">
@@ -92,8 +79,6 @@
                     </td>
                 </tr>
             </table>
-            <br />
-            <br />
         </div>
     </section>
 </asp:Content>

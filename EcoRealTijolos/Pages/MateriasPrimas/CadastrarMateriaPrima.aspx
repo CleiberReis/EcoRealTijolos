@@ -64,11 +64,8 @@
                     </td>
                 </tr>
             </table>
-            <br />
-            <br />
         </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
-
 </asp:Content>
