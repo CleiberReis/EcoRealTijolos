@@ -1,23 +1,23 @@
-﻿using EcoRealTijolos.App_Code.Classes;
-using EcoRealTijolos.App_Code.Persistencia;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using EcoRealTijolos.App_Code.Classes;
+using EcoRealTijolos.App_Code.Persistencia;
 
-namespace EcoRealTijolos.Pages.MateriasPrimas
+namespace EcoRealTijolos.Pages.RefugoMateriaPrima
 {
-    public partial class PerdaMateriaPrima : System.Web.UI.Page
+    public partial class CadastrarRefugoMateria : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
-                lblOptionMenu.Text = "Perda Matéria Prima";
+                lblOptionMenu.Text = "Estoque - Matéria Prima";
 
                 CarregaMateria();
                 ddlNomeMateria.Focus();
@@ -51,18 +51,15 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             MateriaPrimaBD materiaBD = new MateriaPrimaBD();
             MateriaPrima materia = materiaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
 
-            PerdaMateriaBD perdaMateriaBD = new PerdaMateriaBD();
-            PerdaMateria perdaMateria = perdaMateriaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
+            PerdaMateria perda = new PerdaMateria();
 
-            PerdaMateriaPrima perda = new PerdaMateriaPrima();
             perda.Quantidade = Convert.ToInt32(txtQuantidadePerda.Text);
             perda.Observacao = Convert.ToString(txtObservacao.Text);
 
-            perda.PerdaMateriaPrima = materia;
+            perda.MateriaPrima = materia;
 
-            PerdaMateriaBD perdabd = new PerdaMateriaBD();
-            int retorno = perdabd.Insert(perda);
-
+            PerdaMateriaBD perdaMateriaBD = new PerdaMateriaBD();
+            int retorno = perdaMateriaBD.Insert(perda);
             switch (retorno)
             {
                 case 0:
@@ -82,6 +79,11 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
                 default:
                     break;
             }
+        }
+
+        protected void BtnVoltarLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../MateriasPrimas/CadastrarMateriaPrima.aspx", false);
         }
     }
 }

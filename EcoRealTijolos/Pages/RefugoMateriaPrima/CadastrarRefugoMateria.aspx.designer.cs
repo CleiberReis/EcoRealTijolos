@@ -7,10 +7,10 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace EcoRealTijolos.Pages.MateriasPrimas {
+namespace EcoRealTijolos.Pages.RefugoMateriaPrima {
     
     
-    public partial class PerdaMateriaPrima {
+    public partial class CadastrarRefugoMateria {
         
         /// <summary>
         /// Controle ddlNomeMateria.

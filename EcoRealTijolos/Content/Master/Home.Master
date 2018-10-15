@@ -43,9 +43,9 @@
             color: #666;
         }
 
-            .frame a:hover {
-                color: #222;
-            }
+        .frame a:hover {
+            color: #222;
+        }
 
         .frame .buttons a {
             height: 49px;

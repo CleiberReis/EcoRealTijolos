@@ -62,11 +62,10 @@
                                     </td>
                                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                                     <td>
-                                        <asp:HyperLink ID="hlListarProdutos" runat="server" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Seleção de Produtos</asp:HyperLink>
+                                        <asp:HyperLink ID="hlListarProdutos" runat="server" CssClass="btn btn-dark" Width="200px" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Seleção de Produtos</asp:HyperLink>
                                     </td>
                                 </tr>
                             </table>
-                            <br />
                         </div>
                     </div>
                 </div>

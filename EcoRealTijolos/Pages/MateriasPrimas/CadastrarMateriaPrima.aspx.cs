@@ -47,5 +47,10 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
         {
             Response.Redirect("ListarMateriaPrima.aspx", false);
         }
+
+        protected void BtnIncluirPerda_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../RefugoMateriaPrima/CadastrarRefugoMateria.aspx", false);
+        }
     }
 }

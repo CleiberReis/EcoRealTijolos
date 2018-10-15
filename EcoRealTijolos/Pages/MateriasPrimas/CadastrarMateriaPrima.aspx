@@ -56,7 +56,7 @@
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="BtnIncluirPerda" runat="server" CssClass="btn btn-dark" Width="200px" Text="Incluir Perda" />
+                        <asp:Button ID="BtnIncluirPerda" runat="server" CssClass="btn btn-dark" Width="200px" Text="Incluir Perda" OnClick="BtnIncluirPerda_Click" />
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>

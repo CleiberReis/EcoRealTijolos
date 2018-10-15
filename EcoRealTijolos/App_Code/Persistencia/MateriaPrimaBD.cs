@@ -72,7 +72,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
 
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_materia INNER JOIN tbl_perdamateria ON tbl_materia.mat_id = tbl_perdamateria.mat_idperda", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_materia", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
 

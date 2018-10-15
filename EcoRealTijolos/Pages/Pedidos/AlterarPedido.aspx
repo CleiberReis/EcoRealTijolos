@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="AlterarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.AlterarPedido" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -21,40 +22,57 @@
     <section class="content-header">
         <h1 style="text-align: center">ALTERAÇÃO DE PEDIDO</h1>
     </section>
-    <br />
-    <div>
-    <asp:Label ID="lblCliente" runat="server" Text="Cliente: "></asp:Label>
-    <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px">
-    </asp:DropDownList>
-    <br />
-    <br />
-
-    <asp:Label ID="lblEndereco" runat="server" Text="Endereço Completo:"></asp:Label>
-    <br />
-    <asp:TextBox ID="txtEndereco" runat="server" Width="562px" Height="24px"></asp:TextBox>
-
-    <br />
-    <asp:Label ID="lblObsEndereco" runat="server" Font-Size="Smaller" Text="Ex:  (Rua xxxx, 00, Bairro xxx - Cidade (UF))"></asp:Label>
-    <br />
-    <br />
-    FINALIZAR ENTREGA:<br />
-
-    <br />
-    <asp:Label ID="lblDtPedido" runat="server" Text="Data de Entrega: "></asp:Label>
-    <br />
-    <asp:TextBox ID="txtData" runat="server" Width="114px" Height="21px"></asp:TextBox>
-    <br />
-    <br />
-
-    <asp:Label ID="lblObsPedido" runat="server" Text="Observação do Pedido: "></asp:Label>
-    <br />
-    <asp:TextBox ID="txtObsPedido" runat="server" Width="406px" Height="21px"></asp:TextBox>
-    <br />
-    <br />
-    <asp:Button ID="BtnAlterar" runat="server" OnClick="BtnAlterar_Click" Text="Alterar" />
-    <br />
-    <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-    </div>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>CLIENTE:</label>
+                            <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px" CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group" style="text-align: center">
+                            <label style="font-weight: bold">DADOS DA ENTREGA</label>
+                        </div>
+                        <div class="form-group">
+                            <label>ENDEREÇO COMPLETO:</label>
+                            <asp:TextBox ID="txtEndereco" Width="562px" Height="24px" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <label>Ex: Rua xxxx, 00, Bairro xxx - Cidade (UF)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>DATA DA ENTREGA:</label>
+                            <asp:TextBox ID="txtData" runat="server" Width="114px" Height="21px" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label>OBSERVAÇÃO DO PEDIDO:</label>
+                            <asp:TextBox ID="txtObsPedido" runat="server" Width="406px" Height="21px" CssClass="form-control"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnAlterar_Click" Text="Alterar" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div align="center">
+            <div class="form-group">
+                <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+            </div>
+        </div>
+    </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

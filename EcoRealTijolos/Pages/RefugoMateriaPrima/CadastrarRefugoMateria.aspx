@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="PerdaMateriaPrima.aspx.cs" Inherits="EcoRealTijolos.Pages.MateriasPrimas.PerdaMateriaPrima" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="CadastrarRefugoMateria.aspx.cs" Inherits="EcoRealTijolos.Pages.RefugoMateriaPrima.CadastrarRefugoMateria" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -20,7 +20,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <section class="content-header">
-        <h1 style="text-align: center">ALTERAÇÃO DE MATÉRIA PRIMA</h1>
+        <h1 style="text-align: center">REFUGO DE MATÉRIA PRIMA</h1>
     </section>
     <section class="content">
         <div class="row">
@@ -66,8 +66,6 @@
                 </td>
             </tr>
         </table>
-        <br />
-        <br />
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">

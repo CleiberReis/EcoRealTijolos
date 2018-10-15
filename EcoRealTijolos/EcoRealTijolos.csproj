@@ -287,7 +287,6 @@
     <Content Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx" />
     <Content Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx" />
     <Content Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx" />
-    <Content Include="Pages\MateriasPrimas\PerdaMateriaPrima.aspx" />
     <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
     <Content Include="Pages\Pedidos\CadastrarPedProduto.aspx" />
@@ -295,6 +294,7 @@
     <Content Include="Pages\Produtos\AlterarProduto.aspx" />
     <Content Include="Pages\Produtos\CadastrarProduto.aspx" />
     <Content Include="Pages\Produtos\ListarProduto.aspx" />
+    <Content Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -556,13 +556,6 @@
     <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.designer.cs">
       <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\PerdaMateriaPrima.aspx.cs">
-      <DependentUpon>PerdaMateriaPrima.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\MateriasPrimas\PerdaMateriaPrima.aspx.designer.cs">
-      <DependentUpon>PerdaMateriaPrima.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
       <DependentUpon>AlterarPedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -611,6 +604,13 @@
     </Compile>
     <Compile Include="Pages\Produtos\ListarProduto.aspx.designer.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx.cs">
+      <DependentUpon>CadastrarRefugoMateria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx.designer.cs">
+      <DependentUpon>CadastrarRefugoMateria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
