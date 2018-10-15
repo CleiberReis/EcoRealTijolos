@@ -19,6 +19,8 @@
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
 
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <section class="content-header">
         <h1 style="text-align: center">CADASTRO DE CLIENTES</h1>
@@ -56,10 +58,23 @@
                             <label>E-MAIL</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
                         </div>
+                        <div class="form-group">
+                            <label>EndereçoL</label>
+                        </div>
+                        
                     </div>
                 </div>
+                &nbsp;Estado
+                <asp:DropDownList ID="ddlEstado" runat="server" Margin_left="30px" Height="17px" Width="170px" CssClass="form-control">
+                            </asp:DropDownList>
+                <br />
+                Cidade<asp:DropDownList ID="ddlCidade" runat="server" Height="17px" Width="170px"  CssClass="form-control">
+                            </asp:DropDownList>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+&nbsp;&nbsp;&nbsp;
             </div>
         </div>
         <div align="center">

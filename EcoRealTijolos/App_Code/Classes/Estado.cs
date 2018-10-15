@@ -11,26 +11,19 @@ using System.Web.Configuration;
 
 namespace EcoRealTijolos.App_Code.Classes
 {
-    public class Cliente
+    public class Estado
     {
-        //propriedades da classe
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public string Telefone { get; set; }
-        public string Email { get; set; }
-        public string Endereco { get; set; }
-        public Pedido Pedido { get; set; }
+        public int Uf { get; set; }
+        public string Pais { get; set; }
 
-
-
-        
-        //construtor
-        public Cliente()
+        public Estado()
         {
             //
             // TODO: Add constructor logic here
             //
         }
     }
+   
 }

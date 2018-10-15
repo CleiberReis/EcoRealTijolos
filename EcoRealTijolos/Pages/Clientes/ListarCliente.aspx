@@ -22,7 +22,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <!-- Datatable Part -->
     <section class="content-header">
-        <h1 style="text-align: center">LISTAR CLIENTES</h1>
+        <h1 style="text-align: center">LISTA DE MATÉRIA PRIMA</h1>
     </section>
     <div class="row">
         <div class="col-md-12">

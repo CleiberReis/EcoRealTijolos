@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using EcoRealTijolos.App_Code.Classes;
 using EcoRealTijolos.App_Code.Persistencia;
+using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace EcoRealTijolos.Pages.Clientes
 {
@@ -18,6 +20,9 @@ namespace EcoRealTijolos.Pages.Clientes
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Clientes";
+                CarregaEstados();
+                CarregaCidades();
+                ddlEstado.Focus();
             }
         }
 
@@ -29,6 +34,8 @@ namespace EcoRealTijolos.Pages.Clientes
             cliente.Cpf = txtCpf.Text;
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
+            cliente.Email = txtEmail.Text;
+            
 
             ClienteBD bd = new ClienteBD();
             if (bd.Insert(cliente))
@@ -51,5 +58,40 @@ namespace EcoRealTijolos.Pages.Clientes
         {
             Response.Redirect("ListarCliente.aspx", false);
         }
+
+        protected void txtEmail0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CarregaEstados()
+        {
+            EstadoBD bd = new EstadoBD();
+            DataSet ds = bd.SelectAll();
+            ddlEstado.DataSource = ds.Tables[0].DefaultView;
+            ddlEstado.DataTextField = "nome";
+            ddlEstado.DataValueField = "id";
+            ddlEstado.DataBind();
+            ddlEstado.Items.Insert(0, "Selecione um Estado");
+        }
+
+        private void CarregaCidades()
+        {
+            CidadeBD bd = new CidadeBD();
+            DataSet ds = bd.SelectAll();
+            ddlCidade.DataSource = ds.Tables[0].DefaultView;
+            ddlCidade.DataTextField = "nome";
+            ddlCidade.DataValueField = "id";
+            ddlCidade.DataBind();
+            ddlCidade.Items.Insert(0, "Selecione ua Cidade");
+        }
+
+
     }
+    
 }
