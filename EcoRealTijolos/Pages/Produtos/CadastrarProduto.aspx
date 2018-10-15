@@ -22,7 +22,7 @@
     <section class="content-header">
         <h1 style="text-align: center">CADASTRO DE PRODUTOS</h1>
     </section>
-    <section class="content ">
+    <section class="content">
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-primary">
@@ -67,6 +67,7 @@
                     </tr>
                 </table>
             </div>
+        </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
