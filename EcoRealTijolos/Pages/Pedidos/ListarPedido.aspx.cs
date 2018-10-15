@@ -26,24 +26,24 @@ namespace EcoRealTijolos.Pages.Pedidos
             GridView1.DataBind();
         }
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = 0;
+            switch (e.CommandName)
             {
-                int codigo = 0;
-                switch (e.CommandName)
-                {
-                    case "Alterar":
-                        codigo = Convert.ToInt32(e.CommandArgument);
-                        Session["ID"] = codigo;
-                        Response.Redirect("AlterarPedido.aspx");
-                        break;
-                    case "Excluir":
-                        codigo = Convert.ToInt32(e.CommandArgument);
-                        PedidoBD bd = new PedidoBD();
-                        bd.Delete(codigo);
-                        Carregar();
-                        break;
-                    default:
-                        break;
-                }
+                case "Alterar":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    Session["ID"] = codigo;
+                    Response.Redirect("AlterarPedido.aspx");
+                    break;
+                case "Excluir":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    PedidoBD bd = new PedidoBD();
+                    bd.Delete(codigo);
+                    Carregar();
+                    break;
+                default:
+                    break;
             }
+        }
     }
 }
