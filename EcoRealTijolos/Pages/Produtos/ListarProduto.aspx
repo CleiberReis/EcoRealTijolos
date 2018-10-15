@@ -59,7 +59,7 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Button ID="BtnNovo" runat="server" CssClass="btn btn-primary" Width="200px" Text="Novo Produto" OnClick="BtnNovo_Click" />
+                        <!-- Retirado o código do botão daqui! -->
                     </td>
                 </tr>
             </table>
@@ -69,8 +69,6 @@
     <br />
     <br />
 
-
-    <asp:HyperLink ID="hlProduto" runat="server" NavigateUrl="~/Pages/Pedidos/CadastrarPedProduto.aspx">Voltar para o pedido em andamento</asp:HyperLink>
     <br />
     <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
     <br />

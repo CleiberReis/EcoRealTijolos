@@ -36,7 +36,9 @@
                             <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton> CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>
+                                    &nbsp;
+                                    <asp:LinkButton ID="lbDeletar" runat="server" CommandName="Deletar" CssClass="btn btn-danger" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
