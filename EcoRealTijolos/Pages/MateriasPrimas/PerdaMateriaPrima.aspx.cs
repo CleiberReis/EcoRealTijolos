@@ -51,8 +51,10 @@ namespace EcoRealTijolos.Pages.MateriasPrimas
             MateriaPrimaBD materiaBD = new MateriaPrimaBD();
             MateriaPrima materia = materiaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
 
-            PerdaMateriaPrima perda = new PerdaMateriaPrima();
+            PerdaMateriaBD perdaMateriaBD = new PerdaMateriaBD();
+            PerdaMateria perdaMateria = perdaMateriaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
 
+            PerdaMateriaPrima perda = new PerdaMateriaPrima();
             perda.Quantidade = Convert.ToInt32(txtQuantidadePerda.Text);
             perda.Observacao = Convert.ToString(txtObservacao.Text);
 

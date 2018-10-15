@@ -51,6 +51,7 @@
 
                 </div>
             </div>
+            <asp:Button ID="Button1" runat="server" OnClick="BtnNovo_Click" Text="Button" />
         </div>
     </div>
 

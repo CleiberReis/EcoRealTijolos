@@ -49,5 +49,10 @@ namespace EcoRealTijolos.Pages.Produtos
         {
             Response.Redirect("CadastrarProduto.aspx", true);
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
