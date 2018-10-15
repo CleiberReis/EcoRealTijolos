@@ -34,7 +34,7 @@
                             <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lbAlterar" runat="server" CommandName="Alterar" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CommandName="Excluir"
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
                                         CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -56,10 +56,6 @@
             </table>
         </div>
     </div>
-    <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="../Index.aspx">Home</asp:HyperLink>
-    <br />
-    <asp:HyperLink ID="hlCadastrar" runat="server" NavigateUrl="~/Pages/Produtos/CadastrarProduto.aspx">Cadastrar um Novo Produto</asp:HyperLink>
-    <br />
     <!-- Scripts -->
     <script src="../../Scripts/jquery-3.3.1.min.js"></script>
     <script src="../../Scripts/jquery.validate.min.js"></script>
