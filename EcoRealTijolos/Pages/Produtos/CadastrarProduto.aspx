@@ -18,34 +18,23 @@
     <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <section class="content-header">
         <h1 style="text-align: center">CADASTRO DE PRODUTOS</h1>
     </section>
-
     <section class="content ">
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
-
                         <div class="form-group">
-                            <label>NOME DO PRODUTO</label>
+                            <label>NOME DO PRODUTO:</label>
+                            <asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            &nbsp;<asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-
-                        <div class="form-group">
-                            <label>VALOR UNITÁRIO</label>
-                        </div>
-                        <div class="form-group">
+                            <label>VALOR UNITÁRIO:</label>
                             <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
                         </div>
-                        <br />
-                        <br />
                     </div>
                 </div>
             </div>
@@ -53,53 +42,32 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>QUANTIDADE</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="TextBox1" runat="server" Width="170px"></asp:TextBox>
-                        </div>
-
-                        <div class="form-group">
                             <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
+                            <div class="form-group">
+                                <label>QUANTIDADE</label>
+                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label>QUANTIDADE</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
-                        </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div align="center">
-            <div class="form-group">
-                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+            <div align="center">
+                <div class="form-group">
+                    <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+                </div>
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Salvar Produto" OnClick="btnSalvar_Click" />
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
+                        </td>
+                    </tr>
+                </table>
             </div>
-
-            <table>
-                <tr>
-                    <td>
-                        <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Salvar Produto" OnClick="btnSalvar_Click" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-
-            <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
-
-        </div>
-        <br />
-        <br />
-
     </section>
-
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

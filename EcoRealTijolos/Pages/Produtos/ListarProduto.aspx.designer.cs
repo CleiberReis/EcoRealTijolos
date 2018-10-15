@@ -22,13 +22,13 @@ namespace EcoRealTijolos.Pages.Produtos {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Controle Button1.
+        /// Controle BtnNovo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button BtnNovo;
         
         /// <summary>
         /// Controle hlHome.
