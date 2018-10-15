@@ -40,12 +40,6 @@ namespace EcoRealTijolos.Pages.Pedidos
             ddlPedido.DataTextField = "ped_id";
             ddlPedido.DataValueField = "ped_id";
             ddlPedido.DataBind();
-
-            ClienteBD bd = new ClienteBD();
-            DataSet ds = bd.SelectAll();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
-
         }
 
         private void LimparCampos()
@@ -107,43 +101,6 @@ namespace EcoRealTijolos.Pages.Pedidos
                     break;
             }
         }
-        /*
-        try
-        {
-            if (e.ColumnIndex == 3)
-            {
-                decimal cell1 = Convert.ToDecimal(gdvItens.CurrentRow.Cells[2].Value);
-                decimal cell2 = Convert.ToDecimal(gdvItens.CurrentRow.Cells[3].Value);
-                if (cell1.ToString() != "" && cell2.ToString() != "")
-                {
-                    gdvItens.CurrentRow.Cells[4].Value = cell1 * cell2;
-                }
-            }
-            decimal valorTotal = 0;
-            string valor = "";
-            if (gdvItens.CurrentRow.Cells[4].Value != null)
-            {
-                valor = gdvItens.CurrentRow.Cells[4].Value.ToString();
-                if (!valor.Equals(""))
-                {
-                    for (int i = 0; i <= gdvItens.RowCount - 1; i++)
-                    {
-                        if (gdvItens.Rows[i].Cells[4].Value != null)
-                            valorTotal += Convert.ToDecimal(gdvItens.Rows[i].Cells[4].Value);
-                    }
-                    if (valorTotal == 0)
-                    {
-                        MessageBox.Show("Nenhum registro encontrado");
-                    }
-                    txtTotal.Text = valorTotal.ToString("C");
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show(ex.ToString());
-        }*/
-
     }
 }
 

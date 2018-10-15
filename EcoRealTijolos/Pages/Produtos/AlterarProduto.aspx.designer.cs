@@ -13,33 +13,6 @@ namespace EcoRealTijolos.Pages.Produtos {
     public partial class AlterarProduto {
         
         /// <summary>
-        /// Controle form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// Controle lblNome.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
-        
-        /// <summary>
-        /// Controle lblValor.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblValor;
-        
-        /// <summary>
         /// Controle txtNome.
         /// </summary>
         /// <remarks>
@@ -58,15 +31,6 @@ namespace EcoRealTijolos.Pages.Produtos {
         protected global::System.Web.UI.WebControls.TextBox txtValor;
         
         /// <summary>
-        /// Controle lblQuantidade.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblQuantidade;
-        
-        /// <summary>
         /// Controle txtQuantidade.
         /// </summary>
         /// <remarks>
@@ -76,15 +40,6 @@ namespace EcoRealTijolos.Pages.Produtos {
         protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
         
         /// <summary>
-        /// Controle btnAlterar.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAlterar;
-        
-        /// <summary>
         /// Controle lblMensagem.
         /// </summary>
         /// <remarks>
@@ -92,6 +47,15 @@ namespace EcoRealTijolos.Pages.Produtos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// Controle btnAlterar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAlterar;
         
         /// <summary>
         /// Controle hlListar.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="AlterarMateriaPrima.aspx.cs" Inherits="EcoRealTijolos.Pages.MateriasPrimas.AlterarMateriaPrima" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="PerdaMateriaPrima.aspx.cs" Inherits="EcoRealTijolos.Pages.MateriasPrimas.PerdaMateriaPrima" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -28,9 +28,13 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>DESCRIÇÃO:</label>
+                            <label>SELECIONE A MATÉRIA PRIMA:</label>
                             <asp:DropDownList ID="ddlNomeMateria" runat="server" CssClass="form-control">
                             </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <label>QUANTIDADE DE PERDA:</label>
+                            <asp:TextBox ID="txtQuantidadePerda" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -39,8 +43,8 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>QUANTIDADE:</label>
-                            <asp:TextBox ID="txtQuantidadeMateria" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <label>OBSERVAÇÕES:</label>
+                            <asp:TextBox ID="txtObservacao" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -65,4 +69,6 @@
         <br />
         <br />
     </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

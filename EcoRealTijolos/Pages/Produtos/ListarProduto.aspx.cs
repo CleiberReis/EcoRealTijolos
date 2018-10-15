@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Data;
 using System.Web.UI.WebControls;
-using EcoRealTijolos.App_Code.Classes;
 using EcoRealTijolos.App_Code.Persistencia;
+using System.Data;
 
 namespace EcoRealTijolos.Pages.Produtos
 {
@@ -44,6 +43,11 @@ namespace EcoRealTijolos.Pages.Produtos
                 default:
                     break;
             }
+        }
+
+        protected void BtnNovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastrarProduto.aspx", true);
         }
     }
 }

@@ -11,6 +11,9 @@ namespace EcoRealTijolos.App_Code.Classes
         public string Nome { get; set; }
         public int Quantidade { get; set; }
 
+        //relacionamentos
+        public PerdaMateria PerdaMateria { get; set; }
+
         //contructor
         public MateriaPrima()
         {
