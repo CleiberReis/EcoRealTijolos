@@ -1,39 +1,87 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AlterarProduto.aspx.cs" Inherits="EcoRealTijolos.Pages.Produtos.AlterarProduto" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="AlterarProduto.aspx.cs" Inherits="EcoRealTijolos.Pages.Produtos.AlterarProduto" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- IonIcons -->
+    <link href="../../Content/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="../../Content/css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../Content/jAlert/jquery.alerts.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/jquery.ui.draggable.js" type="text/javascript"></script>
+    <script src="../../Scripts/js/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="../../Scripts/js/plugins/datatables/dataTables.bootstrap.js"></script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
+    <section class="content-header">
+        <h1 style="text-align: center">ALTERAÇÃO DE PRODUTOS</h1>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            ALTERAÇÃO DE PRODUTOS<br />
-            <br />
-            <br />
-            <asp:Label ID="lblNome" runat="server" Text="Nome do Produto:"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="lblValor" runat="server" Text="Valor Unitário do Produto:"></asp:Label>
-            <br />
-&nbsp;<asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="lblQuantidade" runat="server" Text="Quantidade em Estoque:"></asp:Label>
-            <br />
-            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
-            <br />
-            <br />
-            <br />
-            <asp:Button ID="btnAlterar" runat="server" Text="Alterar Produto" OnClick="btnAlterar_Click" />
-            <br />
-            <asp:Label ID="lblMensagem" runat="server"></asp:Label>
-            <br />
-            <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
+                        <div class="form-group">
+                            <label>NOME DO PRODUTO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+
+                        <div class="form-group">
+                            <label>VALOR DO PRODUTO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>QUANTIDADE EM ESTOQUE:</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
-</body>
-</html>
+        <div align="center">
+            <div class="form-group">
+                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+            </div>
+            <br />
+
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar Produto" OnClick="btnAlterar_Click" />
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+        </div>
+    </section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
+</asp:Content>
+
+
