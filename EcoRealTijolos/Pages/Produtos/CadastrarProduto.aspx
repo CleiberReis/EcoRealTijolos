@@ -52,22 +52,22 @@
                     </div>
                 </div>
             </div>
-            <div align="center">
-                <div class="form-group">
-                    <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
-                </div>
-                <table>
-                    <tr>
-                        <td>
-                            <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Salvar Produto" OnClick="btnSalvar_Click" />
-                        </td>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                        <td>
-                            <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
-                        </td>
-                    </tr>
-                </table>
+        </div>
+        <div align="center">
+            <div class="form-group">
+                <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
             </div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="btnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Salvar Produto" OnClick="btnSalvar_Click" />
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <asp:HyperLink ID="hlListar" runat="server" CssClass="btn btn-danger" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
         </div>
     </section>
 </asp:Content>

@@ -15,6 +15,9 @@ namespace EcoRealTijolos.Pages.Produtos
         {
             if (!Page.IsPostBack)
             {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Estoque - Produtos";
+
                 ProdutoBD bd = new ProdutoBD();
                 Produto produto = bd.Select(Convert.ToInt32(Session["ID"]));
                 txtNome.Text = produto.Nome;

@@ -16,6 +16,8 @@ namespace EcoRealTijolos.Pages.Pedidos
         {
             if (!Page.IsPostBack)
             {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Pedidos";
                 PedidoBD bd = new PedidoBD();
                 Pedido pedido = bd.Select(Convert.ToInt32(Session["ID"]));
                 txtEndereco.Text = pedido.EnderecoEntrega.ToString();

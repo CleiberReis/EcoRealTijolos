@@ -43,9 +43,9 @@
             color: #666;
         }
 
-        .frame a:hover {
-            color: #222;
-        }
+            .frame a:hover {
+                color: #222;
+            }
 
         .frame .buttons a {
             height: 49px;
@@ -136,16 +136,22 @@
                             <span>Página Inicial</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="../../Pages/Pedidos/CadastrarPedido.aspx">
-                            <i class="fa fa-th"></i>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-cart-arrow-down"></i>
                             <span>Pedidos</span>
                             <i class="fa fa-angle-right pull-right"></i>
                         </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../../Pages/Pedidos/CadastrarPedido.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar</a>
+                                <a href="../../Pages/Pedidos/ListarPedido.aspx"><i class="fa fa-angle-double-right"></i>Listar</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-address-card"></i>
                             <span>Clientes</span>
                             <i class="fa fa-angle-right pull-right"></i>
                         </a>
@@ -158,7 +164,7 @@
                     </li>
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-cubes"></i>
                             <span>Estoque</span>
                             <i class="fa fa-angle-right pull-right"></i>
                         </a>

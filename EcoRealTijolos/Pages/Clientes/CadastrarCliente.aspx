@@ -55,9 +55,9 @@
                         </div>
                         <div class="form-group">
                             <label>ESTADO:</label>
-                            <asp:DropDownList ID="ddlEstado" runat="server" Margin_left="30px" Height="17px" Width="170px" CssClass="form-control"></asp:DropDownList>&nbsp
+                            <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control"></asp:DropDownList>&nbsp
                             <label>CIDADE:</label>
-                            <asp:DropDownList ID="ddlCidade" runat="server" Height="17px" Width="170px" CssClass="form-control">
+                            <asp:DropDownList ID="ddlCidade" runat="server" CssClass="form-control">
                             </asp:DropDownList>
                         </div>
                     </div>

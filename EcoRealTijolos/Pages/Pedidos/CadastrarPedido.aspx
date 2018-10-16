@@ -29,7 +29,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>CLIENTE:</label>
-                            <asp:DropDownList ID="ddlCliente" runat="server" Height="21px" Width="131px" CssClass="form-control">
+                            <asp:DropDownList ID="ddlCliente" runat="server" CssClass="form-control">
                             </asp:DropDownList>
                         </div>
                         <div class="form-group" style="text-align: center">
@@ -59,10 +59,6 @@
                                 <tr>
                                     <td>
                                         <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
-                                    </td>
-                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                    <td>
-                                        <asp:HyperLink ID="hlListarProdutos" runat="server" CssClass="btn btn-dark" Width="200px" NavigateUrl="~/Pages/Pedidos/ListarPedido.aspx">Seleção de Produtos</asp:HyperLink>
                                     </td>
                                 </tr>
                             </table>

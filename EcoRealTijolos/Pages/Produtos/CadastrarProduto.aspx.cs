@@ -13,7 +13,11 @@ namespace EcoRealTijolos.Pages.Produtos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Estoque - Produtos";
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
