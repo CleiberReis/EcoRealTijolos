@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label>Subtotal - R$</label>
-                            <asp:TextBox ID="txtSubtotal" runat="server" Width="106px"></asp:TextBox>
+                            <asp:TextBox ID="txtSubtotal" runat="server" Width="106px" Enabled="False"></asp:TextBox>
                         </div>
                     </div>
                 </div>
