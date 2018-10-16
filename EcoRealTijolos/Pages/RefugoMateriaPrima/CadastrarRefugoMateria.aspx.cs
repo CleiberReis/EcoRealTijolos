@@ -60,8 +60,6 @@ namespace EcoRealTijolos.Pages.RefugoMateriaPrima
 
             PerdaMateriaBD perdaMateriabd = new PerdaMateriaBD();
             int retorno = perdaMateriabd.Insert(perdamateria);
-            int perdaID = perdaMateriabd.GetID(perdamateria.Quantidade, perdamateria.MateriaPrima.Id, perdamateria.Observacao);
-            Session["perdaID"] = perdaID;
             switch (retorno)
             {
                 case 0:

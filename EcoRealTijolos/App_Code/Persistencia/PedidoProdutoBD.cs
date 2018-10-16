@@ -125,6 +125,10 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
+        public PedidoProdutoBD()
+        {
+            /// Construtor
+        }
 
     }
 }
