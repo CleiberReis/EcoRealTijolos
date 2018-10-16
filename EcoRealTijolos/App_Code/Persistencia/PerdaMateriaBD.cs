@@ -19,7 +19,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             {
                 System.Data.IDbConnection objConexao;
                 System.Data.IDbCommand objCommand;
-                string sql = "INSERT INTO tbl_perdamateria(per_quantidade, per_observacao, mat_idperda) VALUES (?quantidade, ?observacao, ?idMmateria)";
+                string sql = "INSERT INTO tbl_perdamateria(per_quantidade, per_observacao, mat_idperda) VALUES (?quantidade, ?observacao, ?idMateria)";
 
                 objConexao = Mapped.Connection();
                 objCommand = Mapped.Command(sql, objConexao);
