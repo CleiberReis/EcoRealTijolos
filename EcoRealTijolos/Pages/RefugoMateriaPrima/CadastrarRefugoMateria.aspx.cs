@@ -63,7 +63,6 @@ namespace EcoRealTijolos.Pages.RefugoMateriaPrima
             switch (retorno)
             {
                 case 0:
-
                     LimparCampos();
                     ddlNomeMateria.Focus();
                     lblMensagem.Text = "Refugo de Matéria Prima adicionado";
