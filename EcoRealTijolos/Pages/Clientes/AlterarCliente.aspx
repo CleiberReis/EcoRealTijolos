@@ -35,6 +35,10 @@
                             <label>CPF:</label>
                             <asp:TextBox ID="txtCpf" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
+                        <div class="form-group">
+                            <label>TELEFONE:</label>
+                            <asp:TextBox ID="txtTelefone" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,12 +46,12 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>TELEFONE:</label>
-                            <asp:TextBox ID="txtTelefone" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
                             <label>E-MAIL:</label>
                             <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label>LOGRADOURO:</label>
+                            <asp:TextBox ID="txtEndereco" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>ESTADO:</label>

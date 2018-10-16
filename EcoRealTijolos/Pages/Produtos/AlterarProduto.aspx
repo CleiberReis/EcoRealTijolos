@@ -61,18 +61,18 @@
         </div>
         <div align="center">
             <div class="form-group">
-                <asp:Label ID="lblMensagem" runat="server"></asp:Label>
+                <asp:Label ID="lblMensagem" runat="server"  Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
             </div>
             <br />
 
             <table>
                 <tr>
                     <td>
-                        <asp:Button ID="btnAlterar" runat="server" Text="Alterar Produto" OnClick="btnAlterar_Click" />
+                        <asp:Button ID="btnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Alterar Produto" OnClick="btnAlterar_Click" />
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:HyperLink ID="hlListar" runat="server" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
+                        <asp:HyperLink ID="hlListar" runat="server" CssClass="btn btn-danger" NavigateUrl="~/Pages/Produtos/ListarProduto.aspx">Lista de Produtos</asp:HyperLink>
                     </td>
                 </tr>
             </table>

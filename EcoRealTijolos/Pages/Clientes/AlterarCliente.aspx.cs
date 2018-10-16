@@ -26,6 +26,7 @@ namespace EcoRealTijolos.Pages.Clientes
                 txtCpf.Text = cliente.Cpf;
                 txtTelefone.Text = cliente.Telefone;
                 txtEmail.Text = cliente.Email;
+                txtEndereco.Text = cliente.Logradouro;
                 ddlEstado.Text = cliente.Estado;
                 ddlCidade.Text = cliente.Cidade;
 
@@ -55,7 +56,7 @@ namespace EcoRealTijolos.Pages.Clientes
             ddlCidade.DataTextField = "nome";
             ddlCidade.DataValueField = "nome";
             ddlCidade.DataBind();
-            ddlCidade.Items.Insert(0, "Selecione ua Cidade");
+            ddlCidade.Items.Insert(0, "Selecione uma Cidade");
         }
 
 
@@ -67,6 +68,7 @@ namespace EcoRealTijolos.Pages.Clientes
             cliente.Cpf = txtCpf.Text;
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
+            cliente.Logradouro = txtEndereco.Text;
             cliente.Estado = ddlEstado.Text;
             cliente.Cidade = ddlCidade.Text;
 
@@ -77,6 +79,7 @@ namespace EcoRealTijolos.Pages.Clientes
                 txtCpf.Text = "";
                 txtTelefone.Text = "";
                 txtEmail.Text = "";
+                txtEndereco.Text = "";
                 
 
                 txtNome.Focus();

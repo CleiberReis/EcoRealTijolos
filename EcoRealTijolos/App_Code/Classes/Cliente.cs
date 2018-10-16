@@ -19,12 +19,10 @@ namespace EcoRealTijolos.App_Code.Classes
         public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+        public string Logradouro { get; set; }
         public string Estado { get; set; }
         public string Cidade { get; set; }
         public Pedido Pedido { get; set; }
-
-
-
         
         //construtor
         public Cliente()

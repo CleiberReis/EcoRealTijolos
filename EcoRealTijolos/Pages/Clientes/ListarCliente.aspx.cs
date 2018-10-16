@@ -28,9 +28,6 @@ namespace EcoRealTijolos.Pages.Clientes
 
 
             GridView1.DataBind();
-
-            Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
-            lblOptionMenu.Text = "Listar - Clientes";
         }
 
         protected void Page_Load(object sender, EventArgs e)
