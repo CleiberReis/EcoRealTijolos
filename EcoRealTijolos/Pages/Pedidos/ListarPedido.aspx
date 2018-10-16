@@ -39,7 +39,7 @@
                             <asp:BoundField DataField="pedpro_subtotal" HeaderText="Subtotal Pedido" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("ped_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("ped_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
                                         CommandArgument='<%#Bind("ped_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
