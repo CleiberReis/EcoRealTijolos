@@ -17,6 +17,16 @@ namespace EcoRealTijolos.Pages.Clientes
             ClienteBD bd = new ClienteBD();
             DataSet ds = bd.SelectAll();
             GridView1.DataSource = ds.Tables[0].DefaultView;
+
+            EstadoBD bd2 = new EstadoBD();
+            DataSet ds2 = bd.SelectAll();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+
+            CidadeBD bd3 = new CidadeBD();
+            DataSet ds3 = bd.SelectAll();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+
+
             GridView1.DataBind();
 
             Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;

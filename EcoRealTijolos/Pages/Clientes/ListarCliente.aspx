@@ -34,6 +34,9 @@
                             <asp:BoundField DataField="cli_cpf" HeaderText="CPF" />
                             <asp:BoundField DataField="cli_telefone" HeaderText="Telefone" />
                             <asp:BoundField DataField="cli_email" HeaderText="E-mail" />
+                            <asp:BoundField DataField="cli_estado" HeaderText="Estado" />
+                            <asp:BoundField DataField="cli_cidade" HeaderText="Cidade" />
+
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("cli_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>
