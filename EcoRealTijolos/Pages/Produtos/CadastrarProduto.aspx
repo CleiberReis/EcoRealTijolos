@@ -44,6 +44,7 @@
                         <div class="form-group">
                             <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
                             <div class="form-group">
+                                <br />
                                 <label>QUANTIDADE</label>
                                 <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
                             </div>
