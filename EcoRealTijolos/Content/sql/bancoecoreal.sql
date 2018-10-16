@@ -4,7 +4,7 @@
 
 --                 BANCO ECO REAL  
 
---				    VERSÃO: 1.6            
+--				    VERSION: 1.7            
 
 
 -- ------------------------------------------------
@@ -56,7 +56,7 @@ CREATE TABLE `tbl_perdamateria` (
   `mat_idperda` int(11) NOT NULL,
   PRIMARY KEY (`per_id`),
   KEY `fk_perdamateria1_idx` (`mat_idperda`),
-  CONSTRAINT `fk_perdamateria1` FOREIGN KEY (`mat_idperda`) REFERENCES `tbl_materia` (`mat_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_perdamateria1` FOREIGN KEY (`mat_idperda`) REFERENCES `tbl_materia` (`mat_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_produto` (
@@ -75,7 +75,7 @@ CREATE TABLE `tbl_pedido` (
   `ped_obs` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`ped_id`),
   KEY `tbl_pedido_ibfk_1` (`ped_idCliente`),
-  CONSTRAINT `tbl_pedido_ibfk_1` FOREIGN KEY (`ped_idCliente`) REFERENCES `tbl_cliente` (`cli_id`)
+  CONSTRAINT `tbl_pedido_ibfk_1` FOREIGN KEY (`ped_idCliente`) REFERENCES `tbl_cliente` (`cli_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_pedidoproduto` (
@@ -88,8 +88,8 @@ CREATE TABLE `tbl_pedidoproduto` (
   KEY `tbl_pedido_ibfk_1` (`pedpro_id`),
   KEY `ped_id` (`ped_id`),
   KEY `prod_id` (`prod_id`),
-  CONSTRAINT `ped_id` FOREIGN KEY (`ped_id`) REFERENCES `tbl_pedido` (`ped_id`),
-  CONSTRAINT `prod_id` FOREIGN KEY (`prod_id`) REFERENCES `tbl_produto` (`prod_id`)
+  CONSTRAINT `ped_id` FOREIGN KEY (`ped_id`) REFERENCES `tbl_pedido` (`ped_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `prod_id` FOREIGN KEY (`prod_id`) REFERENCES `tbl_produto` (`prod_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `pais` (
