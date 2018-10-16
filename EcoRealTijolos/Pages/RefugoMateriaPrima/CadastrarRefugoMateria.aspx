@@ -64,6 +64,10 @@
                 <td>
                     <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
                 </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <asp:Button ID="BtnListar" runat="server" CssClass="btn btn-danger" Width="200px" Text="Lista Refugo" OnClick="BtnListar_Click" />
+                </td>
             </tr>
         </table>
     </div>

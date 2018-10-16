@@ -295,6 +295,7 @@
     <Content Include="Pages\Produtos\CadastrarProduto.aspx" />
     <Content Include="Pages\Produtos\ListarProduto.aspx" />
     <Content Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx" />
+    <Content Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -611,6 +612,13 @@
     </Compile>
     <Compile Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx.designer.cs">
       <DependentUpon>CadastrarRefugoMateria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx.cs">
+      <DependentUpon>ListarRefugoMateria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx.designer.cs">
+      <DependentUpon>ListarRefugoMateria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

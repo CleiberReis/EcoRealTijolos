@@ -2932,7 +2932,7 @@ Component: timeline
 .btn-social {
   position: relative;
   padding-left: 44px !important;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

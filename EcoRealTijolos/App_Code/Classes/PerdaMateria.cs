@@ -13,5 +13,13 @@ namespace EcoRealTijolos.App_Code.Classes
 
         //relacionamentos
         public MateriaPrima MateriaPrima { get; set; }
+
+        //constructor
+        public PerdaMateria()
+        {
+            //
+            // TODO: Add contructor logic here
+            //
+        }
     }
 }
