@@ -49,6 +49,13 @@
                             <label>E-MAIL:</label>
                             <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
+                        <div class="form-group">
+                            <label>ESTADO:</label>
+                            <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control"></asp:DropDownList>&nbsp
+                            <label>CIDADE:</label>
+                            <asp:DropDownList ID="ddlCidade" runat="server" CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
                     </div>
                 </div>
             </div>
