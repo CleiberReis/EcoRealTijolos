@@ -22,11 +22,32 @@ namespace EcoRealTijolos.Pages.Clientes
                 lblOptionMenu.Text = "Clientes";
                 CarregaEstados();
                 CarregaCidades();
-                ddlEstado.Focus();
+                txtNome.Focus();
             }
         }
 
-        
+        private void LimparCidade()
+        {
+            //remove seleção do ddl
+            for (int i = 0; i < ddlCidade.Items.Count; i++)
+            {
+                ddlCidade.Items[i].Selected = false;
+            }
+            //coloca o "Selecione" selecionado
+            ddlCidade.Items[0].Selected = true;
+        }
+
+        private void LimparEstado()
+        {
+            //remove seleção do ddl
+            for (int i = 0; i < ddlEstado.Items.Count; i++)
+            {
+                ddlEstado.Items[i].Selected = false;
+            }
+            //coloca o "Selecione" selecionado
+            ddlEstado.Items[0].Selected = true;
+        }
+
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
@@ -44,6 +65,8 @@ namespace EcoRealTijolos.Pages.Clientes
             {
                 lblMensagem.Text = "Cliente cadastrado com sucesso";
 
+                LimparCidade();
+                LimparEstado();
                 txtNome.Text = "";
                 txtCpf.Text = "";
                 txtTelefone.Text = "";
