@@ -1,5 +1,15 @@
--- Host: localhost   Database: bancoecoreal Version: 1.5
--- ------------------------------------------------------
+-- ------------------------------------------------
+
+
+
+--                 BANCO ECO REAL  
+
+--				    VERSÃO: 1.6            
+
+
+-- ------------------------------------------------
+
+
 
 CREATE TABLE `tbl_cliente` (
   `cli_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7,8 +17,11 @@ CREATE TABLE `tbl_cliente` (
   `cli_cpf` varchar(14) NOT NULL,
   `cli_telefone` varchar(13) NOT NULL,
   `cli_email` varchar(100) DEFAULT NULL,
+  `cli_logradouro` varchar(255) NOT NULL,
+  `cli_cidade` varchar(100) NOT NULL,
+  `cli_estado` varchar(100) NOT NULL,
   PRIMARY KEY (`cli_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_fornecedor` (
   `for_id` int(11) NOT NULL,
@@ -34,7 +47,7 @@ CREATE TABLE `tbl_materia` (
   `mat_nome` varchar(45) NOT NULL,
   `mat_quantidade` int(11) NOT NULL,
   PRIMARY KEY (`mat_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_perdamateria` (
   `per_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -55,17 +68,14 @@ CREATE TABLE `tbl_produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_pedido` (
-  `ped_id` int(11) NOT NULL,
+ `ped_id` int(11) NOT NULL AUTO_INCREMENT,
   `ped_data` datetime NOT NULL,
   `ped_idCliente` int(11) NOT NULL,
-  `ped_idProduto` int(11) NOT NULL,
-  `ped_endereco` varchar(100) NOT NULL,
-  `ped_obs` text,
+  `ped_endereco` varchar(445) COLLATE utf8_unicode_ci NOT NULL,
+  `ped_obs` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`ped_id`),
   KEY `tbl_pedido_ibfk_1` (`ped_idCliente`),
-  KEY `tbl_pedido_ibfk_2` (`ped_idProduto`),
-  CONSTRAINT `tbl_pedido_ibfk_1` FOREIGN KEY (`ped_idCliente`) REFERENCES `tbl_cliente` (`cli_id`),
-  CONSTRAINT `tbl_pedido_ibfk_2` FOREIGN KEY (`ped_idProduto`) REFERENCES `tbl_produto` (`prod_id`)
+  CONSTRAINT `tbl_pedido_ibfk_1` FOREIGN KEY (`ped_idCliente`) REFERENCES `tbl_cliente` (`cli_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_pedidoproduto` (
@@ -73,7 +83,7 @@ CREATE TABLE `tbl_pedidoproduto` (
   `ped_id` int(11) NOT NULL,
   `prod_id` int(11) NOT NULL,
   `pedpro_quantidade` int(11) NOT NULL,
-  `pedprod_subtotal` decimal(6,2) NOT NULL,
+  `pedpro_subtotal` decimal(6,2) NOT NULL,
   PRIMARY KEY (`pedpro_id`),
   KEY `tbl_pedido_ibfk_1` (`pedpro_id`),
   KEY `ped_id` (`ped_id`),
