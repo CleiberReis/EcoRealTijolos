@@ -1,35 +1,23 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using EcoRealTijolos.App_Code.Persistencia;
-using System.Data;
 
-namespace EcoRealTijolos.Pages.Clientes
+namespace EcoRealTijolos.Pages.RefugoMateriaPrima
 {
-    public partial class ListarCliente : System.Web.UI.Page
+    public partial class ListarRefugoMateria : System.Web.UI.Page
     {
-
         private void Carrega()
         {
-            ClienteBD bd = new ClienteBD();
+            PerdaMateriaBD bd = new PerdaMateriaBD();
             DataSet ds = bd.SelectAll();
             GridView1.DataSource = ds.Tables[0].DefaultView;
-
-            EstadoBD bd2 = new EstadoBD();
-            DataSet ds2 = bd.SelectAll();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-
-            CidadeBD bd3 = new CidadeBD();
-            DataSet ds3 = bd.SelectAll();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-
-
             GridView1.DataBind();
         }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -37,10 +25,10 @@ namespace EcoRealTijolos.Pages.Clientes
                 Carrega();
 
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
-                lblOptionMenu.Text = "Clientes";
+                lblOptionMenu.Text = "Estoque - Matéria Prima";
             }
-        }
 
+        }
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int codigo = 0;
@@ -49,11 +37,11 @@ namespace EcoRealTijolos.Pages.Clientes
                 case "Alterar":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     Session["ID"] = codigo;
-                    Response.Redirect("AlterarCliente.aspx");
+                    Response.Redirect("AlterarRefugoMateria.aspx");
                     break;
                 case "Deletar":
                     codigo = Convert.ToInt32(e.CommandArgument);
-                    ClienteBD bd = new ClienteBD();
+                    PerdaMateriaBD bd = new PerdaMateriaBD();
                     bd.Delete(codigo);
                     Carrega();
                     break;
@@ -61,10 +49,9 @@ namespace EcoRealTijolos.Pages.Clientes
                     break;
             }
         }
-
         protected void BtnNovo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CadastrarCliente.aspx", false);
+            Response.Redirect("CadastrarRefugoMateria.aspx", false);
         }
     }
 }

@@ -50,7 +50,7 @@
                             <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>ENDEREÇO:</label>
+                            <label>LOGRADOURO:</label>
                             <asp:TextBox ID="txtEndereco" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                         <div class="form-group">

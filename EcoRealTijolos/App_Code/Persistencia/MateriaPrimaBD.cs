@@ -34,33 +34,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
-        public int GetID(int materiaID, int quantidade, String observacao)
-        {
-            int perdaID = 0;
-            System.Data.IDbConnection objConexao;
-            System.Data.IDbCommand objCommand;
-            System.Data.IDataReader objDataReader;
-            objConexao = Mapped.Connection();
-            //os campos abaixo são de exemplo. Você pode adicionar mais campos.
-            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria WHERE mat_idperda=?codigo and per_quantidade=?quantidade and per_observacao=?observacao ORDER BY per_id DESC LIMIT 1", objConexao);
-
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", materiaID));
-            objCommand.Parameters.Add(Mapped.Parameter("?endereco", quantidade));
-            objCommand.Parameters.Add(Mapped.Parameter("?observacao", observacao));
-            objDataReader = objCommand.ExecuteReader();
-
-            while (objDataReader.Read())
-            {
-                perdaID = Convert.ToInt32(objDataReader["per_id"]);
-            }
-            objDataReader.Close();
-            objConexao.Close();
-            objCommand.Dispose();
-            objConexao.Dispose();
-            objDataReader.Dispose();
-
-            return perdaID;
-        }
+        
 
         //selectall
         public DataSet SelectAll()

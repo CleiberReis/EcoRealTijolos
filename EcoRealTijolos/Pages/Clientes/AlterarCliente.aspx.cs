@@ -26,9 +26,39 @@ namespace EcoRealTijolos.Pages.Clientes
                 txtCpf.Text = cliente.Cpf;
                 txtTelefone.Text = cliente.Telefone;
                 txtEmail.Text = cliente.Email;
+                txtEndereco.Text = cliente.Logradouro;
+                ddlEstado.Text = cliente.Estado;
+                ddlCidade.Text = cliente.Cidade;
+
+                CarregaEstados();
+                CarregaCidades();
+                ddlEstado.Focus();
+
             }
         }
-        
+
+        private void CarregaEstados()
+        {
+            EstadoBD bd = new EstadoBD();
+            DataSet ds = bd.SelectAll();
+            ddlEstado.DataSource = ds.Tables[0].DefaultView;
+            ddlEstado.DataTextField = "nome";
+            ddlEstado.DataValueField = "nome";
+            ddlEstado.DataBind();
+            ddlEstado.Items.Insert(0, "Selecione um Estado");
+        }
+
+        private void CarregaCidades()
+        {
+            CidadeBD bd = new CidadeBD();
+            DataSet ds = bd.SelectAll();
+            ddlCidade.DataSource = ds.Tables[0].DefaultView;
+            ddlCidade.DataTextField = "nome";
+            ddlCidade.DataValueField = "nome";
+            ddlCidade.DataBind();
+            ddlCidade.Items.Insert(0, "Selecione uma Cidade");
+        }
+
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
@@ -38,6 +68,9 @@ namespace EcoRealTijolos.Pages.Clientes
             cliente.Cpf = txtCpf.Text;
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
+            cliente.Logradouro = txtEndereco.Text;
+            cliente.Estado = ddlEstado.Text;
+            cliente.Cidade = ddlCidade.Text;
 
             if (bd.Update(cliente))
             {
@@ -46,6 +79,9 @@ namespace EcoRealTijolos.Pages.Clientes
                 txtCpf.Text = "";
                 txtTelefone.Text = "";
                 txtEmail.Text = "";
+                txtEndereco.Text = "";
+                
+
                 txtNome.Focus();
             }
             else

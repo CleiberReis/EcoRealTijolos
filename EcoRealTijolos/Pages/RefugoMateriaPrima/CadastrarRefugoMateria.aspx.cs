@@ -51,19 +51,20 @@ namespace EcoRealTijolos.Pages.RefugoMateriaPrima
             MateriaPrimaBD materiaBD = new MateriaPrimaBD();
             MateriaPrima materia = materiaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
 
-            PerdaMateria perda = new PerdaMateria();
+            PerdaMateria perdamateria = new PerdaMateria();
 
-            perda.Quantidade = Convert.ToInt32(txtQuantidadePerda.Text);
-            perda.Observacao = Convert.ToString(txtObservacao.Text);
+            perdamateria.Quantidade = Convert.ToInt32(txtQuantidadePerda.Text);
+            perdamateria.Observacao = Convert.ToString(txtObservacao.Text);
 
-            perda.MateriaPrima = materia;
+            perdamateria.MateriaPrima = materia;
 
-            PerdaMateriaBD perdaMateriaBD = new PerdaMateriaBD();
-            int retorno = perdaMateriaBD.Insert(perda);
+            PerdaMateriaBD perdaMateriabd = new PerdaMateriaBD();
+            int retorno = perdaMateriabd.Insert(perdamateria);
+            int perdaID = perdaMateriabd.GetID(perdamateria.Quantidade, perdamateria.MateriaPrima.Id, perdamateria.Observacao);
+            Session["perdaID"] = perdaID;
             switch (retorno)
             {
                 case 0:
-
                     LimparCampos();
                     ddlNomeMateria.Focus();
                     lblMensagem.Text = "Refugo de Matéria Prima adicionado";
@@ -84,6 +85,11 @@ namespace EcoRealTijolos.Pages.RefugoMateriaPrima
         protected void BtnVoltarLista_Click(object sender, EventArgs e)
         {
             Response.Redirect("../MateriasPrimas/CadastrarMateriaPrima.aspx", false);
+        }
+
+        protected void BtnListar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarRefugoMateria.aspx", false);
         }
     }
 }
