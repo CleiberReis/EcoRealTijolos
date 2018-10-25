@@ -11,6 +11,7 @@
 
 
 
+
 CREATE TABLE `tbl_cliente` (
   `cli_id` int(11) NOT NULL AUTO_INCREMENT,
   `cli_nome` varchar(45) NOT NULL,
@@ -46,8 +47,12 @@ CREATE TABLE `tbl_materia` (
   `mat_id` int(11) NOT NULL AUTO_INCREMENT,
   `mat_nome` varchar(45) NOT NULL,
   `mat_quantidade` int(11) NOT NULL,
-  PRIMARY KEY (`mat_id`)
+  `mat_idfornecedor` int(11) NOT NULL,
+  PRIMARY KEY (`mat_id`),
+  KEY `fkmateria1_idx` (`mat_idfornecedor`),
+  CONSTRAINT `fkmateria1` FOREIGN KEY (`mat_idfornecedor`) REFERENCES `tbl_fornecedor` (`for_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE `tbl_perdamateria` (
   `per_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -68,15 +73,18 @@ CREATE TABLE `tbl_produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_pedido` (
- `ped_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ped_id` int(11) NOT NULL AUTO_INCREMENT,
   `ped_data` datetime NOT NULL,
   `ped_idCliente` int(11) NOT NULL,
-  `ped_endereco` varchar(445) COLLATE utf8_unicode_ci NOT NULL,
-  `ped_obs` text COLLATE utf8_unicode_ci,
+  `ped_endereco` varchar(445) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ped_obs` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `ped_estado` varchar(45) NOT NULL,
+  `ped_cidade` varchar(45) NOT NULL,
   PRIMARY KEY (`ped_id`),
   KEY `tbl_pedido_ibfk_1` (`ped_idCliente`),
   CONSTRAINT `tbl_pedido_ibfk_1` FOREIGN KEY (`ped_idCliente`) REFERENCES `tbl_cliente` (`cli_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE `tbl_pedidoproduto` (
   `pedpro_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -5738,3 +5746,4 @@ INSERT INTO `cidade` (`id`, `nome`, `estado`) VALUES
 (5562, 'Tupiratins', 27),
 (5563, 'Wanderlândia', 27),
 (5564, 'Xambioá', 27);
+
