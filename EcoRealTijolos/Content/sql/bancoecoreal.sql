@@ -100,6 +100,13 @@ CREATE TABLE `tbl_pedidoproduto` (
   CONSTRAINT `prod_id` FOREIGN KEY (`prod_id`) REFERENCES `tbl_produto` (`prod_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `tbl_usuario` (
+  `usu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `usu_login` varchar(45) NOT NULL,
+  `usu_senha` varchar(45) NOT NULL,
+  PRIMARY KEY (`usu_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE `pais` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) DEFAULT NULL,
