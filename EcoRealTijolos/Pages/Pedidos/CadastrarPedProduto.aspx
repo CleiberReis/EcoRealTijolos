@@ -29,7 +29,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <asp:Label ID="lblPedido" runat="server" OnDataBinding="Page_Load" Visible="False"></asp:Label>
-                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False" Visible="False"></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <label>PRODUTO:</label>
