@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/Master/Home.Master" AutoEventWireup="true" CodeBehind="ListarPedido.aspx.cs" Inherits="EcoRealTijolos.Pages.Pedidos.ListarPedido" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <<link href="../../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- IonIcons -->
     <link href="../../Content/css/ionicons.min.css" rel="stylesheet" type="text/css" />
