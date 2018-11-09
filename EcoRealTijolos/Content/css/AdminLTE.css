@@ -654,6 +654,7 @@ body > .header .logo .icon {
 .sidebar .sidebar-menu > li > a > .glyphicon,
 .sidebar .sidebar-menu > li > a > .ion {
   width: 20px;
+    height: 12px;
 }
 .sidebar .sidebar-menu .treeview-menu {
   display: none;
