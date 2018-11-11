@@ -84,6 +84,7 @@
     <Compile Include="App_Code\Classes\PedidoProduto.cs" />
     <Compile Include="App_Code\Classes\PerdaMateria.cs" />
     <Compile Include="App_Code\Classes\Produto.cs" />
+    <Compile Include="App_Code\Classes\Usuarios.cs" />
     <Compile Include="App_Code\Persistencia\CidadeBD.cs" />
     <Compile Include="App_Code\Persistencia\ClienteBD.cs" />
     <Compile Include="App_Code\Persistencia\EstadoBD.cs" />
@@ -501,6 +502,7 @@
     <Compile Include="App_Code\Persistencia\PedidoProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\PerdaMateriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
+    <Compile Include="App_Code\Persistencia\UsuariosBD.cs" />
     <Compile Include="Content\Master\Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
