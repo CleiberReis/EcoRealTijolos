@@ -281,6 +281,7 @@
     <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\sql\bancoecoreal.sql" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Compile Include="Pages\CadastroUsuario.aspx" />
     <Content Include="Pages\Clientes\AlterarCliente.aspx" />
     <Content Include="Pages\Clientes\CadastrarCliente.aspx" />
     <Content Include="Pages\Clientes\ListarCliente.aspx" />
@@ -509,6 +510,13 @@
     </Compile>
     <Compile Include="Content\Master\Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Clientes\AlterarCliente.aspx.cs">
       <DependentUpon>AlterarCliente.aspx</DependentUpon>
