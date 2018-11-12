@@ -114,190 +114,198 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\images\logo_icon.png" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\images\logo_icon.png" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\jAlert\images\error-icon.png" />
-    <Content Include="Content\jAlert\images\help.gif" />
-    <Content Include="Content\jAlert\images\important.gif" />
-    <Content Include="Content\jAlert\images\info.gif" />
-    <Content Include="Content\jAlert\images\message-icon.png" />
-    <Content Include="Content\jAlert\images\title.gif" />
-    <Content Include="Content\jAlert\images\warning-icon.png" />
-    <Content Include="Content\jAlert\jquery.alerts.css" />
-    <Content Include="Content\jAlert\jquery.alerts.js" />
+    <Content Include="Index.aspx" />
+    <Content Include="jAlert\images\error-icon.png" />
+    <Content Include="jAlert\images\help.gif" />
+    <Content Include="jAlert\images\important.gif" />
+    <Content Include="jAlert\images\info.gif" />
+    <Content Include="jAlert\images\message-icon.png" />
+    <Content Include="jAlert\images\title.gif" />
+    <Content Include="jAlert\images\warning-icon.png" />
+    <Content Include="jAlert\jquery.alerts.css" />
+    <Content Include="jAlert\jquery.alerts.js" />
     <Content Include="Content\jquery.validate.bootstrap.css" />
-    <Content Include="Content\css\AdminLTE.css" />
-    <Content Include="Content\css\bootstrap-slider\slider.css" />
-    <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
-    <Content Include="Content\css\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
-    <Content Include="Content\css\colorpicker\bootstrap-colorpicker.css" />
-    <Content Include="Content\css\colorpicker\bootstrap-colorpicker.min.css" />
-    <Content Include="Content\css\datatables\dataTables.bootstrap.css" />
-    <Content Include="Content\css\datatables\images\sort_asc.png" />
-    <Content Include="Content\css\datatables\images\sort_asc_disabled.png" />
-    <Content Include="Content\css\datatables\images\sort_both.png" />
-    <Content Include="Content\css\datatables\images\sort_desc.png" />
-    <Content Include="Content\css\datatables\images\sort_desc_disabled.png" />
-    <Content Include="Content\css\datepicker\datepicker3.css" />
-    <Content Include="Content\css\daterangepicker\daterangepicker-bs3.css" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\css\iCheck\all.css" />
-    <Content Include="Content\css\iCheck\flat\aero%402x.png" />
-    <Content Include="Content\css\iCheck\flat\aero.css" />
-    <Content Include="Content\css\iCheck\flat\aero.png" />
-    <Content Include="Content\css\iCheck\flat\blue%402x.png" />
-    <Content Include="Content\css\iCheck\flat\blue.css" />
-    <Content Include="Content\css\iCheck\flat\blue.png" />
-    <Content Include="Content\css\iCheck\flat\flat%402x.png" />
-    <Content Include="Content\css\iCheck\flat\flat.css" />
-    <Content Include="Content\css\iCheck\flat\flat.png" />
-    <Content Include="Content\css\iCheck\flat\green%402x.png" />
-    <Content Include="Content\css\iCheck\flat\green.css" />
-    <Content Include="Content\css\iCheck\flat\green.png" />
-    <Content Include="Content\css\iCheck\flat\grey%402x.png" />
-    <Content Include="Content\css\iCheck\flat\grey.css" />
-    <Content Include="Content\css\iCheck\flat\grey.png" />
-    <Content Include="Content\css\iCheck\flat\orange%402x.png" />
-    <Content Include="Content\css\iCheck\flat\orange.css" />
-    <Content Include="Content\css\iCheck\flat\orange.png" />
-    <Content Include="Content\css\iCheck\flat\pink%402x.png" />
-    <Content Include="Content\css\iCheck\flat\pink.css" />
-    <Content Include="Content\css\iCheck\flat\pink.png" />
-    <Content Include="Content\css\iCheck\flat\purple%402x.png" />
-    <Content Include="Content\css\iCheck\flat\purple.css" />
-    <Content Include="Content\css\iCheck\flat\purple.png" />
-    <Content Include="Content\css\iCheck\flat\red%402x.png" />
-    <Content Include="Content\css\iCheck\flat\red.css" />
-    <Content Include="Content\css\iCheck\flat\red.png" />
-    <Content Include="Content\css\iCheck\flat\yellow%402x.png" />
-    <Content Include="Content\css\iCheck\flat\yellow.css" />
-    <Content Include="Content\css\iCheck\flat\yellow.png" />
-    <Content Include="Content\css\iCheck\flat\_all.css" />
-    <Content Include="Content\css\iCheck\futurico\futurico%402x.png" />
-    <Content Include="Content\css\iCheck\futurico\futurico.css" />
-    <Content Include="Content\css\iCheck\futurico\futurico.png" />
-    <Content Include="Content\css\iCheck\line\aero.css" />
-    <Content Include="Content\css\iCheck\line\blue.css" />
-    <Content Include="Content\css\iCheck\line\green.css" />
-    <Content Include="Content\css\iCheck\line\grey.css" />
-    <Content Include="Content\css\iCheck\line\line%402x.png" />
-    <Content Include="Content\css\iCheck\line\line.css" />
-    <Content Include="Content\css\iCheck\line\line.png" />
-    <Content Include="Content\css\iCheck\line\orange.css" />
-    <Content Include="Content\css\iCheck\line\pink.css" />
-    <Content Include="Content\css\iCheck\line\purple.css" />
-    <Content Include="Content\css\iCheck\line\red.css" />
-    <Content Include="Content\css\iCheck\line\yellow.css" />
-    <Content Include="Content\css\iCheck\line\_all.css" />
-    <Content Include="Content\css\iCheck\minimal\aero%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\aero.css" />
-    <Content Include="Content\css\iCheck\minimal\aero.png" />
-    <Content Include="Content\css\iCheck\minimal\blue%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\blue.css" />
-    <Content Include="Content\css\iCheck\minimal\blue.png" />
-    <Content Include="Content\css\iCheck\minimal\green%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\green.css" />
-    <Content Include="Content\css\iCheck\minimal\green.png" />
-    <Content Include="Content\css\iCheck\minimal\grey%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\grey.css" />
-    <Content Include="Content\css\iCheck\minimal\grey.png" />
-    <Content Include="Content\css\iCheck\minimal\minimal%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\minimal.css" />
-    <Content Include="Content\css\iCheck\minimal\minimal.png" />
-    <Content Include="Content\css\iCheck\minimal\orange%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\orange.css" />
-    <Content Include="Content\css\iCheck\minimal\orange.png" />
-    <Content Include="Content\css\iCheck\minimal\pink%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\pink.css" />
-    <Content Include="Content\css\iCheck\minimal\pink.png" />
-    <Content Include="Content\css\iCheck\minimal\purple%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\purple.css" />
-    <Content Include="Content\css\iCheck\minimal\purple.png" />
-    <Content Include="Content\css\iCheck\minimal\red%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\red.css" />
-    <Content Include="Content\css\iCheck\minimal\red.png" />
-    <Content Include="Content\css\iCheck\minimal\yellow%402x.png" />
-    <Content Include="Content\css\iCheck\minimal\yellow.css" />
-    <Content Include="Content\css\iCheck\minimal\yellow.png" />
-    <Content Include="Content\css\iCheck\minimal\_all.css" />
-    <Content Include="Content\css\iCheck\polaris\polaris%402x.png" />
-    <Content Include="Content\css\iCheck\polaris\polaris.css" />
-    <Content Include="Content\css\iCheck\polaris\polaris.png" />
-    <Content Include="Content\css\iCheck\square\aero%402x.png" />
-    <Content Include="Content\css\iCheck\square\aero.css" />
-    <Content Include="Content\css\iCheck\square\aero.png" />
-    <Content Include="Content\css\iCheck\square\blue%402x.png" />
-    <Content Include="Content\css\iCheck\square\blue.css" />
-    <Content Include="Content\css\iCheck\square\blue.png" />
-    <Content Include="Content\css\iCheck\square\green%402x.png" />
-    <Content Include="Content\css\iCheck\square\green.css" />
-    <Content Include="Content\css\iCheck\square\green.png" />
-    <Content Include="Content\css\iCheck\square\grey%402x.png" />
-    <Content Include="Content\css\iCheck\square\grey.css" />
-    <Content Include="Content\css\iCheck\square\grey.png" />
-    <Content Include="Content\css\iCheck\square\orange%402x.png" />
-    <Content Include="Content\css\iCheck\square\orange.css" />
-    <Content Include="Content\css\iCheck\square\orange.png" />
-    <Content Include="Content\css\iCheck\square\pink%402x.png" />
-    <Content Include="Content\css\iCheck\square\pink.css" />
-    <Content Include="Content\css\iCheck\square\pink.png" />
-    <Content Include="Content\css\iCheck\square\purple%402x.png" />
-    <Content Include="Content\css\iCheck\square\purple.css" />
-    <Content Include="Content\css\iCheck\square\purple.png" />
-    <Content Include="Content\css\iCheck\square\red%402x.png" />
-    <Content Include="Content\css\iCheck\square\red.css" />
-    <Content Include="Content\css\iCheck\square\red.png" />
-    <Content Include="Content\css\iCheck\square\square%402x.png" />
-    <Content Include="Content\css\iCheck\square\square.css" />
-    <Content Include="Content\css\iCheck\square\square.png" />
-    <Content Include="Content\css\iCheck\square\yellow%402x.png" />
-    <Content Include="Content\css\iCheck\square\yellow.css" />
-    <Content Include="Content\css\iCheck\square\yellow.png" />
-    <Content Include="Content\css\iCheck\square\_all.css" />
-    <Content Include="Content\css\images\animated-overlay.gif" />
-    <Content Include="Content\css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\css\images\ui-bg_flat_55_fbec88_40x100.png" />
-    <Content Include="Content\css\images\ui-bg_glass_75_d0e5f5_1x400.png" />
-    <Content Include="Content\css\images\ui-bg_glass_85_dfeffc_1x400.png" />
-    <Content Include="Content\css\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
-    <Content Include="Content\css\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
-    <Content Include="Content\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
-    <Content Include="Content\css\images\ui-icons_217bc0_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_469bdd_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_6da8d5_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_d8e7f3_256x240.png" />
-    <Content Include="Content\css\images\ui-icons_f9bd01_256x240.png" />
-    <Content Include="Content\css\ionicons.min.css" />
-    <Content Include="Content\css\ionslider\ion.rangeSlider.css" />
-    <Content Include="Content\css\ionslider\ion.rangeSlider.skinFlat.css" />
-    <Content Include="Content\css\ionslider\ion.rangeSlider.skinNice.css" />
-    <Content Include="Content\css\jvectormap\jquery-jvectormap-1.2.2.css" />
-    <Content Include="Content\css\morris\morris.css" />
-    <Content Include="Content\css\timepicker\bootstrap-timepicker.css" />
-    <Content Include="Content\css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="css\AdminLTE.css" />
+    <Content Include="css\bootstrap-slider\slider.css" />
+    <Content Include="css\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
+    <Content Include="css\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="css\colorpicker\bootstrap-colorpicker.css" />
+    <Content Include="css\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="css\datatables\dataTables.bootstrap.css" />
+    <Content Include="css\datatables\images\sort_asc.png" />
+    <Content Include="css\datatables\images\sort_asc_disabled.png" />
+    <Content Include="css\datatables\images\sort_both.png" />
+    <Content Include="css\datatables\images\sort_desc.png" />
+    <Content Include="css\datatables\images\sort_desc_disabled.png" />
+    <Content Include="css\datepicker\datepicker3.css" />
+    <Content Include="css\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\iCheck\all.css" />
+    <Content Include="css\iCheck\flat\aero%402x.png" />
+    <Content Include="css\iCheck\flat\aero.css" />
+    <Content Include="css\iCheck\flat\aero.png" />
+    <Content Include="css\iCheck\flat\blue%402x.png" />
+    <Content Include="css\iCheck\flat\blue.css" />
+    <Content Include="css\iCheck\flat\blue.png" />
+    <Content Include="css\iCheck\flat\flat%402x.png" />
+    <Content Include="css\iCheck\flat\flat.css" />
+    <Content Include="css\iCheck\flat\flat.png" />
+    <Content Include="css\iCheck\flat\green%402x.png" />
+    <Content Include="css\iCheck\flat\green.css" />
+    <Content Include="css\iCheck\flat\green.png" />
+    <Content Include="css\iCheck\flat\grey%402x.png" />
+    <Content Include="css\iCheck\flat\grey.css" />
+    <Content Include="css\iCheck\flat\grey.png" />
+    <Content Include="css\iCheck\flat\orange%402x.png" />
+    <Content Include="css\iCheck\flat\orange.css" />
+    <Content Include="css\iCheck\flat\orange.png" />
+    <Content Include="css\iCheck\flat\pink%402x.png" />
+    <Content Include="css\iCheck\flat\pink.css" />
+    <Content Include="css\iCheck\flat\pink.png" />
+    <Content Include="css\iCheck\flat\purple%402x.png" />
+    <Content Include="css\iCheck\flat\purple.css" />
+    <Content Include="css\iCheck\flat\purple.png" />
+    <Content Include="css\iCheck\flat\red%402x.png" />
+    <Content Include="css\iCheck\flat\red.css" />
+    <Content Include="css\iCheck\flat\red.png" />
+    <Content Include="css\iCheck\flat\yellow%402x.png" />
+    <Content Include="css\iCheck\flat\yellow.css" />
+    <Content Include="css\iCheck\flat\yellow.png" />
+    <Content Include="css\iCheck\flat\_all.css" />
+    <Content Include="css\iCheck\futurico\futurico%402x.png" />
+    <Content Include="css\iCheck\futurico\futurico.css" />
+    <Content Include="css\iCheck\futurico\futurico.png" />
+    <Content Include="css\iCheck\line\aero.css" />
+    <Content Include="css\iCheck\line\blue.css" />
+    <Content Include="css\iCheck\line\green.css" />
+    <Content Include="css\iCheck\line\grey.css" />
+    <Content Include="css\iCheck\line\line%402x.png" />
+    <Content Include="css\iCheck\line\line.css" />
+    <Content Include="css\iCheck\line\line.png" />
+    <Content Include="css\iCheck\line\orange.css" />
+    <Content Include="css\iCheck\line\pink.css" />
+    <Content Include="css\iCheck\line\purple.css" />
+    <Content Include="css\iCheck\line\red.css" />
+    <Content Include="css\iCheck\line\yellow.css" />
+    <Content Include="css\iCheck\line\_all.css" />
+    <Content Include="css\iCheck\minimal\aero%402x.png" />
+    <Content Include="css\iCheck\minimal\aero.css" />
+    <Content Include="css\iCheck\minimal\aero.png" />
+    <Content Include="css\iCheck\minimal\blue%402x.png" />
+    <Content Include="css\iCheck\minimal\blue.css" />
+    <Content Include="css\iCheck\minimal\blue.png" />
+    <Content Include="css\iCheck\minimal\green%402x.png" />
+    <Content Include="css\iCheck\minimal\green.css" />
+    <Content Include="css\iCheck\minimal\green.png" />
+    <Content Include="css\iCheck\minimal\grey%402x.png" />
+    <Content Include="css\iCheck\minimal\grey.css" />
+    <Content Include="css\iCheck\minimal\grey.png" />
+    <Content Include="css\iCheck\minimal\minimal%402x.png" />
+    <Content Include="css\iCheck\minimal\minimal.css" />
+    <Content Include="css\iCheck\minimal\minimal.png" />
+    <Content Include="css\iCheck\minimal\orange%402x.png" />
+    <Content Include="css\iCheck\minimal\orange.css" />
+    <Content Include="css\iCheck\minimal\orange.png" />
+    <Content Include="css\iCheck\minimal\pink%402x.png" />
+    <Content Include="css\iCheck\minimal\pink.css" />
+    <Content Include="css\iCheck\minimal\pink.png" />
+    <Content Include="css\iCheck\minimal\purple%402x.png" />
+    <Content Include="css\iCheck\minimal\purple.css" />
+    <Content Include="css\iCheck\minimal\purple.png" />
+    <Content Include="css\iCheck\minimal\red%402x.png" />
+    <Content Include="css\iCheck\minimal\red.css" />
+    <Content Include="css\iCheck\minimal\red.png" />
+    <Content Include="css\iCheck\minimal\yellow%402x.png" />
+    <Content Include="css\iCheck\minimal\yellow.css" />
+    <Content Include="css\iCheck\minimal\yellow.png" />
+    <Content Include="css\iCheck\minimal\_all.css" />
+    <Content Include="css\iCheck\polaris\polaris%402x.png" />
+    <Content Include="css\iCheck\polaris\polaris.css" />
+    <Content Include="css\iCheck\polaris\polaris.png" />
+    <Content Include="css\iCheck\square\aero%402x.png" />
+    <Content Include="css\iCheck\square\aero.css" />
+    <Content Include="css\iCheck\square\aero.png" />
+    <Content Include="css\iCheck\square\blue%402x.png" />
+    <Content Include="css\iCheck\square\blue.css" />
+    <Content Include="css\iCheck\square\blue.png" />
+    <Content Include="css\iCheck\square\green%402x.png" />
+    <Content Include="css\iCheck\square\green.css" />
+    <Content Include="css\iCheck\square\green.png" />
+    <Content Include="css\iCheck\square\grey%402x.png" />
+    <Content Include="css\iCheck\square\grey.css" />
+    <Content Include="css\iCheck\square\grey.png" />
+    <Content Include="css\iCheck\square\orange%402x.png" />
+    <Content Include="css\iCheck\square\orange.css" />
+    <Content Include="css\iCheck\square\orange.png" />
+    <Content Include="css\iCheck\square\pink%402x.png" />
+    <Content Include="css\iCheck\square\pink.css" />
+    <Content Include="css\iCheck\square\pink.png" />
+    <Content Include="css\iCheck\square\purple%402x.png" />
+    <Content Include="css\iCheck\square\purple.css" />
+    <Content Include="css\iCheck\square\purple.png" />
+    <Content Include="css\iCheck\square\red%402x.png" />
+    <Content Include="css\iCheck\square\red.css" />
+    <Content Include="css\iCheck\square\red.png" />
+    <Content Include="css\iCheck\square\square%402x.png" />
+    <Content Include="css\iCheck\square\square.css" />
+    <Content Include="css\iCheck\square\square.png" />
+    <Content Include="css\iCheck\square\yellow%402x.png" />
+    <Content Include="css\iCheck\square\yellow.css" />
+    <Content Include="css\iCheck\square\yellow.png" />
+    <Content Include="css\iCheck\square\_all.css" />
+    <Content Include="css\images\animated-overlay.gif" />
+    <Content Include="css\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="css\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="css\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="css\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="css\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="css\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="css\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="css\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="css\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="css\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="css\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="css\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="css\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="css\ionslider\ion.rangeSlider.css" />
+    <Content Include="css\ionslider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="css\ionslider\ion.rangeSlider.skinNice.css" />
+    <Content Include="css\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="css\morris\morris.css" />
+    <Content Include="css\timepicker\bootstrap-timepicker.css" />
+    <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\sql\bancoecoreal.sql" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Compile Include="Pages\CadastroUsuario.aspx" />
-    <Content Include="Pages\Clientes\AlterarCliente.aspx" />
-    <Content Include="Pages\Clientes\CadastrarCliente.aspx" />
-    <Content Include="Pages\Clientes\ListarCliente.aspx" />
-    <Content Include="Pages\Index.aspx" />
-    <Content Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx" />
-    <Content Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx" />
-    <Content Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx" />
-    <Content Include="Pages\Pedidos\AlterarPedido.aspx" />
-    <Content Include="Pages\Pedidos\CadastrarPedido.aspx" />
-    <Content Include="Pages\Pedidos\CadastrarPedProduto.aspx" />
-    <Content Include="Pages\Pedidos\ListarPedido.aspx" />
-    <Content Include="Pages\Produtos\AlterarProduto.aspx" />
-    <Content Include="Pages\Produtos\CadastrarProduto.aspx" />
-    <Content Include="Pages\Produtos\ListarProduto.aspx" />
-    <Content Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx" />
-    <Content Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Content Include="AlterarCliente.aspx" />
+    <Content Include="CadastrarCliente.aspx" />
+    <Content Include="ListarCliente.aspx" />
+    <Content Include="AlterarMateriaPrima.aspx" />
+    <Content Include="CadastrarMateriaPrima.aspx" />
+    <Content Include="ListarMateriaPrima.aspx" />
+    <Content Include="AlterarPedido.aspx" />
+    <Content Include="CadastrarPedido.aspx" />
+    <Content Include="CadastrarPedProduto.aspx" />
+    <Content Include="ListarPedido.aspx" />
+    <Content Include="AlterarProduto.aspx" />
+    <Content Include="CadastrarProduto.aspx" />
+    <Content Include="ListarProduto.aspx" />
+    <Content Include="CadastrarRefugoMateria.aspx" />
+    <Content Include="ListarRefugoMateria.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -312,15 +320,15 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Content\Master\Home.Master" />
+    <Content Include="Home.Master" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -352,139 +360,139 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\js\AdminLTE\app.js" />
-    <Content Include="Scripts\js\AdminLTE\dashboard.js" />
-    <Content Include="Scripts\js\AdminLTE\demo.js" />
-    <Content Include="Scripts\js\bootstrap.min.js" />
-    <Content Include="Scripts\js\horariosmedico.js" />
-    <Content Include="Scripts\js\jquery-3.1.0.min.js" />
-    <Content Include="Scripts\js\jquery-ui.min.js" />
-    <Content Include="Scripts\js\jquery.min.js" />
-    <Content Include="Scripts\js\jquery.ui.draggable.js" />
-    <Content Include="Scripts\js\paciente.js" />
-    <Content Include="Scripts\js\plugins\bootstrap-slider\bootstrap-slider.js" />
-    <Content Include="Scripts\js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
-    <Content Include="Scripts\js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
-    <Content Include="Scripts\js\plugins\colorpicker\bootstrap-colorpicker.js" />
-    <Content Include="Scripts\js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
-    <Content Include="Scripts\js\plugins\datatables\dataTables.bootstrap.js" />
-    <Content Include="Scripts\js\plugins\datatables\jquery.dataTables.js" />
-    <Content Include="Scripts\js\plugins\datepicker\bootstrap-datepicker.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
-    <Content Include="Scripts\js\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
-    <Content Include="Scripts\js\plugins\daterangepicker\calendario.js" />
-    <Content Include="Scripts\js\plugins\daterangepicker\daterangepicker.js" />
-    <Content Include="Scripts\js\plugins\flot\excanvas.js" />
-    <Content Include="Scripts\js\plugins\flot\excanvas.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.colorhelpers.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.colorhelpers.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.canvas.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.canvas.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.categories.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.categories.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.crosshair.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.crosshair.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.errorbars.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.errorbars.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.fillbetween.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.fillbetween.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.image.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.image.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.navigate.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.navigate.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.pie.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.pie.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.resize.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.resize.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.selection.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.selection.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.stack.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.stack.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.symbol.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.symbol.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.threshold.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.threshold.min.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.time.js" />
-    <Content Include="Scripts\js\plugins\flot\jquery.flot.time.min.js" />
-    <Content Include="Scripts\js\plugins\iCheck\icheck.js" />
-    <Content Include="Scripts\js\plugins\iCheck\icheck.min.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.date.extensions.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.extensions.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.numeric.extensions.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.phone.extensions.js" />
-    <Content Include="Scripts\js\plugins\input-mask\jquery.inputmask.regex.extensions.js" />
-    <Content Include="Scripts\js\plugins\input-mask\phone-codes\readme.txt" />
-    <Content Include="Scripts\js\plugins\ionslider\ion.rangeSlider.min.js" />
-    <Content Include="Scripts\js\plugins\jqueryKnob\jquery.knob.js" />
-    <Content Include="Scripts\js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
-    <Content Include="Scripts\js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
-    <Content Include="Scripts\js\plugins\misc\html5shiv.js" />
-    <Content Include="Scripts\js\plugins\misc\jquery.ba-resize.min.js" />
-    <Content Include="Scripts\js\plugins\misc\jquery.placeholder.js" />
-    <Content Include="Scripts\js\plugins\misc\modernizr.min.js" />
-    <Content Include="Scripts\js\plugins\misc\respond.min.js" />
-    <Content Include="Scripts\js\plugins\moment\moment.min.js" />
-    <Content Include="Scripts\js\plugins\morris\morris.js" />
-    <Content Include="Scripts\js\plugins\morris\morris.min.js" />
-    <Content Include="Scripts\js\plugins\slimScroll\jquery.slimscroll.js" />
-    <Content Include="Scripts\js\plugins\slimScroll\jquery.slimscroll.min.js" />
-    <Content Include="Scripts\js\plugins\sparkline\jquery.sparkline.js" />
-    <Content Include="Scripts\js\plugins\sparkline\jquery.sparkline.min.js" />
-    <Content Include="Scripts\js\plugins\timepicker\bootstrap-timepicker.js" />
-    <Content Include="Scripts\js\plugins\timepicker\bootstrap-timepicker.min.js" />
-    <Content Include="Scripts\js\reserva.js" />
+    <Content Include="js\AdminLTE\app.js" />
+    <Content Include="js\AdminLTE\dashboard.js" />
+    <Content Include="js\AdminLTE\demo.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\horariosmedico.js" />
+    <Content Include="js\jquery-3.1.0.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.ui.draggable.js" />
+    <Content Include="js\paciente.js" />
+    <Content Include="js\plugins\bootstrap-slider\bootstrap-slider.js" />
+    <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
+    <Content Include="js\plugins\colorpicker\bootstrap-colorpicker.js" />
+    <Content Include="js\plugins\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="js\plugins\datatables\dataTables.bootstrap.js" />
+    <Content Include="js\plugins\datatables\jquery.dataTables.js" />
+    <Content Include="js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="js\plugins\daterangepicker\calendario.js" />
+    <Content Include="js\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="js\plugins\flot\excanvas.js" />
+    <Content Include="js\plugins\flot\excanvas.min.js" />
+    <Content Include="js\plugins\flot\jquery.colorhelpers.js" />
+    <Content Include="js\plugins\flot\jquery.colorhelpers.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.canvas.js" />
+    <Content Include="js\plugins\flot\jquery.flot.canvas.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.categories.js" />
+    <Content Include="js\plugins\flot\jquery.flot.categories.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.crosshair.js" />
+    <Content Include="js\plugins\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.errorbars.js" />
+    <Content Include="js\plugins\flot\jquery.flot.errorbars.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.fillbetween.js" />
+    <Content Include="js\plugins\flot\jquery.flot.fillbetween.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.image.js" />
+    <Content Include="js\plugins\flot\jquery.flot.image.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.js" />
+    <Content Include="js\plugins\flot\jquery.flot.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.navigate.js" />
+    <Content Include="js\plugins\flot\jquery.flot.navigate.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="js\plugins\flot\jquery.flot.pie.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="js\plugins\flot\jquery.flot.resize.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.selection.js" />
+    <Content Include="js\plugins\flot\jquery.flot.selection.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.stack.js" />
+    <Content Include="js\plugins\flot\jquery.flot.stack.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.symbol.js" />
+    <Content Include="js\plugins\flot\jquery.flot.symbol.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.threshold.js" />
+    <Content Include="js\plugins\flot\jquery.flot.threshold.min.js" />
+    <Content Include="js\plugins\flot\jquery.flot.time.js" />
+    <Content Include="js\plugins\flot\jquery.flot.time.min.js" />
+    <Content Include="js\plugins\iCheck\icheck.js" />
+    <Content Include="js\plugins\iCheck\icheck.min.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.date.extensions.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.extensions.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="js\plugins\input-mask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="js\plugins\input-mask\phone-codes\readme.txt" />
+    <Content Include="js\plugins\ionslider\ion.rangeSlider.min.js" />
+    <Content Include="js\plugins\jqueryKnob\jquery.knob.js" />
+    <Content Include="js\plugins\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="js\plugins\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="js\plugins\misc\html5shiv.js" />
+    <Content Include="js\plugins\misc\jquery.ba-resize.min.js" />
+    <Content Include="js\plugins\misc\jquery.placeholder.js" />
+    <Content Include="js\plugins\misc\modernizr.min.js" />
+    <Content Include="js\plugins\misc\respond.min.js" />
+    <Content Include="js\plugins\moment\moment.min.js" />
+    <Content Include="js\plugins\morris\morris.js" />
+    <Content Include="js\plugins\morris\morris.min.js" />
+    <Content Include="js\plugins\slimScroll\jquery.slimscroll.js" />
+    <Content Include="js\plugins\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="js\plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="js\plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="js\plugins\timepicker\bootstrap-timepicker.js" />
+    <Content Include="js\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="js\reserva.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -504,130 +512,116 @@
     <Compile Include="App_Code\Persistencia\PerdaMateriaBD.cs" />
     <Compile Include="App_Code\Persistencia\ProdutoBD.cs" />
     <Compile Include="App_Code\Persistencia\UsuariosBD.cs" />
-    <Compile Include="Content\Master\Home.Master.cs">
+    <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Content\Master\Home.Master.designer.cs">
+    <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CadastroUsuario.aspx.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\CadastroUsuario.aspx.designer.cs">
-      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Clientes\AlterarCliente.aspx.cs">
+    <Compile Include="AlterarCliente.aspx.cs">
       <DependentUpon>AlterarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Clientes\AlterarCliente.aspx.designer.cs">
+    <Compile Include="AlterarCliente.aspx.designer.cs">
       <DependentUpon>AlterarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Clientes\CadastrarCliente.aspx.cs">
+    <Compile Include="CadastrarCliente.aspx.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Clientes\CadastrarCliente.aspx.designer.cs">
+    <Compile Include="CadastrarCliente.aspx.designer.cs">
       <DependentUpon>CadastrarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Clientes\ListarCliente.aspx.cs">
+    <Compile Include="ListarCliente.aspx.cs">
       <DependentUpon>ListarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Clientes\ListarCliente.aspx.designer.cs">
+    <Compile Include="ListarCliente.aspx.designer.cs">
       <DependentUpon>ListarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx.cs">
+    <Compile Include="AlterarMateriaPrima.aspx.cs">
       <DependentUpon>AlterarMateriaPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\AlterarMateriaPrima.aspx.designer.cs">
+    <Compile Include="AlterarMateriaPrima.aspx.designer.cs">
       <DependentUpon>AlterarMateriaPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx.cs">
+    <Compile Include="CadastrarMateriaPrima.aspx.cs">
       <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\CadastrarMateriaPrima.aspx.designer.cs">
+    <Compile Include="CadastrarMateriaPrima.aspx.designer.cs">
       <DependentUpon>CadastrarMateriaPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.cs">
+    <Compile Include="ListarMateriaPrima.aspx.cs">
       <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\MateriasPrimas\ListarMateriaPrima.aspx.designer.cs">
+    <Compile Include="ListarMateriaPrima.aspx.designer.cs">
       <DependentUpon>ListarMateriaPrima.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Pedidos\AlterarPedido.aspx.cs">
+    <Compile Include="AlterarPedido.aspx.cs">
       <DependentUpon>AlterarPedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Pedidos\AlterarPedido.aspx.designer.cs">
+    <Compile Include="AlterarPedido.aspx.designer.cs">
       <DependentUpon>AlterarPedido.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Pedidos\CadastrarPedido.aspx.cs">
+    <Compile Include="CadastrarPedido.aspx.cs">
       <DependentUpon>CadastrarPedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Pedidos\CadastrarPedido.aspx.designer.cs">
+    <Compile Include="CadastrarPedido.aspx.designer.cs">
       <DependentUpon>CadastrarPedido.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Pedidos\CadastrarPedProduto.aspx.cs">
+    <Compile Include="CadastrarPedProduto.aspx.cs">
       <DependentUpon>CadastrarPedProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Pedidos\CadastrarPedProduto.aspx.designer.cs">
+    <Compile Include="CadastrarPedProduto.aspx.designer.cs">
       <DependentUpon>CadastrarPedProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Pedidos\ListarPedido.aspx.cs">
+    <Compile Include="ListarPedido.aspx.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Pedidos\ListarPedido.aspx.designer.cs">
+    <Compile Include="ListarPedido.aspx.designer.cs">
       <DependentUpon>ListarPedido.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Produtos\AlterarProduto.aspx.cs">
+    <Compile Include="AlterarProduto.aspx.cs">
       <DependentUpon>AlterarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Produtos\AlterarProduto.aspx.designer.cs">
+    <Compile Include="AlterarProduto.aspx.designer.cs">
       <DependentUpon>AlterarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Produtos\CadastrarProduto.aspx.cs">
+    <Compile Include="CadastrarProduto.aspx.cs">
       <DependentUpon>CadastrarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Produtos\CadastrarProduto.aspx.designer.cs">
+    <Compile Include="CadastrarProduto.aspx.designer.cs">
       <DependentUpon>CadastrarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Produtos\ListarProduto.aspx.cs">
+    <Compile Include="ListarProduto.aspx.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Produtos\ListarProduto.aspx.designer.cs">
+    <Compile Include="ListarProduto.aspx.designer.cs">
       <DependentUpon>ListarProduto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx.cs">
+    <Compile Include="CadastrarRefugoMateria.aspx.cs">
       <DependentUpon>CadastrarRefugoMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\RefugoMateriaPrima\CadastrarRefugoMateria.aspx.designer.cs">
+    <Compile Include="CadastrarRefugoMateria.aspx.designer.cs">
       <DependentUpon>CadastrarRefugoMateria.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx.cs">
+    <Compile Include="ListarRefugoMateria.aspx.cs">
       <DependentUpon>ListarRefugoMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\RefugoMateriaPrima\ListarRefugoMateria.aspx.designer.cs">
+    <Compile Include="ListarRefugoMateria.aspx.designer.cs">
       <DependentUpon>ListarRefugoMateria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -644,9 +638,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Scripts\js\plugins\input-mask\phone-codes\phone-be.json" />
-    <Content Include="Scripts\js\plugins\input-mask\phone-codes\phone-codes.json" />
-    <Content Include="Scripts\js\plugins\slimScroll\slimScroll.jquery.json" />
+    <Content Include="js\plugins\input-mask\phone-codes\phone-be.json" />
+    <Content Include="js\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="js\plugins\slimScroll\slimScroll.jquery.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -654,7 +648,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\Clientes\" />
+    <Folder Include="Pages\MateriasPrimas\" />
+    <Folder Include="Pages\Pedidos\" />
+    <Folder Include="Pages\Produtos\" />
+    <Folder Include="Pages\RefugoMateriaPrima\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
