@@ -178,13 +178,13 @@
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-line-chart"></i>
-                            <span>Ralatórios</span>
+                            <span>Relatórios</span>
                             <i class="fa fa-angle-right pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
                             <li>
-                                <a href="#"><i class="fa fa-angle-double-right"></i>Relatório de Vendas</a>
-                                <a href="#"><i class="fa fa-angle-double-right"></i>Relatório de Matéria Prima</a>
+                                <a href="RelatorioVenda.aspx"><i class="fa fa-angle-double-right"></i>Relatório de Vendas</a>
+                                <a href="RelatorioMateria.aspx"><i class="fa fa-angle-double-right"></i>Relatório de Matéria Prima</a>
                             </li>
                         </ul>
                     </li>

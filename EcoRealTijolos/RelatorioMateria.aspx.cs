@@ -11,6 +11,11 @@ namespace EcoRealTijolos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
+                lblOptionMenu.Text = "Relátorio de Matéria Prima";
+            }
 
         }
     }

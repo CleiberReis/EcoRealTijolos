@@ -1,15 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RelatorioMateria.aspx.cs" Inherits="EcoRealTijolos.RelatorioMateria" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="RelatorioMateria.aspx.cs" Inherits="EcoRealTijolos.RelatorioMateria" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
+
+    <section class="content-header">
+        <h1 style="text-align: center">RELÁTORIO DE MATÉRIA PRIMA</h1>
+    </section>
+    <section class="content">
+        </section>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
+</asp:Content>
