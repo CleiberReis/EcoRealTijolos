@@ -8,7 +8,7 @@
     <title>Gerenciamento EcoReal Tijolos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- IonIcons -->
     <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
@@ -172,6 +172,19 @@
                             <li>
                                 <a href="CadastrarProduto.aspx"><i class="fa fa-angle-double-right"></i>Produtos</a>
                                 <a href="CadastrarMateriaPrima.aspx"><i class="fa fa-angle-double-right"></i>Matéria Prima</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-line-chart"></i>
+                            <span>Ralatórios</span>
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-angle-double-right"></i>Relatório de Vendas</a>
+                                <a href="#"><i class="fa fa-angle-double-right"></i>Relatório de Matéria Prima</a>
                             </li>
                         </ul>
                     </li>

@@ -99,6 +99,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RelatorioMateria.aspx.cs">
+      <DependentUpon>RelatorioMateria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioMateria.aspx.designer.cs">
+      <DependentUpon>RelatorioMateria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioVenda.aspx.cs">
+      <DependentUpon>RelatorioVenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioVenda.aspx.designer.cs">
+      <DependentUpon>RelatorioVenda.aspx</DependentUpon>
+    </Compile>
     <Content Include="bin\EcoRealTijolos.dll" />
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -333,6 +347,8 @@
     <Content Include="ListarProduto.aspx" />
     <Content Include="CadastrarRefugoMateria.aspx" />
     <Content Include="ListarRefugoMateria.aspx" />
+    <Content Include="RelatorioMateria.aspx" />
+    <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
