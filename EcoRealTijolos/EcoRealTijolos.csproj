@@ -47,6 +47,33 @@
     <LangVersion>7.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Arction.DirectX, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.DirectXFiles, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.DirectXFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.DirectXInit, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.DirectXInit.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.Licensing, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.RenderingDefinitions, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.RenderingDefinitions.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.RenderingEngine, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.RenderingEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.RenderingEngine11, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.RenderingEngine11.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.RenderingEngine9, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.RenderingEngine9.dll</HintPath>
+    </Reference>
+    <Reference Include="Arction.WinForms.Charting.LightningChartUltimate, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
