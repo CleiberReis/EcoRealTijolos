@@ -99,6 +99,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\Funcoes.cs" />
     <Compile Include="CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
