@@ -175,6 +175,21 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-gear"></i>
+                            <span>Área do Admim</span>
+                            <i class="fa fa-angle-right pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="../../Pages/AreaAdm/CadastrarUsuario.aspx">../../Pages/AreaAdm/CadastrarUsuario.aspx</a>
+
+                                <a href="../../Pages/AreaAdm/ListarUsuarios.aspx"><i class="fa fa-angle-double-right"></i>Listar Usuários</a>
+                                <a href="../../Pages/AreaAdm/CadastrarUsuario.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar Usuários</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
         </aside>
