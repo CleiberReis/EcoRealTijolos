@@ -25,8 +25,20 @@ namespace EcoRealTijolos
             }
         }
 
+        protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int pedido = Convert.ToInt32(ddlPedido.SelectedItem.Value);
+            PedidoBD bd = new PedidoBD();
+            DataSet ds = bd.SelectAll();
+        }
+
         private void Carregar()
         {
+            ProdutoBD bd = new ProdutoBD();
+            DataSet ds = bd.SelectAll();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
@@ -34,7 +46,7 @@ namespace EcoRealTijolos
             ddlProduto.DataTextField = "prod_nome";
             ddlProduto.DataValueField = "prod_id";
             ddlProduto.DataBind();
-            ddlProduto.Items.Insert(0, "selecione um produto");
+            ddlProduto.Items.Insert(0, "Selecione um produto");
 
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
@@ -58,6 +70,7 @@ namespace EcoRealTijolos
             //coloca o "Selecione" selecionado
             ddlProduto.Items[0].Selected = true;
         }
+
 
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
