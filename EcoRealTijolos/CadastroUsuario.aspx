@@ -31,11 +31,10 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>ADMINISTRADOR?</label>
-                            <asp:CheckBox ID="cblAdmSim" Text="Sim" runat="server" CssClass="form-control"></asp:CheckBox>
-                            <asp:CheckBox ID="cblAdmNao" Text="Não" runat="server" CssClass="form-control"></asp:CheckBox>
+                            <label>ADMINISTRADOR?</label><asp:CheckBox ID="cbxAdmSim" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="cbxAdmSim_CheckedChanged"></asp:CheckBox>
+                            
                             <label>ATIVO?</label>
-                            <asp:CheckBox ID="cblAtivo" Text="Sim" runat="server" CssClass="form-control">
+                            <asp:CheckBox ID="cbxAtivo" Text="Sim" runat="server" CssClass="form-control">
                             </asp:CheckBox>
                         </div>
                     </div>

@@ -20,5 +20,10 @@ namespace EcoRealTijolos
                 lblOptionMenu.Text = "Usuários";
             }
         }
+
+        protected void cbxAdmSim_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
