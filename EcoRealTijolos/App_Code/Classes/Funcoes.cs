@@ -28,7 +28,7 @@ namespace EcoRealTijolos.App_Code.Classes
 
     }
 
-    public static string HashTexto(string texto, string nomeHash)
+    /*public static string HashTexto(string texto, string nomeHash)
     {
         HashAlgorithm algoritmo = HashAlgorithm.Create(nomeHash);
         if (algoritmo == null)
@@ -38,7 +38,7 @@ namespace EcoRealTijolos.App_Code.Classes
         byte[] hash = algoritmo.ComputeHash(Encoding.UTF8.GetBytes(texto));
         return Convert.ToBase64String(hash);
 
-    }
+    }*/
 
 
 }
