@@ -34,10 +34,9 @@ namespace EcoRealTijolos
             Usuarios usuarios = new Usuarios();
             usuarios.Nome = txtNome.Text;
             usuarios.Email = txtEmail.Text;
-            usuarios.Tipo = cbxAdmSim.Text;
+            usuarios.Tipo = Convert.ToInt32(cbxAdmSim.Text);
             usuarios.Login = txtLogin.Text;
-            usuarios.Senha = txtSenha.Text;
-            usuarios.Ativo = cbxAtivo.Text;
+            usuarios.Ativo =Convert.ToInt32(cbxAtivo.Text);
 
 
             UsuariosBD bd = new UsuariosBD();
@@ -47,9 +46,9 @@ namespace EcoRealTijolos
 
                 txtNome.Text = "";
                 txtEmail.Text = "";
-                txtTelefone.Text = "";
+                cbxAdmSim.Text = "";
                 txtLogin.Text = "";
-                txtSenha.Text = "";
+                cbxAtivo.Text = "";
 
                 txtNome.Focus();
             }
@@ -57,6 +56,11 @@ namespace EcoRealTijolos
             {
                 lblMensagem.Text = "Erro ao salvar.";
             }
+        }
+
+        protected void BtnLista_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListarUsuarios.aspx", false);
         }
     }
 }

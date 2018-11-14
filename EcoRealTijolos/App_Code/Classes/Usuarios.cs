@@ -13,7 +13,7 @@ namespace EcoRealTijolos.App_Code.Classes
         public int Tipo { get; set; }
         public string Login { get; set; }
         public string PriAcesso { get; set; }
-        public bool Senha { get; set; }
+        public string Senha { get; set; }
         public int Ativo { get; set; }
 
         //contructor
