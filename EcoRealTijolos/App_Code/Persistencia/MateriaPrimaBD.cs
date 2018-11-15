@@ -13,7 +13,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
     public class MateriaPrimaBD
     {
         //métodos
-
         //insert
         public bool Insert(MateriaPrima materia)
         {
@@ -34,6 +33,37 @@ namespace EcoRealTijolos.App_Code.Persistencia
 
             return true;
         }
+
+        public int GetID(int materiaID, int quantidade, String observacao)
+        {
+            int perdaID = 0;
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataReader objDataReader;
+            objConexao = Mapped.Connection();
+            //os campos abaixo são de exemplo. Você pode adicionar mais campos.
+            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria WHERE mat_idperda=?codigo and per_quantidade=?quantidade and per_observacao=?observacao ORDER BY per_id DESC LIMIT 1", objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", materiaID));
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidade", quantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?observacao", observacao));
+            objDataReader = objCommand.ExecuteReader();
+
+            while (objDataReader.Read())
+            {
+                perdaID = Convert.ToInt32(objDataReader["per_id"]);
+            }
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
+
+            return perdaID;
+        }
+
+
+
         //selectall
         public DataSet SelectAll()
         {
@@ -56,9 +86,25 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
-        internal static object getInstance()
+        //selectall Para a tela de PerdaMateria
+        public DataSet SelectAllPerda()
         {
-            throw new NotImplementedException();
+            DataSet ds = new DataSet();
+
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_perdamateria BY per_id DESC LIMIT 1", objConexao);
+
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return ds;
         }
 
         //select
@@ -81,7 +127,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Id = Convert.ToInt32(objDataReader["mat_id"]);
                 obj.Nome = Convert.ToString(objDataReader["mat_nome"]);
                 obj.Quantidade = Convert.ToInt32(objDataReader["mat_quantidade"]);
-
             }
 
             objDataReader.Close();
@@ -93,6 +138,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
 
             return obj;
         }
+
         //update
         public bool Update(MateriaPrima materia)
         {

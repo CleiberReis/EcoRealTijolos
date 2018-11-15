@@ -19,7 +19,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_cliente(cli_nome, cli_cpf, cli_telefone, cli_email) VALUES (?nome, ?cpf, ?telefone, ?email)";
+            string sql = "INSERT INTO tbl_cliente(cli_nome, cli_cpf, cli_telefone, cli_email, cli_estado, cli_cidade, cli_logradouro) VALUES (?nome, ?cpf, ?telefone, ?email, ?estado, ?cidade, ?logradouro)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -28,6 +28,10 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.Cpf));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
+            objCommand.Parameters.Add(Mapped.Parameter("?logradouro", cliente.Logradouro));
+            objCommand.Parameters.Add(Mapped.Parameter("?estado", cliente.Estado));
+            objCommand.Parameters.Add(Mapped.Parameter("?cidade", cliente.Cidade));
+
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -80,6 +84,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Cpf = Convert.ToString(objDataReader["cli_cpf"]);
                 obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
                 obj.Email = Convert.ToString(objDataReader["cli_email"]);
+                obj.Logradouro = Convert.ToString(objDataReader["cli_logradouro"]);
+                obj.Estado = Convert.ToString(objDataReader["cli_estado"]);
+                obj.Cidade = Convert.ToString(objDataReader["cli_cidade"]);
 
             }
 
@@ -97,7 +104,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_cpf=?cpf, cli_telefone=?telefone, cli_email=?email WHERE cli_id=?id";
+            string sql = "UPDATE tbl_cliente SET cli_nome=?nome, cli_cpf=?cpf, cli_telefone=?telefone, cli_email=?email, cli_estado=?estado, cli_cidade=?cidade, cli_logradouro=?logradouro WHERE cli_id=?id";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -106,6 +113,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?cpf", cliente.Cpf));
             objCommand.Parameters.Add(Mapped.Parameter("?telefone", cliente.Telefone));
             objCommand.Parameters.Add(Mapped.Parameter("?email", cliente.Email));
+            objCommand.Parameters.Add(Mapped.Parameter("?logradouro", cliente.Logradouro));
+            objCommand.Parameters.Add(Mapped.Parameter("?estado", cliente.Estado));
+            objCommand.Parameters.Add(Mapped.Parameter("?cidade", cliente.Cidade));
             objCommand.Parameters.Add(Mapped.Parameter("?id", cliente.Id));
 
             objCommand.ExecuteNonQuery();

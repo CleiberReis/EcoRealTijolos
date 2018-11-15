@@ -6,7 +6,8 @@ using System.Linq;
 using System.Web;
 using EcoRealTijolos.App_Code.Classes;
 using EcoRealTijolos.App_Code.Persistencia;
-
+using System.Data.SqlClient;
+using System.Web.Configuration;
 
 namespace EcoRealTijolos.App_Code.Classes
 {
@@ -18,9 +19,11 @@ namespace EcoRealTijolos.App_Code.Classes
         public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
-
+        public string Logradouro { get; set; }
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
         public Pedido Pedido { get; set; }
-
+        
         //construtor
         public Cliente()
         {
