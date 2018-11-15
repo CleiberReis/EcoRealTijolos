@@ -40,6 +40,11 @@ namespace EcoRealTijolos
             GridView1.DataSource = ds.Tables[0].DefaultView;
             GridView1.DataBind();
 
+            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
+            DataSet pedprodds = pedprodbd.SelectAllPedProd();
+            GridView2.DataSource = pedprodds.Tables[0].DefaultView;
+            GridView2.DataBind();
+
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
             ddlProduto.DataSource = produtods.Tables[0].DefaultView;
@@ -76,9 +81,10 @@ namespace EcoRealTijolos
         {
             double calcular = Convert.ToDouble(txtValorUnitario.Text) * Convert.ToInt32(txtQuantidade.Text);
             txtSubtotal.Text = calcular.ToString();
+            btnIncluir.Focus();
         }
 
-        protected void btnFinalizar_Click(object sender, EventArgs e)
+        protected void btnIncluir_Click(object sender, EventArgs e)
         {
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
@@ -102,15 +108,15 @@ namespace EcoRealTijolos
                 case 0:
                     LimparCampos();
                     ddlProduto.Focus();
-                    lblMensagem.Text = "Pedido Finalizado com sucesso";
+                    lblMensagem.Text = "Produto Incluso";
                     break;
                 case 1:
                     //Erro no banco de dados
-                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
                     break;
                 case 2:
                     //Erro geral
-                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
                     break;
                 default:
                     break;

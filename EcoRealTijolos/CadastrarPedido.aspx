@@ -22,10 +22,10 @@
                         </div>
                         <div class="form-group">
                             <label>ENDEREÇO COMPLETO:</label>
-                            <asp:TextBox ID="txtEndereco" Width="562px" Height="24px" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <asp:TextBox ID="txtEndereco" Width="500px" Height="24px" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                             <label>Ex: Rua xxxx, 00, Bairro xxx - Cidade (UF)</label>
                         </div>
-                    </div>
+                    </div>2
                 </div>
             </div>
             <div class="col-md-6">
