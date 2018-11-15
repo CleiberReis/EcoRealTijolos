@@ -33,7 +33,7 @@
                             <asp:Button ID="btnCalcular" runat="server" CssClass="btn btn-facebook" OnClick="btnCalcular_Click" Text="Calcular Subtotal" />
                         </div>
                         <label>Subtotal: R$</label>
-                            <asp:TextBox ID="txtSubtotal" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                        <asp:TextBox ID="txtSubtotal" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                         <div class="form-group">
                         </div>
                         <div align="center">
@@ -81,10 +81,10 @@
                             </Columns>
                         </asp:GridView>
                         <br />
-                         <div align="left">
-                            <asp:Button ID="btnTotal" runat="server" CssClass="btn btn-primary" Text="Calcular Total" />
+                        <div>
+                            <asp:Button ID="btnTotal" runat="server" CssClass="btn btn-primary" Text="Calcular Total" OnClick="btnTotal_Click"/>
+                            <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                         </div>
-                        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                     </div>
                 </div>
             </div>

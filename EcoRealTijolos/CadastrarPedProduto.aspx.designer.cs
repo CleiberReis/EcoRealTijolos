@@ -121,12 +121,12 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.Button btnTotal;
         
         /// <summary>
-        /// Controle Label1.
+        /// Controle lblTotal.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
     }
 }

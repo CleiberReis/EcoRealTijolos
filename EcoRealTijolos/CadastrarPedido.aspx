@@ -25,7 +25,7 @@
                             <asp:TextBox ID="txtEndereco" Width="500px" Height="24px" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                             <label>Ex: Rua xxxx, 00, Bairro xxx - Cidade (UF)</label>
                         </div>
-                    </div>2
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">

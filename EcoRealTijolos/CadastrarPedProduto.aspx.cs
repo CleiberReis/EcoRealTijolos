@@ -84,6 +84,25 @@ namespace EcoRealTijolos
             btnIncluir.Focus();
         }
 
+        protected void btnTotal_Click(object sender, EventArgs e)
+        {
+            decimal ValorTotal = 0;
+
+            foreach (GridViewRow row in GridView2.Rows)
+            {
+                if (row.RowType != DataControlRowType.Header && row.RowType != DataControlRowType.Footer)
+                {
+                    if (row.Cells[3].Text != null && row.Cells[3].Text != string.Empty)
+                    {
+                        ValorTotal += Convert.ToDecimal(row.Cells[3].Text);
+                    }
+                }
+            }
+
+            lblTotal.Text = ValorTotal.ToString("C2");
+            lblTotal.Focus();
+        }
+
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
             ProdutoBD produtobd = new ProdutoBD();
@@ -122,5 +141,7 @@ namespace EcoRealTijolos
                     break;
             }
         }
+
+      
     }
 }
