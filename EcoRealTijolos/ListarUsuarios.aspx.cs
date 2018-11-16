@@ -44,7 +44,7 @@ namespace EcoRealTijolos
                 case "Deletar":
                     codigo = Convert.ToInt32(e.CommandArgument);
                     UsuariosBD bd = new UsuariosBD();
-                    //bd.Delete(codigo);
+                    bd.Delete(codigo);
                     break;
                 default:
                     break;

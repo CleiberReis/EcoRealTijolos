@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-body table-responsive">
-                    <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" CssClass="table table-bordered table-hover col-md-12" AutoGenerateColumns="False">
+                    <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
                         <Columns>
                             <asp:BoundField DataField="prod_nome" HeaderText="Nome do Produto" />
                             <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário" />

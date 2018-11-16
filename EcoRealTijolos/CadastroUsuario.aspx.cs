@@ -12,10 +12,13 @@ namespace EcoRealTijolos
 {
     public partial class CadastroUsuario : System.Web.UI.Page
     {
+        int value1;
+        int value2;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
+                
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Usuários";
             }
@@ -25,32 +28,45 @@ namespace EcoRealTijolos
         {
             if (cbxAdmSim.Checked)
             {
+                value1 = 0; //administrador
+            }
+            else
+            {
+                value1 = 1; //usuário comum
+            }
+        }
 
+        protected void cbxAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxAtivo.Checked)
+            {
+                value2 = 0; //ativo
+            }
+            else
+            {
+                value2 = 1; //inativo
             }
         }
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
-            usuarios.Nome = txtNome.Text;
+            usuarios.Nome = txtUser.Text;
             usuarios.Email = txtEmail.Text;
-            usuarios.Tipo = Convert.ToInt32(cbxAdmSim.Text);
+            usuarios.Tipo = Convert.ToInt32(value1);
             usuarios.Login = txtLogin.Text;
-            usuarios.Ativo =Convert.ToInt32(cbxAtivo.Text);
-
+            usuarios.Ativo =Convert.ToInt32(value2);
 
             UsuariosBD bd = new UsuariosBD();
             if (bd.Insert(usuarios))
             {
                 lblMensagem.Text = "Usuário cadastrado com sucesso";
 
-                txtNome.Text = "";
+                txtUser.Text = "";
                 txtEmail.Text = "";
-                cbxAdmSim.Text = "";
                 txtLogin.Text = "";
-                cbxAtivo.Text = "";
 
-                txtNome.Focus();
+                txtUser.Focus();
             }
             else
             {

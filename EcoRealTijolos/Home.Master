@@ -196,10 +196,8 @@
                         </a>
                         <ul class="treeview-menu">
                             <li>
-                                
-
-                                <a href="../../Pages/AreaAdm/ListarUsuarios.aspx"><i class="fa fa-angle-double-right"></i>Listar Usuários</a>
-                                <a href="../../Pages/AreaAdm/CadastrarUsuario.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar Usuários</a>
+                                <a href="CadastroUsuario.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar Usuários</a>
+                                <a href="ListarUsuarios.aspx"><i class="fa fa-angle-double-right"></i>Listar Usuários</a>
                             </li>
                         </ul>
                     </li>
