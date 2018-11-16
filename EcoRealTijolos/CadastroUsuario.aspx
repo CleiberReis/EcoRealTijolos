@@ -14,15 +14,12 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>NOME:</label>
-                            <asp:TextBox ID="txtNome" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                            <asp:TextBox ID="txtUser" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
+                        &nbsp;
                         <div class="form-group">
                             <label>E-MAIL:</label>
                             <asp:TextBox ID="txtEmail" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label>LOGIN:</label>
-                            <asp:TextBox ID="txtLogin" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -31,11 +28,14 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>ADMINISTRADOR?</label>
-                            <asp:CheckBox ID="cblAdmSim" Text="Sim" runat="server" CssClass="form-control"></asp:CheckBox>
-                            <asp:CheckBox ID="cblAdmNao" Text="Não" runat="server" CssClass="form-control"></asp:CheckBox>
-                            <label>ATIVO?</label>
-                            <asp:CheckBox ID="cblAtivo" Text="Sim" runat="server" CssClass="form-control">
+                            <label>LOGIN:</label>
+                            <asp:TextBox ID="txtLogin" runat="server" Text="" CssClass="form-control col-md-6"></asp:TextBox>
+                        </div>
+                        &nbsp;
+                        <div class="form-group">
+                            <label>ADMINISTRADOR?</label><asp:CheckBox ID="cbxAdmSim" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="cbxAdmSim_CheckedChanged" BorderStyle="None" BorderWidth="0px" Font-Bold="True" Width="89px"></asp:CheckBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>ATIVO?        </label><asp:CheckBox ID="cbxAtivo" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="cbxAtivo_CheckedChanged" BorderStyle="None" BorderWidth="0px" Width="85px">
                             </asp:CheckBox>
                         </div>
                     </div>

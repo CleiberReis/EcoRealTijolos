@@ -26,24 +26,19 @@ namespace EcoRealTijolos.App_Code.Classes
             client.Send(msgMail);
         }
 
-        public static string HashTexto(string texto)
-        {
-            HashAlgorithm algoritmo = HashAlgorithm.Create("SHA5-12");
-            if (algoritmo == null)
-            {
-                throw new ArgumentException("Nome de hash incorreto", "nomeHash");
-            }
-            byte[] hash = algoritmo.ComputeHash(Encoding.UTF8.GetBytes(texto));
-            return Convert.ToBase64String(hash);
-
-        }
-        
-
-
-
     }
 
-    
+    /*public static string HashTexto(string texto, string nomeHash)
+    {
+        HashAlgorithm algoritmo = HashAlgorithm.Create(nomeHash);
+        if (algoritmo == null)
+        {
+            throw new ArgumentException("Nome de hash incorreto", "nomeHash");
+        }
+        byte[] hash = algoritmo.ComputeHash(Encoding.UTF8.GetBytes(texto));
+        return Convert.ToBase64String(hash);
+
+    }*/
 
 
 }

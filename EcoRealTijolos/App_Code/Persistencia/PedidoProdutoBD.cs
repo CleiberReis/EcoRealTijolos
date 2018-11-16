@@ -63,6 +63,23 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+        //SelectAllPedProd
+        public DataSet SelectAllPedProd()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto ORDER BY ped_id", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //select
         public PedidoProduto Select(int id)
         {
@@ -124,6 +141,27 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objConexao.Dispose();
             return true;
         }
+
+        //calculoTotal
+        public Double GetSomaTotal(int idPedido)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT SUM(pedpro_subtotal) AS SOMA FROM tbl_pedidoproduto WHERE ped_id=?codigo", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", idPedido));
+            objDataAdapter.Fill(ds);
+            DataRow dr = ds.Tables[0].Rows[0];
+            Double total = Convert.ToDouble(dr["SOMA"]);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return total;
+        }
+
 
         public PedidoProdutoBD()
         {

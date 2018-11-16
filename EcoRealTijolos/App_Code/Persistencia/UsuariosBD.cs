@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using EcoRealTijolos.App_Code.Classes;
+using System.Web.UI.WebControls;
 
 namespace EcoRealTijolos.App_Code.Persistencia
 {
@@ -92,6 +93,55 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return obj;
         }
 
+        //update
+        public bool Update(Usuarios usuario)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "UPDATE tbl_usuario SET usu_nome=?nome, usu_email=?email, usu_login=?login, usu_tipo=?tipo, usu_ativo=?ativo WHERE usu_id=?codigo";
 
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
+            objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
+            objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
+            objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
+            objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return true;
+        }
+
+        //delete
+        public bool Delete(int codigo)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "DELETE FROM tbl_usuario WHERE usu_id=?codigo";
+
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", codigo));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+
+            return true;
+        }
+        //contructor
+        public UsuariosBD()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+        }
     }
 }
