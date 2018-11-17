@@ -77,7 +77,7 @@
                                 <div class="form-group">
                                     <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                                 </div>
-                                    <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" data-toggle="modal" data-target="#myModal" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                    <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
                             </div>
                         </div>
                     </div>

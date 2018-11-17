@@ -41,7 +41,7 @@ namespace EcoRealTijolos
             GridView1.DataBind();
 
             PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            DataSet pedprodds = pedprodbd.SelectAllPedProd();
+            DataSet pedprodds = pedprodbd.SelectAll();
             GridView2.DataSource = pedprodds.Tables[0].DefaultView;
             GridView2.DataBind();
 
@@ -128,14 +128,15 @@ namespace EcoRealTijolos
                     LimparCampos();
                     ddlProduto.Focus();
                     lblMensagem.Text = "Produto Incluso";
+                    Carregar();
                     break;
                 case 1:
                     //Erro no banco de dados
-                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 case 2:
                     //Erro geral
-                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 default:
                     break;
