@@ -5,6 +5,7 @@ using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using EcoRealTijolos.App_Code.Classes;
 
 namespace EcoRealTijolos.App_Code.Classes
 {
@@ -26,26 +27,21 @@ namespace EcoRealTijolos.App_Code.Classes
             client.Send(msgMail);
         }
 
-    }
 
-    public static string HashTexto(string texto, string nomeHash)
-    {
-        HashAlgorithm algoritmo = HashAlgorithm.Create(nomeHash);
-        if (algoritmo == null)
+
+        public static string HashTexto(string texto, string nomeHash)
         {
-            throw new ArgumentException("Nome de hash incorreto", "nomeHash");
+            HashAlgorithm algoritmo = HashAlgorithm.Create(nomeHash);
+            if (algoritmo == null)
+            {
+                throw new ArgumentException("Nome de hash incorreto", "nomeHash");
+            }
+            byte[] hash = algoritmo.ComputeHash(Encoding.UTF8.GetBytes(texto));
+            return Convert.ToBase64String(hash);
+
         }
-        byte[] hash = algoritmo.ComputeHash(Encoding.UTF8.GetBytes(texto));
-        return Convert.ToBase64String(hash);
-
-    }
-
-
 
 
     }
-
-    
-
 
 }
