@@ -40,13 +40,13 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.DropDownList ddlProduto;
         
         /// <summary>
-        /// Controle txtQuantidade.
+        /// Controle GridView1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// Controle txtValorUnitario.
@@ -56,6 +56,15 @@ namespace EcoRealTijolos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtValorUnitario;
+        
+        /// <summary>
+        /// Controle txtQuantidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
         
         /// <summary>
         /// Controle btnCalcular.
@@ -85,21 +94,39 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.Label lblMensagem;
         
         /// <summary>
-        /// Controle btnFinalizar.
+        /// Controle btnIncluir.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFinalizar;
+        protected global::System.Web.UI.WebControls.Button btnIncluir;
         
         /// <summary>
-        /// Controle hlProduto.
+        /// Controle GridView2.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlProduto;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
+        
+        /// <summary>
+        /// Controle btnTotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnTotal;
+        
+        /// <summary>
+        /// Controle lblTotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal;
     }
 }

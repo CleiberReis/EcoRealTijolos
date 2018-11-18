@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace EcoRealTijolos.Pages
+namespace EcoRealTijolos.Pages.AreaAdm
 {
-    public partial class CadastroUsuario : System.Web.UI.Page
+    public partial class CadastrarUsuario : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

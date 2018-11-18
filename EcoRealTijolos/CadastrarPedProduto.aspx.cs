@@ -25,8 +25,25 @@ namespace EcoRealTijolos
             }
         }
 
+        protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int pedido = Convert.ToInt32(ddlPedido.SelectedItem.Value);
+            PedidoBD bd = new PedidoBD();
+            DataSet ds = bd.SelectAll();
+        }
+
         private void Carregar()
         {
+            ProdutoBD bd = new ProdutoBD();
+            DataSet ds = bd.SelectAll();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+
+            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
+            DataSet pedprodds = pedprodbd.SelectAll();
+            GridView2.DataSource = pedprodds.Tables[0].DefaultView;
+            GridView2.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
@@ -34,7 +51,7 @@ namespace EcoRealTijolos
             ddlProduto.DataTextField = "prod_nome";
             ddlProduto.DataValueField = "prod_id";
             ddlProduto.DataBind();
-            ddlProduto.Items.Insert(0, "selecione um produto");
+            ddlProduto.Items.Insert(0, "Selecione um produto");
 
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
@@ -59,13 +76,34 @@ namespace EcoRealTijolos
             ddlProduto.Items[0].Selected = true;
         }
 
+
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
             double calcular = Convert.ToDouble(txtValorUnitario.Text) * Convert.ToInt32(txtQuantidade.Text);
             txtSubtotal.Text = calcular.ToString();
+            btnIncluir.Focus();
         }
 
-        protected void btnFinalizar_Click(object sender, EventArgs e)
+        protected void btnTotal_Click(object sender, EventArgs e)
+        {
+            decimal ValorTotal = 0;
+
+            foreach (GridViewRow row in GridView2.Rows)
+            {
+                if (row.RowType != DataControlRowType.Header && row.RowType != DataControlRowType.Footer)
+                {
+                    if (row.Cells[3].Text != null && row.Cells[3].Text != string.Empty)
+                    {
+                        ValorTotal += Convert.ToDecimal(row.Cells[3].Text);
+                    }
+                }
+            }
+
+            lblTotal.Text = ValorTotal.ToString("C2");
+            lblTotal.Focus();
+        }
+
+        protected void btnIncluir_Click(object sender, EventArgs e)
         {
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
@@ -89,19 +127,22 @@ namespace EcoRealTijolos
                 case 0:
                     LimparCampos();
                     ddlProduto.Focus();
-                    lblMensagem.Text = "Pedido Finalizado com sucesso";
+                    lblMensagem.Text = "Produto Incluso";
+                    Carregar();
                     break;
                 case 1:
                     //Erro no banco de dados
-                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 case 2:
                     //Erro geral
-                    lblMensagem.Text = "Não foi possível realizar o pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 default:
                     break;
             }
         }
+
+      
     }
 }

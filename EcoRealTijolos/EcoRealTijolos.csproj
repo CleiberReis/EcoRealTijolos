@@ -99,6 +99,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Classes\Funcoes.cs" />
+    <Compile Include="CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListarUsuarios.aspx.cs">
+      <DependentUpon>ListarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarUsuarios.aspx.designer.cs">
+      <DependentUpon>ListarUsuarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RelatorioMateria.aspx.cs">
       <DependentUpon>RelatorioMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -347,6 +362,8 @@
     <Content Include="ListarProduto.aspx" />
     <Content Include="CadastrarRefugoMateria.aspx" />
     <Content Include="ListarRefugoMateria.aspx" />
+    <Content Include="CadastroUsuario.aspx" />
+    <Content Include="ListarUsuarios.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
