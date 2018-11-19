@@ -84,27 +84,15 @@ namespace EcoRealTijolos
             btnIncluir.Focus();
         }
 
-        protected void btnTotal_Click(object sender, EventArgs e)
-        {
-            decimal ValorTotal = 0;
-
-            foreach (GridViewRow row in GridView2.Rows)
-            {
-                if (row.RowType != DataControlRowType.Header && row.RowType != DataControlRowType.Footer)
-                {
-                    if (row.Cells[3].Text != null && row.Cells[3].Text != string.Empty)
-                    {
-                        ValorTotal += Convert.ToDecimal(row.Cells[3].Text);
-                    }
-                }
-            }
-
-            lblTotal.Text = ValorTotal.ToString("C2");
-            lblTotal.Focus();
-        }
-
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
+            int pedidoTotal = Convert.ToInt32(ddlPedido.SelectedItem.Value);
+            PedidoBD bd = new PedidoBD();
+            DataSet ds = bd.SelectAll();
+            PedidoProdutoBD db = new PedidoProdutoBD();
+            double total = db.GetSomaTotal(pedidoTotal);
+            lblTotal.Text = total.ToString();
+
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
 
@@ -115,7 +103,14 @@ namespace EcoRealTijolos
             PedidoProduto pedidoproduto = new PedidoProduto();
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
-
+            if (lblTotal is null)
+            {
+                pedidoproduto.Total = 0;
+            }
+            else
+            {
+                pedidoproduto.Total = Convert.ToDouble(lblTotal.Text);
+            }
             pedidoproduto.Produto = produto;
             pedidoproduto.Pedido = pedido;
 
@@ -143,6 +138,6 @@ namespace EcoRealTijolos
             }
         }
 
-      
+
     }
 }

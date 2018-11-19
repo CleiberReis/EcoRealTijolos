@@ -21,9 +21,9 @@
                             <asp:DropDownList ID="ddlProduto" runat="server" CssClass="form-control"></asp:DropDownList>
                             <br />
                             <div align="center">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                                Consultar Preço Unitário
-                            </button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    Consultar Preço Unitário
+                                </button>
                             </div>
                             <!-- Modal -->
                             <div class="modal fade" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -77,7 +77,10 @@
                                 <div class="form-group">
                                     <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                                 </div>
-                                    <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                <div>
+                                    <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,13 +98,11 @@
                                 <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
                                 <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
                                 <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
+                                <asp:BoundField DataField="pedpro_total" HeaderText="Valor Total do Pedido" />
                             </Columns>
                         </asp:GridView>
                         <br />
-                        <div>
-                            <asp:Button ID="btnTotal" runat="server" CssClass="btn btn-primary" Text="Calcular Total" OnClick="btnTotal_Click" />
-                            <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>

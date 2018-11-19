@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using EcoRealTijolos.App_Code.Classes;
+using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos.App_Code.Persistencia
 {
@@ -17,13 +18,14 @@ namespace EcoRealTijolos.App_Code.Persistencia
             {
                 System.Data.IDbConnection objConexao;
                 System.Data.IDbCommand objCommand;
-                string sql = "INSERT INTO tbl_pedidoproduto(pedpro_quantidade, pedpro_subtotal, ped_id, prod_id) VALUES (?quantidade, ?subtotal, ?idPedido, ?idProduto)";
+                string sql = "INSERT INTO tbl_pedidoproduto(pedpro_quantidade, pedpro_subtotal, ped_id, prod_id, pedpro_total) VALUES (?quantidade, ?subtotal, ?idPedido, ?idProduto, ?total)";
 
                 objConexao = Mapped.Connection();
                 objCommand = Mapped.Command(sql, objConexao);
 
                 objCommand.Parameters.Add(Mapped.Parameter("?quantidade", pedidoproduto.Quantidade));
                 objCommand.Parameters.Add(Mapped.Parameter("?subtotal", pedidoproduto.Subtotal));
+                objCommand.Parameters.Add(Mapped.Parameter("?total", pedidoproduto.Total));
                 objCommand.Parameters.Add(Mapped.Parameter("?idPedido", pedidoproduto.Pedido.Codigo));
                 objCommand.Parameters.Add(Mapped.Parameter("?idProduto", pedidoproduto.Produto.Id));
 
@@ -63,23 +65,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
-        //SelectAllPedProd
-        public DataSet SelectAllPedProd()
-        {
-            DataSet ds = new DataSet();
-            System.Data.IDbConnection objConexao;
-            System.Data.IDbCommand objCommand;
-            System.Data.IDataAdapter objDataAdapter;
-            objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto ORDER BY ped_id", objConexao);
-            objDataAdapter = Mapped.Adapter(objCommand);
-            objDataAdapter.Fill(ds);
-            objConexao.Close();
-            objCommand.Dispose();
-            objConexao.Dispose();
-            return ds;
-        }
-
         //select
         public PedidoProduto Select(int id)
         {
@@ -88,7 +73,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto WHERE pedpro_id=?codigo", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto WHERE pedprod_id=?codigo", objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", id));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
@@ -142,8 +127,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
-        //calculoTotal
-        public Double GetSomaTotal(int idPedido)
+        //calculoValorTotal
+        public double GetSomaTotal(int idPedido)
         {
             DataSet ds = new DataSet();
             System.Data.IDbConnection objConexao;
