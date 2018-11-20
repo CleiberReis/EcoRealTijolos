@@ -97,7 +97,6 @@
                                 <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
                                 <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
                                 <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
-                                <asp:BoundField DataField="pedpro_total" HeaderText="Valor Total do Pedido" />
                             </Columns>
                         </asp:GridView>
                         <br />

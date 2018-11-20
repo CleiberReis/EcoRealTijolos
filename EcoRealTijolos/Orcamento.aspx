@@ -24,6 +24,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
+                                <Columns>
+                                    <asp:BoundField DataField="ped_id" HeaderText="Código do Pedido" />
+                                    <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
+                                    <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
+                                    <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
+                                </Columns>
+                            </asp:GridView>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </asp:Content>

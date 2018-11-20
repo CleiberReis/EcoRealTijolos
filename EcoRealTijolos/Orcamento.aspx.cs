@@ -47,6 +47,11 @@ namespace EcoRealTijolos
             PedidoProdutoBD db = new PedidoProdutoBD();
             double total = db.GetSomaTotal(pedidoTotal);
             lblTotal.Text = total.ToString("C2");
+
+            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
+            DataSet pedprodds = pedprodbd.SelectAll();
+            GridView1.DataSource = pedprodds.Tables[0].DefaultView;
+            GridView1.DataBind();
         }
     }
 }

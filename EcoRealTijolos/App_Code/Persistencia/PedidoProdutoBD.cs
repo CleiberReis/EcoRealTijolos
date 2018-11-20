@@ -18,14 +18,13 @@ namespace EcoRealTijolos.App_Code.Persistencia
             {
                 System.Data.IDbConnection objConexao;
                 System.Data.IDbCommand objCommand;
-                string sql = "INSERT INTO tbl_pedidoproduto(pedpro_quantidade, pedpro_subtotal, ped_id, prod_id, pedpro_total) VALUES (?quantidade, ?subtotal, ?idPedido, ?idProduto, ?total)";
+                string sql = "INSERT INTO tbl_pedidoproduto(pedpro_quantidade, pedpro_subtotal, ped_id, prod_id) VALUES (?quantidade, ?subtotal, ?idPedido, ?idProduto)";
 
                 objConexao = Mapped.Connection();
                 objCommand = Mapped.Command(sql, objConexao);
 
                 objCommand.Parameters.Add(Mapped.Parameter("?quantidade", pedidoproduto.Quantidade));
                 objCommand.Parameters.Add(Mapped.Parameter("?subtotal", pedidoproduto.Subtotal));
-                objCommand.Parameters.Add(Mapped.Parameter("?total", pedidoproduto.Total));
                 objCommand.Parameters.Add(Mapped.Parameter("?idPedido", pedidoproduto.Pedido.Codigo));
                 objCommand.Parameters.Add(Mapped.Parameter("?idProduto", pedidoproduto.Produto.Id));
 
