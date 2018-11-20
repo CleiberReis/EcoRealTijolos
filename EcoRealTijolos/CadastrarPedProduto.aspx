@@ -78,9 +78,8 @@
                                     <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                                 </div>
                                 <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
-                                <div>
-                                    <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
-                                </div>
+                                <asp:Button ID="btnFinalizar" runat="server" CssClass="btn btn-danger" Text="Finalizar Pedido" OnClick="btnFinalizar_Click" />
+                                
                             </div>
                         </div>
                     </div>

@@ -86,12 +86,6 @@ namespace EcoRealTijolos
 
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
-            int pedidoTotal = Convert.ToInt32(ddlPedido.SelectedItem.Value);
-            PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAll();
-            PedidoProdutoBD db = new PedidoProdutoBD();
-            double total = db.GetSomaTotal(pedidoTotal);
-            lblTotal.Text = total.ToString();
 
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
@@ -103,14 +97,7 @@ namespace EcoRealTijolos
             PedidoProduto pedidoproduto = new PedidoProduto();
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
             pedidoproduto.Subtotal = Convert.ToDouble(txtSubtotal.Text);
-            if (lblTotal is null)
-            {
-                pedidoproduto.Total = 0;
-            }
-            else
-            {
-                pedidoproduto.Total = Convert.ToDouble(lblTotal.Text);
-            }
+
             pedidoproduto.Produto = produto;
             pedidoproduto.Pedido = pedido;
 
@@ -138,6 +125,10 @@ namespace EcoRealTijolos
             }
         }
 
-
+        protected void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Orcamento.aspx");
+           
+        }
     }
 }

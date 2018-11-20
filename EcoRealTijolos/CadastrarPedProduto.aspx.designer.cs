@@ -103,13 +103,13 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.Button btnIncluir;
         
         /// <summary>
-        /// Controle lblTotal.
+        /// Controle btnFinalizar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Button btnFinalizar;
         
         /// <summary>
         /// Controle GridView2.
