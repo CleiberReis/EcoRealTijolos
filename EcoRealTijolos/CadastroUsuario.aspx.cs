@@ -50,12 +50,17 @@ namespace EcoRealTijolos
 
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
+            Random senaRandomica = new Random();
+            int senhaint = senaRandomica.Next(1, 999999);
+            string senha = senhaint.ToString();
+
             Usuarios usuarios = new Usuarios();
             usuarios.Nome = txtUser.Text;
             usuarios.Email = txtEmail.Text;
             usuarios.Tipo = Convert.ToInt32(value1);
             usuarios.Login = txtLogin.Text;
             usuarios.Ativo =Convert.ToInt32(value2);
+            usuarios.Senha = senha;
 
             UsuariosBD bd = new UsuariosBD();
             if (bd.Insert(usuarios))

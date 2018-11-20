@@ -102,6 +102,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoNegado.aspx.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcessoNegado.aspx.designer.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Classes\Funcoes.cs" />
     <Compile Include="CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
@@ -116,6 +123,13 @@
     </Compile>
     <Compile Include="ListarUsuarios.aspx.designer.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Orcamento.aspx.cs">
       <DependentUpon>Orcamento.aspx</DependentUpon>
@@ -138,6 +152,7 @@
     <Compile Include="RelatorioVenda.aspx.designer.cs">
       <DependentUpon>RelatorioVenda.aspx</DependentUpon>
     </Compile>
+    <Content Include="AcessoNegado.aspx" />
     <Content Include="bin\EcoRealTijolos.dll" />
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -374,6 +389,7 @@
     <Content Include="ListarRefugoMateria.aspx" />
     <Content Include="CadastroUsuario.aspx" />
     <Content Include="ListarUsuarios.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Orcamento.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
