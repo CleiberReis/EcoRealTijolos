@@ -10,10 +10,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Login"></asp:Label>
         </div>
         <p>
-            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtLogin" runat="server"></asp:TextBox>
         </p>
         <p>
             <asp:Label ID="Label2" runat="server" Text="Senha"></asp:Label>
