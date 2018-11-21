@@ -47,6 +47,23 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return retorno;
         }
 
+        public DataSet SelectAllByID(int idpedido)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN tbl_pedido ON tbl_pedido.ped_id = tbl_pedidoproduto.ped_id WHERE tbl_pedidoproduto.ped_id = ?codigo", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", idpedido));
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //selectall
         public DataSet SelectAll()
         {

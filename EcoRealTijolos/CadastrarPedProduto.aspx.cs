@@ -21,29 +21,28 @@ namespace EcoRealTijolos
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
                 Carregar();
+                CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                 ddlProduto.Focus();
             }
         }
 
-        protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
+        private void CarregaProdutos(int idpedido)
         {
 
-            int pedido = Convert.ToInt32(ddlPedido.SelectedItem.Value);
-            PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAll();
+            PedidoProdutoBD bd = new PedidoProdutoBD();
+            DataSet ds = bd.SelectAllByID(idpedido);
+            GridView2.DataSource = ds.Tables[0].DefaultView;
+            GridView2.DataBind();
         }
+
+       
 
         private void Carregar()
         {
-            ProdutoBD bd = new ProdutoBD();
-            DataSet ds = bd.SelectAll();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
-
-            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            DataSet pedprodds = pedprodbd.SelectAll();
-            GridView2.DataSource = pedprodds.Tables[0].DefaultView;
-            GridView2.DataBind();
+            //PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
+            //DataSet pedprodds = pedprodbd.SelectAll();
+            //GridView2.DataSource = pedprodds.Tables[0].DefaultView;
+            //GridView2.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
@@ -111,6 +110,7 @@ namespace EcoRealTijolos
                     ddlProduto.Focus();
                     lblMensagem.Text = "Produto Incluso";
                     Carregar();
+                    CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                     break;
                 case 1:
                     //Erro no banco de dados
@@ -127,8 +127,20 @@ namespace EcoRealTijolos
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
+            CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             Response.Redirect("Orcamento.aspx");
            
+        }
+
+        protected void ddlProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (ddlProduto.SelectedItem.Text != "Selecione um produto")
+            {
+                ProdutoBD bd = new ProdutoBD();
+                Produto produto = bd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
+                txtValorUnitario.Text = produto.ValorUnitario.ToString();
+            }
         }
     }
 }

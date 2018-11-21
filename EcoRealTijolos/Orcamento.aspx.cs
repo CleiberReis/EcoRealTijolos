@@ -20,7 +20,17 @@ namespace EcoRealTijolos
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
                 Carregar();
+                CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             }
+        }
+
+        private void CarregaProdutos(int idpedido)
+        {
+
+            PedidoProdutoBD bd = new PedidoProdutoBD();
+            DataSet ds = bd.SelectAllByID(idpedido);
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
         }
 
         private void Carregar()
@@ -41,17 +51,14 @@ namespace EcoRealTijolos
 
         protected void btnOrcamento_Click(object sender, EventArgs e)
         {
+
             int pedidoTotal = Convert.ToInt32(ddlPedido.SelectedItem.Value);
-            PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAll();
             PedidoProdutoBD db = new PedidoProdutoBD();
             double total = db.GetSomaTotal(pedidoTotal);
+            CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             lblTotal.Text = total.ToString("C2");
 
-            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            DataSet pedprodds = pedprodbd.SelectAll();
-            GridView1.DataSource = pedprodds.Tables[0].DefaultView;
-            GridView1.DataBind();
+
         }
     }
 }
