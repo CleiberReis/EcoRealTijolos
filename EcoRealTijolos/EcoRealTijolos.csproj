@@ -98,8 +98,18 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoNegado.aspx.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcessoNegado.aspx.designer.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Classes\Funcoes.cs" />
     <Compile Include="CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
@@ -115,6 +125,20 @@
     <Compile Include="ListarUsuarios.aspx.designer.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orcamento.aspx.cs">
+      <DependentUpon>Orcamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orcamento.aspx.designer.cs">
+      <DependentUpon>Orcamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RelatorioMateria.aspx.cs">
       <DependentUpon>RelatorioMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +153,7 @@
     <Compile Include="RelatorioVenda.aspx.designer.cs">
       <DependentUpon>RelatorioVenda.aspx</DependentUpon>
     </Compile>
+    <Content Include="AcessoNegado.aspx" />
     <Content Include="bin\EcoRealTijolos.dll" />
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -365,6 +390,8 @@
     <Content Include="ListarRefugoMateria.aspx" />
     <Content Include="CadastroUsuario.aspx" />
     <Content Include="ListarUsuarios.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Orcamento.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />

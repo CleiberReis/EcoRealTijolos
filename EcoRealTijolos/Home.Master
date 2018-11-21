@@ -148,6 +148,7 @@
                             <li>
                                 <a href="CadastrarPedido.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar</a>
                                 <a href="ListarPedido.aspx"><i class="fa fa-angle-double-right"></i>Listar</a>
+                                <a href="Orcamento.aspx"><i class="fa fa-angle-double-right"></i>Orçamento</a>
                             </li>
                         </ul>
                     </li>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="CadastrarPedProduto.aspx.cs" Inherits="EcoRealTijolos.CadastrarPedProduto" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="CadastrarPedProduto.aspx.cs" Inherits="EcoRealTijolos.CadastrarPedProduto" MaintainScrollPositionOnPostback="true"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -14,42 +14,12 @@
                         <div class="form-group">
                             <h6 class="text-bold">SELECIONE OS PRODUTOS DO PEDIDO:</h6>
                             <asp:Label ID="lblPedido" runat="server" OnDataBinding="Page_Load" Visible="False"></asp:Label>
-                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False" AutoPostBack="True" OnSelectedIndexChanged="ddlPedido_SelectedIndexChanged"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False" ></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <label>Produto:</label>
-                            <asp:DropDownList ID="ddlProduto" runat="server" CssClass="form-control"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlProduto" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlProduto_SelectedIndexChanged"></asp:DropDownList>
                             <br />
-                            <div align="center">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                                Consultar Preço Unitário
-                            </button>
-                            </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal" tabindex="1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h4 class="modal-title" id="myModalLabel">Consulta de Preço Unitário</h4>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
-                                                <Columns>
-                                                    <asp:BoundField DataField="prod_nome" HeaderText="Nome do Produto" />
-                                                    <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário" />
-                                                    <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Disponível" />
-                                                </Columns>
-                                            </asp:GridView>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <label>Valor Unitário: R$</label>
                                 <asp:TextBox ID="txtValorUnitario" runat="server" CssClass="form-control"></asp:TextBox>
@@ -77,7 +47,9 @@
                                 <div class="form-group">
                                     <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                                 </div>
-                                    <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                <asp:Button ID="btnFinalizar" runat="server" CssClass="btn btn-danger" Text="Finalizar Pedido" OnClick="btnFinalizar_Click" />
+                                
                             </div>
                         </div>
                     </div>
@@ -98,10 +70,7 @@
                             </Columns>
                         </asp:GridView>
                         <br />
-                        <div>
-                            <asp:Button ID="btnTotal" runat="server" CssClass="btn btn-primary" Text="Calcular Total" OnClick="btnTotal_Click" />
-                            <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
-                        </div>
+
                     </div>
                 </div>
             </div>
