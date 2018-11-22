@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -23,6 +24,22 @@ namespace EcoRealTijolos
             else
             {
                 lblTitulo.Text = "Bem vindo (Administrador) : " + usuarios.Nome;
+
+
+                ProdutoBD produtoBD = new ProdutoBD();
+                DataSet ds = produtoBD.GetEstoqueMinimo();
+
+                int quantidadeLinhas = ds.Tables[0].Rows.Count;
+                string produtos = "";
+
+                for (int i = 0; i < quantidadeLinhas; i++)
+                {
+                    DataRow dr = ds.Tables[0].Rows[i];
+                    string nome = Convert.ToString(dr["prod_nome"]);
+                    produtos = produtos + nome + ",";
+                }
+
+                lblTitulo.Text = "Produtos abaixo do estoque mínimo " + produtos;
             }
 
         }

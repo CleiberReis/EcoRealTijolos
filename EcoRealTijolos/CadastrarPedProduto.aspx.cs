@@ -109,6 +109,9 @@ namespace EcoRealTijolos
                     LimparCampos();
                     ddlProduto.Focus();
                     lblMensagem.Text = "Produto Incluso";
+
+                    pedidoprodutobd.UpdateQuantidade(pedidoproduto.Quantidade, pedidoproduto.Produto.Id);
+
                     Carregar();
                     CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                     break;

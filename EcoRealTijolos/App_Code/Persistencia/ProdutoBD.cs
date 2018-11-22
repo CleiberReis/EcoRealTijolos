@@ -14,13 +14,14 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario) VALUES (?id, ?nome, ?quantidade, ?valorUnitario)";
+            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario, prod_estoqueMinimo) VALUES (?id, ?nome, ?quantidade, ?valorUnitario, ?estoqueMinimo)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?id", produto.Id));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?valorUnitario", produto.ValorUnitario));
+            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", produto.EstoqueMinimo));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -36,6 +37,22 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_produto ORDER BY prod_nome", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+        public DataSet GetEstoqueMinimo()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_produto where prod_quantTotal < prod_estoqueMinimo;", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
