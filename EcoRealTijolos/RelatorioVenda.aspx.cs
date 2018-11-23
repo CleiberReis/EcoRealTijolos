@@ -33,17 +33,34 @@ namespace EcoRealTijolos
             string dados = "";
             //varre linhas do dataset
             dados = dados + "['Data do pedido', 'Quantidade de Pedidos'],";
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+
+            foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                DataRow dr = ds.Tables[0].Rows[i];
 
-                DateTime data = Convert.ToDateTime(dr["datapedido"]);
-                int qntPed = Convert.ToInt32(dr["quantidade"]);
 
-                dados = dados + "['" + data + "', " + qntPed + "],";
 
+                dados = dados + "['" + Convert.ToDateTime(dr["datapedido"]).ToShortDateString() + "', " + Convert.ToInt32(dr["quantidade"]) + "],";
             }
 
+            //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            //{
+            //    DataRow dr = ds.Tables[0].Rows[i];
+
+            //    DateTime data = Convert.ToDateTime(dr["datapedido"]);
+            //    int qntPed = Convert.ToInt32(dr["quantidade"]);
+
+            //    dados = dados + "['" + data + "', " + qntPed + "],";
+
+            //}
+            GerarGrafico(dados);
+           
+
+
+        }
+
+        void GerarGrafico(string dados)
+        {
+            Literal1.Text = "";
             string grafico = "";
             grafico = grafico + "<script type='text/javascript'>";
             grafico = grafico + "google.load('visualization', '1', {packages:['corechart']});";
@@ -63,17 +80,16 @@ namespace EcoRealTijolos
             grafico = grafico + "</script>";
 
             Literal1.Text = grafico;
-
-
         }
 
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAllGrafico();
-
+           
             DateTime dataIni = DateTime.ParseExact(txtInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             DateTime dataFim = DateTime.ParseExact(txtFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            DataSet ds = bd.SelectAllByDATAS(dataIni, dataFim);
 
             if (dataFim < dataIni)
             {
@@ -84,9 +100,16 @@ namespace EcoRealTijolos
             }
             else
             {
-                txtMensagem.Text = "Nada!";
-            }
+                string dados = "";
+                //varre linhas do dataset
+                dados = dados + "['Data do pedido', 'Quantidade de Pedidos'],";
 
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dados = dados + "['" + Convert.ToDateTime(dr["datapedido"]).ToShortDateString() + "', " + Convert.ToInt32(dr["quantidade"]) + "],";
+                }
+                GerarGrafico(dados);
+            }
         }
 
 
