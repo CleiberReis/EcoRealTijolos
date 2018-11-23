@@ -95,6 +95,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+
+
         //selectall Para A tela de PedidoProduto
         public DataSet SelectAllPedidos()
         {
@@ -104,6 +106,54 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_pedido ORDER BY ped_id DESC LIMIT 1", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+        //selectall Para o gráfico
+        public DataSet SelectAllGrafico()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT tbl_pedido.ped_data AS datapedido, COUNT(ped_id) AS quantidade FROM tbl_pedido GROUP BY datapedido", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+
+        public DataSet SelectAllByDATAS(DateTime dataum, DateTime datadois)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+
+            string sql = @"SELECT ped_data AS datapedido, 
+                            COUNT(ped_id) AS quantidade 
+                            FROM tbl_pedido 
+                            GROUP BY datapedido
+                            having datapedido between ?dataum and ?datadois";
+
+            objCommand = Mapped.Command(sql, objConexao);
+            //            ("SELECT * FROM tbl_produtofornecedor INNER JOIN
+            //tbl_produto ON tbl_produto.pro_codigo = tbl_produtofornecedor.pro_codigo INNER JOIN
+            //tbl_fornecedor ON tbl_fornecedor.for_codigo = tbl_produtofornecedor.for_codigo WHERE
+            //tbl_produto.pro_codigo =? produto ORDER BY for_nome; ", objConexao);
+            //objCommand.Parameters.Add(Mapped.Parameter("?pedido", pedido));
+            objCommand.Parameters.Add(Mapped.Parameter("?dataum", dataum));
+            objCommand.Parameters.Add(Mapped.Parameter("?datadois", datadois));
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
@@ -139,7 +189,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return obj;
         }
 
-
+        
         //update
         public bool Update(Pedido pedido)
         {

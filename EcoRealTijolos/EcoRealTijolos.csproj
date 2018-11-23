@@ -74,13 +74,20 @@
     <Reference Include="Arction.WinForms.Charting.LightningChartUltimate, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
       <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
     </Reference>
+    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Telerik, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Telerik.2.1.9\lib\net40\Caliburn.Micro.Telerik.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\Tutoriais Guarino\Materiais de Apoio\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -90,6 +97,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -97,8 +107,18 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoNegado.aspx.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcessoNegado.aspx.designer.cs">
+      <DependentUpon>AcessoNegado.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Classes\Funcoes.cs" />
     <Compile Include="CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
@@ -114,6 +134,20 @@
     <Compile Include="ListarUsuarios.aspx.designer.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orcamento.aspx.cs">
+      <DependentUpon>Orcamento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orcamento.aspx.designer.cs">
+      <DependentUpon>Orcamento.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RelatorioMateria.aspx.cs">
       <DependentUpon>RelatorioMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +162,7 @@
     <Compile Include="RelatorioVenda.aspx.designer.cs">
       <DependentUpon>RelatorioVenda.aspx</DependentUpon>
     </Compile>
+    <Content Include="AcessoNegado.aspx" />
     <Content Include="bin\EcoRealTijolos.dll" />
     <Content Include="bin\EcoRealTijolos.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -364,6 +399,8 @@
     <Content Include="ListarRefugoMateria.aspx" />
     <Content Include="CadastroUsuario.aspx" />
     <Content Include="ListarUsuarios.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Orcamento.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />

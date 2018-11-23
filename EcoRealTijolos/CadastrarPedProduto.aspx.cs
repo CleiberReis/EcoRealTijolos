@@ -21,29 +21,28 @@ namespace EcoRealTijolos
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
                 Carregar();
+                CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                 ddlProduto.Focus();
             }
         }
 
-        protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
+        private void CarregaProdutos(int idpedido)
         {
 
-            int pedido = Convert.ToInt32(ddlPedido.SelectedItem.Value);
-            PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAll();
+            PedidoProdutoBD bd = new PedidoProdutoBD();
+            DataSet ds = bd.SelectAllByID(idpedido);
+            GridView2.DataSource = ds.Tables[0].DefaultView;
+            GridView2.DataBind();
         }
+
+       
 
         private void Carregar()
         {
-            ProdutoBD bd = new ProdutoBD();
-            DataSet ds = bd.SelectAll();
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
-
-            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            DataSet pedprodds = pedprodbd.SelectAllPedProd();
-            GridView2.DataSource = pedprodds.Tables[0].DefaultView;
-            GridView2.DataBind();
+            //PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
+            //DataSet pedprodds = pedprodbd.SelectAll();
+            //GridView2.DataSource = pedprodds.Tables[0].DefaultView;
+            //GridView2.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
@@ -84,27 +83,30 @@ namespace EcoRealTijolos
             btnIncluir.Focus();
         }
 
-        protected void btnTotal_Click(object sender, EventArgs e)
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            decimal ValorTotal = 0;
-
-            foreach (GridViewRow row in GridView2.Rows)
+            int codigo = 0;
+            switch (e.CommandName)
             {
-                if (row.RowType != DataControlRowType.Header && row.RowType != DataControlRowType.Footer)
-                {
-                    if (row.Cells[3].Text != null && row.Cells[3].Text != string.Empty)
-                    {
-                        ValorTotal += Convert.ToDecimal(row.Cells[3].Text);
-                    }
-                }
+                case "Alterar":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    Session["ID"] = codigo;
+                    Response.Redirect("CadastrarPedProduto.aspx");
+                    break;
+                case "Excluir":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    PedidoProdutoBD bd = new PedidoProdutoBD();
+                    bd.Delete(codigo);
+                    Carregar();
+                    break;
+                default:
+                    break;
             }
-
-            lblTotal.Text = ValorTotal.ToString("C2");
-            lblTotal.Focus();
         }
 
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
+
             ProdutoBD produtobd = new ProdutoBD();
             Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
 
@@ -128,20 +130,41 @@ namespace EcoRealTijolos
                     LimparCampos();
                     ddlProduto.Focus();
                     lblMensagem.Text = "Produto Incluso";
+
+                    pedidoprodutobd.UpdateQuantidade(pedidoproduto.Quantidade, pedidoproduto.Produto.Id);
+
+                    Carregar();
+                    CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                     break;
                 case 1:
                     //Erro no banco de dados
-                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 case 2:
                     //Erro geral
-                    lblMensagem.Text = "Não foi possível oncluir o produto no pedido.";
+                    lblMensagem.Text = "Não foi possível incluir o produto no pedido.";
                     break;
                 default:
                     break;
             }
         }
 
-      
+        protected void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
+            Response.Redirect("Orcamento.aspx");
+           
+        }
+
+        protected void ddlProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (ddlProduto.SelectedItem.Text != "Selecione um produto")
+            {
+                ProdutoBD bd = new ProdutoBD();
+                Produto produto = bd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
+                txtValorUnitario.Text = produto.ValorUnitario.ToString();
+            }
+        }
     }
 }
