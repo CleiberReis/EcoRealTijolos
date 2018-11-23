@@ -39,7 +39,7 @@ namespace EcoRealTijolos
                     produtos = produtos + nome + ",";
                 }
 
-                lblTitulo.Text = "Produtos abaixo do estoque mínimo " + produtos;
+                lblAviso.Text = "Produtos abaixo do estoque mínimo: " + produtos;
             }
 
         }
@@ -52,13 +52,10 @@ namespace EcoRealTijolos
 
         protected void lbSair_Click(object sender, EventArgs e)
         {
-
             Session.Abandon();
             Session.Clear();
             Session.RemoveAll();
             Response.Redirect("Login.aspx");
-
-
         }
     }
 }

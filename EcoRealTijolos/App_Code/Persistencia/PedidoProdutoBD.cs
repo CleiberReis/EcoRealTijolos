@@ -143,7 +143,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
-
+        //subtrai quantidade da tbl_produto
         public bool UpdateQuantidade(int quantidade, int produtoid)
         {
             System.Data.IDbConnection objConexao;
@@ -179,26 +179,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Dispose();
             objConexao.Dispose();
             return total;
-        }
-
-        //subtrair produto pelo pedido
-       public double SubtraiQdt(int idPedido)
-        {
-            DataSet ds = new DataSet();
-            System.Data.IDbConnection objConexao;
-            System.Data.IDbCommand objCommand;
-            System.Data.IDataAdapter objDataAdapter;
-            objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("", objConexao);
-            objDataAdapter = Mapped.Adapter(objCommand);
-            objCommand.Parameters.Add(Mapped.Parameter("?codigo", idPedido));
-            objDataAdapter.Fill(ds);
-            DataRow dr = ds.Tables[0].Rows[0];
-            Double subtrair = Convert.ToDouble(dr[""]);
-            objConexao.Close();
-            objCommand.Dispose();
-            objConexao.Dispose();
-            return subtrair;
         }
 
         public PedidoProdutoBD()
