@@ -114,6 +114,23 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+        //selectall Para o gráfico
+        public DataSet SelectAllGrafico()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT COUNT(tbl_cliente.cli_nome) as 'Quantidade de clientes', COUNT(tbl_pedido.ped_data) AS 'Quantidade de pedidos' FROM(tbl_pedido INNER JOIN tbl_cliente ON tbl_cliente.cli_id = tbl_pedido.ped_idCliente) GROUP BY 'Quantidade de pedidos' HAVING COUNT(tbl_pedido.ped_id) > 0", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //select
         public Pedido Select(int id)
         {
