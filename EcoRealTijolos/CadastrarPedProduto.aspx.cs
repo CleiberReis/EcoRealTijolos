@@ -83,6 +83,27 @@ namespace EcoRealTijolos
             btnIncluir.Focus();
         }
 
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = 0;
+            switch (e.CommandName)
+            {
+                case "Alterar":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    Session["ID"] = codigo;
+                    Response.Redirect("CadastrarPedProduto.aspx");
+                    break;
+                case "Excluir":
+                    codigo = Convert.ToInt32(e.CommandArgument);
+                    PedidoProdutoBD bd = new PedidoProdutoBD();
+                    bd.Delete(codigo);
+                    Carregar();
+                    break;
+                default:
+                    break;
+            }
+        }
+
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
 
@@ -109,6 +130,9 @@ namespace EcoRealTijolos
                     LimparCampos();
                     ddlProduto.Focus();
                     lblMensagem.Text = "Produto Incluso";
+
+                    pedidoprodutobd.UpdateQuantidade(pedidoproduto.Quantidade, pedidoproduto.Produto.Id);
+
                     Carregar();
                     CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
                     break;

@@ -4,7 +4,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
     <div id="container">
-        Index
+        <div>
+            <asp:Label ID="lblAviso" runat="server"></asp:Label>
+        </div>
         <asp:Label ID="lblTitulo" runat="server"></asp:Label>
         <asp:LinkButton ID="lbSair" runat="server" OnClick="lbSair_Click">Sair</asp:LinkButton>
     </div>

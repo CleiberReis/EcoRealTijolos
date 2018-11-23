@@ -143,6 +143,24 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
+        //subtrai quantidade da tbl_produto
+        public bool UpdateQuantidade(int quantidade, int produtoid)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "UPDATE tbl_produto SET prod_quantTotal = prod_quantTotal - ?quantidade where prod_id = ?codigo;";
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidade", quantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", produtoid));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return true;
+        }
+
         //calculoValorTotal
         public double GetSomaTotal(int idPedido)
         {
@@ -162,7 +180,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objConexao.Dispose();
             return total;
         }
-
 
         public PedidoProdutoBD()
         {

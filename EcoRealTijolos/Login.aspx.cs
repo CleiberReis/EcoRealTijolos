@@ -30,10 +30,10 @@ namespace EcoRealTijolos
 
         protected void btnLogar_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text.Trim(); string senha = txtSenha.Text.Trim();
-            if (!IsPreenchido(email))
+            string login = txtLogin.Text.Trim(); string senha = txtSenha.Text.Trim();
+            if (!IsPreenchido(login))
             {
-                lblMensagem.Text = "Preencha o email"; txtEmail.Focus();
+                lblMensagem.Text = "Preencha o email"; txtLogin.Focus();
                 return;
             }
             if (!IsPreenchido(senha))
@@ -43,11 +43,11 @@ namespace EcoRealTijolos
             }
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = new Usuarios();
-            usuarios = bd.Autentica(email, senha);
+            usuarios = bd.Autentica(login, senha);
             if (!UsuarioEncontrado(usuarios))
             {
                 lblMensagem.Text = "Usuário não encontrado";
-                txtEmail.Focus();
+                txtLogin.Focus();
                 return;
             }
             Session["ID"] = usuarios.Codigo;
