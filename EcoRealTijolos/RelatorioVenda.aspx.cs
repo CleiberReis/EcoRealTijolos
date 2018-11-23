@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +12,8 @@ namespace EcoRealTijolos
 {
     public partial class RelatorioVenda : System.Web.UI.Page
     {
+        private object lblMensagem;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -29,15 +32,15 @@ namespace EcoRealTijolos
 
             string dados = "";
             //varre linhas do dataset
-            dados = dados + "['Quantidade de Clientes', 'Quantidade de Pedidos'],";
+            dados = dados + "['Data do pedido', 'Quantidade de Pedidos'],";
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 DataRow dr = ds.Tables[0].Rows[i];
 
-                int qntCli = Convert.ToInt32(dr["Quantidade de clientes"]);
-                int qntPed = Convert.ToInt32(dr["Quantidade de Pedidos"]);
+                DateTime data = Convert.ToDateTime(dr["datapedido"]);
+                int qntPed = Convert.ToInt32(dr["quantidade"]);
 
-                dados = dados + "['" + qntCli + "', " + qntPed + "],";
+                dados = dados + "['" + data + "', " + qntPed + "],";
 
             }
 
@@ -50,7 +53,8 @@ namespace EcoRealTijolos
             grafico = grafico + "]);";
             grafico = grafico + "var options = {";
             grafico = grafico + "title: 'Pedidos realizados',";
-            grafico = grafico + "is3D: true ";
+            grafico = grafico + "vAxis: {format: 'decimal'},";
+            grafico = grafico + "colors: ['#1b9e77']";
             grafico = grafico + "};";
             grafico = grafico + "var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));";
             grafico = grafico + "chart.draw(data, options);";
@@ -60,6 +64,28 @@ namespace EcoRealTijolos
 
             Literal1.Text = grafico;
 
+
+        }
+
+        protected void btnEnviar_Click(object sender, EventArgs e)
+        {
+            PedidoBD bd = new PedidoBD();
+            DataSet ds = bd.SelectAllGrafico();
+
+            DateTime dataIni = DateTime.ParseExact(txtInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            DateTime dataFim = DateTime.ParseExact(txtFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+            if (dataFim < dataIni)
+            {
+                txtMensagem.Text = "Data final é menor que Data inicial.";
+                txtInicial.Text = "";
+                txtFinal.Text = "";
+                txtInicial.Focus();
+            }
+            else
+            {
+                txtMensagem.Text = "Nada!";
+            }
 
         }
 

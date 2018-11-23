@@ -122,7 +122,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT COUNT(tbl_cliente.cli_nome) as 'Quantidade de clientes', COUNT(tbl_pedido.ped_data) AS 'Quantidade de pedidos' FROM(tbl_pedido INNER JOIN tbl_cliente ON tbl_cliente.cli_id = tbl_pedido.ped_idCliente) GROUP BY 'Quantidade de pedidos' HAVING COUNT(tbl_pedido.ped_id) > 0", objConexao);
+            objCommand = Mapped.Command("SELECT tbl_pedido.ped_data AS datapedido, COUNT(ped_id) AS quantidade FROM tbl_pedido GROUP BY datapedido", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
