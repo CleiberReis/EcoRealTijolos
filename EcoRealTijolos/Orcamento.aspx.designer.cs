@@ -40,15 +40,6 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.Button btnOrcamento;
         
         /// <summary>
-        /// Controle lblTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
-        
-        /// <summary>
         /// Controle GridView1.
         /// </summary>
         /// <remarks>
@@ -56,5 +47,14 @@ namespace EcoRealTijolos {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
+        
+        /// <summary>
+        /// Controle lblTotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotal;
     }
 }

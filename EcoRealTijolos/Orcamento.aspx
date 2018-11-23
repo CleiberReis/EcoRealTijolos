@@ -18,9 +18,6 @@
                         <div align="center">
                             <asp:Button ID="btnOrcamento" runat="server" CssClass="btn btn-primary" Text="Gerar Orçamento" OnClick="btnOrcamento_Click" />
                         </div>
-                        <div align="center">
-                            <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -36,6 +33,9 @@
                                     <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
                                 </Columns>
                             </asp:GridView>
+                            <div align="center">
+                                <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
+                            </div>
                         </div>
                     </div>
                 </div>
