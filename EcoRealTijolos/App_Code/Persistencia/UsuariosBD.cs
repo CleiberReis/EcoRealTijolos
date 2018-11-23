@@ -17,7 +17,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_usuario(usu_nome, usu_email, usu_login, usu_tipo, usu_ativo) VALUES (?nome, ?email, ?login, ?tipo, ?ativo)";
+            string sql = "INSERT INTO tbl_usuario(usu_nome, usu_email, usu_login, usu_tipo, usu_ativo, usu_senha) VALUES (?nome, ?email, ?login, ?tipo, ?ativo, ?senha)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -27,6 +27,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
             objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
             objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -81,6 +82,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Login = Convert.ToString(objDataReader["usu_login"]);
                 obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
                 obj.Ativo = Convert.ToInt32(objDataReader["usu_ativo"]);
+                obj.Ativo = Convert.ToInt32(objDataReader["usu_senha"]);
             }
 
             objDataReader.Close();
