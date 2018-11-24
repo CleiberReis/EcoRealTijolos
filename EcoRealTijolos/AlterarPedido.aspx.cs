@@ -20,9 +20,11 @@ namespace EcoRealTijolos
                 lblOptionMenu.Text = "Pedidos";
                 PedidoBD bd = new PedidoBD();
                 Pedido pedido = bd.Select(Convert.ToInt32(Session["ID"]));
-                txtEndereco.Text = pedido.EnderecoEntrega.ToString();
+                txtLogradouro.Text = pedido.Logradouro.ToString();
+                txtBairro.Text = pedido.Logradouro.ToString();
+                txtNumero.Text = pedido.Logradouro.ToString();
                 txtData.Text = pedido.Data.ToString();
-                txtObsPedido.Text = pedido.Observacao;
+                txtObs.Text = pedido.Observacao;
             }
         }
 
@@ -30,14 +32,18 @@ namespace EcoRealTijolos
         {
             PedidoBD bd = new PedidoBD();
             Pedido pedido = bd.Select(Convert.ToInt32(Session["ID"]));
-            pedido.EnderecoEntrega = Convert.ToString(txtEndereco.Text);
             pedido.Data = Convert.ToDateTime(txtData.Text);
-            pedido.Observacao = Convert.ToString(txtObsPedido.Text);
+            pedido.Logradouro = Convert.ToString(txtLogradouro.Text);
+            pedido.Observacao = Convert.ToString(txtObs.Text);
+            pedido.Cidade = Convert.ToString(ddlCidade.Text);
+            pedido.Estado = Convert.ToString(ddlEstado.Text);
+            pedido.Bairro = Convert.ToString(txtBairro.Text);
+            pedido.Numero = Convert.ToString(txtNumero.Text);
 
             if (bd.Update(pedido))
             {
                 lblMensagem.Text = "Pedido alterado com sucesso";
-                txtEndereco.Focus();
+                txtLogradouro.Focus();
             }
             else
             {

@@ -61,6 +61,8 @@ namespace EcoRealTijolos
         private void LimparCampos()
         {
             txtLogradouro.Text = "";
+            txtBairro.Text = "";
+            txtData.Text = "";
             txtObsPedido.Text = "";
             //remove seleção do ddl
             for (int i = 0; i < ddlCliente.Items.Count; i++)
@@ -94,15 +96,19 @@ namespace EcoRealTijolos
 
             Pedido pedido = new Pedido();
 
-            pedido.EnderecoEntrega = Convert.ToString(txtLogradouro.Text);
             pedido.Data = Convert.ToDateTime(txtData.Text);
+            pedido.Logradouro = Convert.ToString(txtLogradouro.Text);
             pedido.Observacao = Convert.ToString(txtObsPedido.Text);
+            pedido.Cidade = Convert.ToString(ddlCidade.Text);
+            pedido.Estado = Convert.ToString(ddlEstado.Text);
+            pedido.Bairro = Convert.ToString(txtBairro.Text);
+            pedido.Numero = Convert.ToString(txtNumero.Text);
 
             pedido.Cliente = cliente;
 
             PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);
-            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id, pedido.EnderecoEntrega, pedido.Observacao);
+            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id, pedido.Logradouro, pedido.Observacao, pedido.Cidade, pedido.Estado, pedido.Bairro, pedido.Numero);
             Session["pedidoID"] = pedidoID;
             Response.Redirect("CadastrarPedProduto.aspx");
 
