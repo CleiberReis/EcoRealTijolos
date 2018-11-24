@@ -87,6 +87,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Telefone = Convert.ToString(objDataReader["cli_telefone"]);
                 obj.Email = Convert.ToString(objDataReader["cli_email"]);
                 obj.Logradouro = Convert.ToString(objDataReader["cli_logradouro"]);
+                obj.Bairro = Convert.ToString(objDataReader["cli_bairro"]);
+                obj.Numero = Convert.ToString(objDataReader["cli_numero"]);
                 obj.Estado = Convert.ToString(objDataReader["cli_estado"]);
                 obj.Cidade = Convert.ToString(objDataReader["cli_cidade"]);
 

@@ -26,7 +26,9 @@ namespace EcoRealTijolos
                 txtCpf.Text = cliente.Cpf;
                 txtTelefone.Text = cliente.Telefone;
                 txtEmail.Text = cliente.Email;
-                txtEndereco.Text = cliente.Logradouro;
+                txtLogradouro.Text = cliente.Logradouro;
+                txtBairro.Text = cliente.Bairro;
+                txtNumero.Text = cliente.Numero;
                 ddlEstado.Text = cliente.Estado;
                 ddlCidade.Text = cliente.Cidade;
 
@@ -68,7 +70,9 @@ namespace EcoRealTijolos
             cliente.Cpf = txtCpf.Text;
             cliente.Telefone = txtTelefone.Text;
             cliente.Email = txtEmail.Text;
-            cliente.Logradouro = txtEndereco.Text;
+            cliente.Logradouro = txtLogradouro.Text;
+            cliente.Bairro = txtBairro.Text;
+            cliente.Numero = txtNumero.Text;
             cliente.Estado = ddlEstado.Text;
             cliente.Cidade = ddlCidade.Text;
 
@@ -79,8 +83,9 @@ namespace EcoRealTijolos
                 txtCpf.Text = "";
                 txtTelefone.Text = "";
                 txtEmail.Text = "";
-                txtEndereco.Text = "";
-                
+                txtLogradouro.Text = "";
+                txtBairro.Text = "";
+                txtNumero.Text = "";
 
                 txtNome.Focus();
             }

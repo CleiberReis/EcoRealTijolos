@@ -66,10 +66,10 @@
                                 <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
                                 <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
                                 <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
-                                <ItemTemplate>
+                               <%-- <ItemTemplate>
                                     <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
                                         CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
-                                </ItemTemplate>
+                                </ItemTemplate>--%>
                             </Columns>
                         </asp:GridView>
                         <br />
