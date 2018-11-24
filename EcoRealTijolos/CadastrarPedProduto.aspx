@@ -49,7 +49,6 @@
                                 </div>
                                 <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
                                 <asp:Button ID="btnFinalizar" runat="server" CssClass="btn btn-danger" Text="Finalizar Pedido" OnClick="btnFinalizar_Click" />
-                                
                             </div>
                         </div>
                     </div>
@@ -67,14 +66,10 @@
                                 <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
                                 <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
                                 <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
-                               <%-- <ItemTemplate>
-                                            <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
-                                                CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
-                                        </ItemTemplate>
                                 <ItemTemplate>
-                                            <asp:LinkButton ID="lblExcluir" runat="server" CssClass="btn btn-dark" CommandName="Excluir" CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
-                                                CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
-                                        </ItemTemplate>--%>
+                                    <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"
+                                        CommandArgument='<%#Bind("pedpro_id")%>'><i class="fa fa-minus-square-o"></i></asp:LinkButton>
+                                </ItemTemplate>
                             </Columns>
                         </asp:GridView>
                         <br />
