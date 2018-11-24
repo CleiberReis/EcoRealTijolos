@@ -19,7 +19,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_cliente(cli_nome, cli_cpf, cli_telefone, cli_email, cli_estado, cli_cidade, cli_logradouro) VALUES (?nome, ?cpf, ?telefone, ?email, ?estado, ?cidade, ?logradouro)";
+            string sql = "INSERT INTO tbl_cliente(cli_nome, cli_cpf, cli_telefone, cli_email, cli_estado, cli_cidade, cli_logradouro, cli_bairro, cli_numero) VALUES (?nome, ?cpf, ?telefone, ?email, ?estado, ?cidade, ?logradouro, ?bairro, ?numero)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -31,6 +31,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?logradouro", cliente.Logradouro));
             objCommand.Parameters.Add(Mapped.Parameter("?estado", cliente.Estado));
             objCommand.Parameters.Add(Mapped.Parameter("?cidade", cliente.Cidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?bairro", cliente.Bairro));
+            objCommand.Parameters.Add(Mapped.Parameter("?numero", cliente.Numero));
 
 
             objCommand.ExecuteNonQuery();

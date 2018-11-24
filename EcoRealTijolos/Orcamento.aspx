@@ -25,14 +25,20 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
-                                <Columns>
-                                    <asp:BoundField DataField="ped_id" HeaderText="Código do Pedido" />
-                                    <asp:BoundField DataField="prod_id" HeaderText="Código do Produto" />
-                                    <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quantidade de Produto" />
-                                    <asp:BoundField DataField="pedpro_subtotal" HeaderText="SubTotal" />
-                                </Columns>
-                            </asp:GridView>
+                            <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+                                <ItemTemplate>
+                                    <div>
+                                        <p>
+                                            Código do Produto:
+                            <asp:Label ID="lblPotencia" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_id")%>'></asp:Label>
+                                        </p>
+                                        <p>
+                                            Valor do Produto:
+                            <asp:Label ID="lblPiloto" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "pedpro_quantidade")%>'></asp:Label>
+                                        </p>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
                             <div align="center">
                                 <asp:Label ID="lblTotal" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Red"></asp:Label>
                             </div>
@@ -40,6 +46,8 @@
                     </div>
                 </div>
             </div>
+            <br />
+
         </div>
     </section>
 </asp:Content>
