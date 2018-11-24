@@ -39,10 +39,6 @@ namespace EcoRealTijolos
 
         private void Carregar()
         {
-            //PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            //DataSet pedprodds = pedprodbd.SelectAll();
-            //GridView2.DataSource = pedprodds.Tables[0].DefaultView;
-            //GridView2.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
