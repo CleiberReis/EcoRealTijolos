@@ -49,7 +49,7 @@ namespace EcoRealTijolos
         protected void BtnSalvar_Click(object sender, EventArgs e)
         {
             MateriaPrimaBD materiaBD = new MateriaPrimaBD();
-            MateriaPrima materia = materiaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedItem.Value));
+            MateriaPrima materia = materiaBD.Select(Convert.ToInt32(ddlNomeMateria.SelectedValue));
 
             PerdaMateria perdamateria = new PerdaMateria();
 
