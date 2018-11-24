@@ -12,9 +12,16 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
+                            <div id="container">
+                                <div>
+                                    <asp:Label ID="lblAviso" runat="server"></asp:Label>
+                                </div>
+                                <asp:Label ID="lblTitulo" runat="server"></asp:Label>
+                            </div>
                             <h6 class="text-bold">SELECIONE OS PRODUTOS DO PEDIDO:</h6>
-                            <asp:Label ID="lblPedido" runat="server" OnDataBinding="Page_Load" Visible="False"></asp:Label>
                             <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False"></asp:DropDownList>
+                            <asp:Label ID="lblCliente" runat="server" OnDataBinding="Page_Load" Visible="True" Text="Cliente: "></asp:Label>
+                            <asp:DropDownList ID="ddlCliente" runat="server" Enabled="False"></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <label>Produto:</label>
@@ -22,27 +29,26 @@
                             <br />
                             <div class="form-group">
                                 <label>Valor Unitário: R$</label>
-                                <asp:TextBox ID="txtValorUnitario" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtValorUnitario" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                             </div>
-                             <div class="form-group">
-                            <label>Quantidade:</label>
-                            <asp:TextBox ID="txtQuantidade" runat="server" CssClass="form-control"></asp:TextBox>
-                            <br />
-                            <div align="center">
-                                <asp:Button ID="btnCalcular" runat="server" CssClass="btn btn-facebook" OnClick="btnCalcular_Click" Text="Calcular Subtotal" />
-                            </div>
-                            <label>Subtotal: R$</label>
-                            <asp:TextBox ID="txtSubtotal" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
-                        </div>
-                        <div class="box-body">
-                            <div align="center">
-                                <div class="form-group">
-                                    <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+                            <div class="form-group">
+                                <label>Quantidade:</label>
+                                <asp:TextBox ID="txtQuantidade" runat="server" CssClass="form-control"></asp:TextBox>
+                                <br />
+                                <div align="center">
+                                    <asp:Button ID="btnCalcular" runat="server" CssClass="btn btn-facebook" OnClick="btnCalcular_Click" Text="Calcular Subtotal" />
                                 </div>
-                                <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
-                                <asp:Button ID="btnFinalizar" runat="server" CssClass="btn btn-danger" Text="Finalizar Pedido" OnClick="btnFinalizar_Click" />
+                                <label>Subtotal: R$</label>
+                                <asp:TextBox ID="txtSubtotal" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                             </div>
-                        </div>
+                            <div class="box-body">
+                                <div align="center">
+                                    <div class="form-group">
+                                        <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+                                    </div>
+                                    <asp:Button ID="btnIncluir" runat="server" CssClass="btn btn-primary" Text="Incluir no Pedido" OnClick="btnIncluir_Click" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,6 +69,32 @@
                             </Columns>
                         </asp:GridView>
                         <br />
+                    </div>
+
+                </div>
+                <div align="center">
+                <button type="button" class="btn btn-danger align-center" data-toggle="modal" data-target="#modalAlerta">
+                    Finalizar Pedido
+                </button>
+                <div class="modal fade" id="modalAlerta" tabindex="-1" role="dialog" aria-labelledby="modalAlertaLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="modalAlertaLabel" style="color: crimson;">ATENÇÃO!!!</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Deseja realmente encerrar o pedido?</p>
+                                <p>Encerrando não será possível incluir novos produtos!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                                <asp:Button ID="btnFinalizar" runat="server" CssClass="btn btn-danger" Text="Finalizar Mesmo Assim" OnClick="btnFinalizar_Click" />
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>

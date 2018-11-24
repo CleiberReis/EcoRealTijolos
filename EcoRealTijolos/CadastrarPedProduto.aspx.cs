@@ -48,6 +48,13 @@ namespace EcoRealTijolos
             ddlProduto.DataBind();
             ddlProduto.Items.Insert(0, "Selecione um produto");
 
+            ProdutoBD clientebd = new ProdutoBD();
+            DataSet clienteds = clientebd.SelectClientByID();
+            ddlCliente.DataSource = clienteds.Tables[0].DefaultView;
+            ddlCliente.DataTextField = "cli_nome";
+            ddlCliente.DataValueField = "ped_id";
+            ddlCliente.DataBind();
+
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
             ddlPedido.DataSource = pedidods.Tables[0].DefaultView;
@@ -147,6 +154,7 @@ namespace EcoRealTijolos
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
+            
             CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             Response.Redirect("Orcamento.aspx");
            

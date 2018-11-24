@@ -17,7 +17,11 @@
                             <asp:BoundField DataField="ped_id" HeaderText="ID do Pedido" />
                             <asp:BoundField DataField="ped_idCliente" HeaderText="ID do Cliente" />
                             <asp:BoundField DataField="prod_id" HeaderText="ID do Produto" />
-                            <asp:BoundField DataField="ped_endereco" HeaderText="Endereço de Entrega" />
+                            <asp:BoundField DataField="ped_logradouro" HeaderText="Logradouro" />
+                            <asp:BoundField DataField="ped_numero" HeaderText="Nº" />
+                            <asp:BoundField DataField="ped_bairro" HeaderText="Bairro" />
+                            <asp:BoundField DataField="ped_cidade" HeaderText="Cidade" />
+                            <asp:BoundField DataField="ped_estado" HeaderText="UF" />
                             <asp:BoundField DataField="ped_data" HeaderText="Data de Entrega" />
                             <asp:BoundField DataField="ped_obs" HeaderText="Observações do Pedido" />
                             <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quant.Produto" />

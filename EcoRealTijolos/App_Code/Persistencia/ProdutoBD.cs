@@ -45,6 +45,22 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+        public DataSet SelectClientByID()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_cliente inner join tbl_pedido on cli_id=ped_idCliente ORDER BY ped_id DESC LIMIT 1", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         public DataSet GetEstoqueMinimo()
         {
             DataSet ds = new DataSet();
