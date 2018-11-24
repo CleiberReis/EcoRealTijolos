@@ -29,8 +29,8 @@ namespace EcoRealTijolos
 
             PedidoProdutoBD bd = new PedidoProdutoBD();
             DataSet ds = bd.SelectAllByID(idpedido);
-            GridView1.DataSource = ds.Tables[0].DefaultView;
-            GridView1.DataBind();
+            Repeater1.DataSource = ds.Tables[0].DefaultView;
+            Repeater1.DataBind();
         }
 
         private void Carregar()
@@ -56,8 +56,13 @@ namespace EcoRealTijolos
             PedidoProdutoBD db = new PedidoProdutoBD();
             double total = db.GetSomaTotal(pedidoTotal);
             CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
-            lblTotal.Text = total.ToString("C2");
+            lblTotal.Text = "Valor Final Total" + total.ToString("C2");
 
+
+        }
+
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
 
         }
     }
