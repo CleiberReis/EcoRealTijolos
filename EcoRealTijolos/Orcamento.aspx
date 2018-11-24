@@ -30,11 +30,13 @@
                                     <div>
                                         <p>
                                             Código do Produto:
-                            <asp:Label ID="lblPotencia" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_id")%>'></asp:Label>
+                                            <asp:Label ID="lblProdId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_id")%>'></asp:Label>
                                         </p>
                                         <p>
-                                            Valor do Produto:
-                            <asp:Label ID="lblPiloto" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "pedpro_quantidade")%>'></asp:Label>
+                                            Quantidade do Produto:
+                                            <asp:Label ID="lblQuant" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "pedpro_quantidade")%>'></asp:Label>
+                                            ------------------------------------------------------------------------ R$
+                                            <asp:Label ID="lblSubtotal" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "pedpro_subtotal")%>'></asp:Label>
                                         </p>
                                     </div>
                                 </ItemTemplate>
