@@ -16,7 +16,7 @@
                         <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
                             <Columns>
                                 <asp:BoundField DataField="mat_nome" HeaderText="Descrição" />
-                                <asp:BoundField DataField="mat_quantidade" HeaderText="Quantidade" />
+                                <asp:BoundField DataField="mat_quantidade" HeaderText="Quantidade em estoque" />
                             </Columns>
                         </asp:GridView>
                     </div>
