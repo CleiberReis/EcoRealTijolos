@@ -28,7 +28,7 @@ namespace EcoRealTijolos
         {
 
             PedidoProdutoBD bd = new PedidoProdutoBD();
-            DataSet ds = bd.SelectAllByID(idpedido);
+            DataSet ds = bd.SelectProductID(idpedido);
             Repeater1.DataSource = ds.Tables[0].DefaultView;
             Repeater1.DataBind();
         }

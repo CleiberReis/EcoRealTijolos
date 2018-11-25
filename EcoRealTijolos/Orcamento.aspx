@@ -29,8 +29,10 @@
                                 <ItemTemplate>
                                     <div>
                                         <p>
-                                            Código do Produto:
-                                            <asp:Label ID="lblProdId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_id")%>'></asp:Label>
+                                            Nome do Produto:
+                                            <asp:Label ID="lblProdId" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_nome")%>'></asp:Label>
+                                            --- R$ 
+                                            <asp:Label ID="lblUnitario" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "prod_valorUnitario")%>'></asp:Label>
                                         </p>
                                         <p>
                                             Quantidade do Produto:
