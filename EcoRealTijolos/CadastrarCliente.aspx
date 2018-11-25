@@ -9,7 +9,7 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
@@ -28,6 +28,12 @@
                             <label>E-MAIL:</label>
                             <asp:TextBox ID="txtEmail" Width="500px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
                         <div class="form-group">
                             <label>LOGRADOURO:</label>
                             <asp:TextBox ID="txtLogradouro" Width="500px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
