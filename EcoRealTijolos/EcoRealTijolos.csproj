@@ -155,6 +155,13 @@
     <Compile Include="Orcamento.aspx.designer.cs">
       <DependentUpon>Orcamento.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PrimeiroAcesso.aspx.cs">
+      <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrimeiroAcesso.aspx.designer.cs">
+      <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RelatorioMateria.aspx.cs">
       <DependentUpon>RelatorioMateria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -406,6 +413,7 @@
     <Content Include="ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Orcamento.aspx" />
+    <Content Include="PrimeiroAcesso.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />

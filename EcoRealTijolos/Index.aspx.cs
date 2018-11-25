@@ -17,6 +17,8 @@ namespace EcoRealTijolos
             /*int codigo = Convert.ToInt32(Session["ID"]);
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = bd.Select(codigo);
+
+
             if (!IsAdministrador(usuarios.Tipo))
             {
                 Response.Redirect("AcessoNegado.aspx");
