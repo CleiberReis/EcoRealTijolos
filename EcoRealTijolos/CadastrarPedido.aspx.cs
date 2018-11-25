@@ -89,7 +89,7 @@ namespace EcoRealTijolos
             ddlEstado.Items[0].Selected = true;
         }
 
-        protected void BtnSalvar_Click(object sender, EventArgs e)
+        protected void btnProximo_Click(object sender, EventArgs e)
         {
             ClienteBD clienteBD = new ClienteBD();
             Cliente cliente = clienteBD.Select(Convert.ToInt32(ddlCliente.SelectedItem.Value));

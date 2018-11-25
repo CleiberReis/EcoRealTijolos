@@ -44,7 +44,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
+                                        <asp:Button ID="btnProximo" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="btnProximo_Click" Text="Próximo" />
                                     </td>
                                 </tr>
                             </table>
