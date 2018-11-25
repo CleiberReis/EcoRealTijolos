@@ -207,9 +207,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-face.css" />
     <Content Include="css\images\logo_icon.png" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="css\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="css\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="css\theme.css" />
     <Content Include="Index.aspx" />
     <Content Include="jAlert\images\error-icon.png" />
     <Content Include="jAlert\images\help.gif" />
@@ -442,6 +447,10 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
