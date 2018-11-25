@@ -21,16 +21,22 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_usuario WHERE usu_login = ?login and usu_senha = ?senha", objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?login", login)); objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
+            objCommand.Parameters.Add(Mapped.Parameter("?login", login));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
-                obj = new Usuarios(); obj.Codigo = Convert.ToInt32(objDataReader["usu_id"]);
-                obj.Nome = Convert.ToString(objDataReader["usu_nome"]); obj.Login = Convert.ToString(objDataReader["usu_login"]);
+                obj = new Usuarios();
+                obj.Codigo = Convert.ToInt32(objDataReader["usu_id"]);
+                obj.Nome = Convert.ToString(objDataReader["usu_nome"]);
+                obj.Login = Convert.ToString(objDataReader["usu_login"]);
                 obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
             }
-            objDataReader.Close(); objConexao.Close();
-            objCommand.Dispose(); objConexao.Dispose(); objDataReader.Dispose();
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
             return obj;
         }
         //insert

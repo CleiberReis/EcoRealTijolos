@@ -19,7 +19,7 @@ namespace EcoRealTijolos
             Usuarios usuarios = bd.Select(codigo);
             if (!IsAdministrador(usuarios.Tipo))
             {
-                Response.Redirect("../Erro/AcessoNegado.aspx");
+                Response.Redirect("AcessoNegado.aspx");
             }
             else
             {
@@ -44,7 +44,11 @@ namespace EcoRealTijolos
         }
         private bool IsAdministrador(int tipo)
         {
-            bool retorno = false; if (tipo == 0) { retorno = true; }
+            bool retorno = false;
+            if (tipo == 0)
+            {
+                retorno = true;
+            }
             return retorno;
         }
         
