@@ -14,14 +14,13 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario, prod_estoqueMinimo) VALUES (?id, ?nome, ?quantidade, ?valorUnitario, ?estoqueMinimo)";
+            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario) VALUES (?id, ?nome, ?quantidade, ?valorUnitario)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?id", produto.Id));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?valorUnitario", produto.ValorUnitario));
-            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", produto.EstoqueMinimo));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -37,6 +36,22 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command("SELECT * FROM tbl_produto ORDER BY prod_nome", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+        public DataSet SelectClientByID()
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_cliente inner join tbl_pedido on cli_id=ped_idCliente ORDER BY ped_id DESC LIMIT 1", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();
@@ -92,13 +107,12 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_produto SET prod_nome=?nome, prod_quantTotal=?quantidade, prod_valorUnitario=?valor, prod_estoqueMinimo=?estoqueMinimo WHERE prod_id=?codigo";
+            string sql = "UPDATE tbl_produto SET prod_nome=?nome, prod_quantTotal=?quantidade, prod_valorUnitario=?valor WHERE prod_id=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?valor", produto.ValorUnitario));
-            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", produto.EstoqueMinimo));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", produto.Id));
             objCommand.ExecuteNonQuery();
             objConexao.Close();

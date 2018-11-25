@@ -13,7 +13,11 @@ namespace EcoRealTijolos.App_Code.Classes
     {
         public int Codigo { get; set; }
         public DateTime Data { get; set; }
-        public String EnderecoEntrega { get; set; }
+        public string Logradouro { get; set; }
+        public string Bairro { get; set; }
+        public string Numero { get; set; }
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
         public String Observacao { get; set; }
         
         //Relacionamentos 

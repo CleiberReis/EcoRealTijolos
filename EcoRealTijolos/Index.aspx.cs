@@ -23,7 +23,7 @@ namespace EcoRealTijolos
             }
             else
             {
-                lblTitulo.Text = "Bem vindo (Administrador) : " + usuarios.Nome;
+                lblTitulo.Text = "Bem vindo Sr(a): " + usuarios.Nome;
 
 
                 ProdutoBD produtoBD = new ProdutoBD();
@@ -38,7 +38,6 @@ namespace EcoRealTijolos
                     string nome = Convert.ToString(dr["prod_nome"]);
                     produtos = produtos + nome + ",";
                 }
-
                 lblAviso.Text = "Produtos abaixo do estoque mínimo: " + produtos;
             }
 
@@ -47,9 +46,8 @@ namespace EcoRealTijolos
         {
             bool retorno = false; if (tipo == 0) { retorno = true; }
             return retorno;
-
         }
-
+        
         protected void lbSair_Click(object sender, EventArgs e)
         {
             Session.Abandon();

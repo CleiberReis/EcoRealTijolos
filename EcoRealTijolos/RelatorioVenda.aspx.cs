@@ -36,26 +36,10 @@ namespace EcoRealTijolos
 
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-
-
-
                 dados = dados + "['" + Convert.ToDateTime(dr["datapedido"]).ToShortDateString() + "', " + Convert.ToInt32(dr["quantidade"]) + "],";
             }
 
-            //for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-            //{
-            //    DataRow dr = ds.Tables[0].Rows[i];
-
-            //    DateTime data = Convert.ToDateTime(dr["datapedido"]);
-            //    int qntPed = Convert.ToInt32(dr["quantidade"]);
-
-            //    dados = dados + "['" + data + "', " + qntPed + "],";
-
-            //}
             GerarGrafico(dados);
-           
-
-
         }
 
         void GerarGrafico(string dados)
@@ -108,8 +92,17 @@ namespace EcoRealTijolos
                 {
                     dados = dados + "['" + Convert.ToDateTime(dr["datapedido"]).ToShortDateString() + "', " + Convert.ToInt32(dr["quantidade"]) + "],";
                 }
-                GerarGrafico(dados);
+
+                if (dados == "['Data do pedido', 'Quantidade de Pedidos'],")
+                {
+                    txtMensagem.Text = "Não existem pedidos nesse intervalo de busca.";
+                }
+                else
+                {
+                    GerarGrafico(dados);
+                }
             }
+
         }
 
 

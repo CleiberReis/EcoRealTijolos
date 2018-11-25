@@ -13,15 +13,6 @@ namespace EcoRealTijolos {
     public partial class Index {
         
         /// <summary>
-        /// Controle lblAviso.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAviso;
-        
-        /// <summary>
         /// Controle lblTitulo.
         /// </summary>
         /// <remarks>
@@ -37,6 +28,15 @@ namespace EcoRealTijolos {
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbSair;
+        protected global::System.Web.UI.WebControls.Button lbSair;
+        
+        /// <summary>
+        /// Controle lblAviso.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAviso;
     }
 }
