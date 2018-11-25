@@ -170,5 +170,10 @@ namespace EcoRealTijolos
                 txtValorUnitario.Text = produto.ValorUnitario.ToString();
             }
         }
+
+        protected void ddlCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,13 @@ namespace EcoRealTijolos
             ddlPedido.DataTextField = "ped_id";
             ddlPedido.DataValueField = "ped_id";
             ddlPedido.DataBind();
+
+            ProdutoBD clientebd = new ProdutoBD();
+            DataSet clienteds = clientebd.SelectClientByID();
+            ddlCliente.DataSource = clienteds.Tables[0].DefaultView;
+            ddlCliente.DataTextField = "cli_nome";
+            ddlCliente.DataValueField = "ped_id";
+            ddlCliente.DataBind();
         }
         protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,14 +58,16 @@ namespace EcoRealTijolos
 
         protected void btnOrcamento_Click(object sender, EventArgs e)
         {
-
             int pedidoTotal = Convert.ToInt32(ddlPedido.SelectedItem.Value);
             PedidoProdutoBD db = new PedidoProdutoBD();
             double total = db.GetSomaTotal(pedidoTotal);
             CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
-            lblTotal.Text = "Valor Final Total" + total.ToString("C2");
+            lblTotal.Text = "Valor Final Total " + total.ToString("C2");
 
-
+            //PedidoProdutoBD bd = new PedidoProdutoBD();
+            //DataSet ds = bd.SelectProductID(pedidoTotal);
+            //Repeater1.DataSource = ds.Tables[0].DefaultView;
+            //Repeater1.DataBind();
         }
 
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
