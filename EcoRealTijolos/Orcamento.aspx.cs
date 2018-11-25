@@ -20,17 +20,17 @@ namespace EcoRealTijolos
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
                 Carregar();
-                CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
+                //CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             }
         }
 
         private void CarregaProdutos(int idpedido)
         {
 
-            PedidoProdutoBD bd = new PedidoProdutoBD();
-            DataSet ds = bd.SelectProductID(idpedido);
-            Repeater1.DataSource = ds.Tables[0].DefaultView;
-            Repeater1.DataBind();
+            //PedidoProdutoBD bd = new PedidoProdutoBD();
+            //DataSet ds = bd.SelectProductID(idpedido);
+            //Repeater1.DataSource = ds.Tables[0].DefaultView;
+            //Repeater1.DataBind();
         }
 
         private void Carregar()
@@ -64,10 +64,10 @@ namespace EcoRealTijolos
             CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             lblTotal.Text = "Valor Final Total " + total.ToString("C2");
 
-            //PedidoProdutoBD bd = new PedidoProdutoBD();
-            //DataSet ds = bd.SelectProductID(pedidoTotal);
-            //Repeater1.DataSource = ds.Tables[0].DefaultView;
-            //Repeater1.DataBind();
+            PedidoProdutoBD bd = new PedidoProdutoBD();
+            DataSet ds = bd.SelectProductID(pedidoTotal);
+            Repeater1.DataSource = ds.Tables[0].DefaultView;
+            Repeater1.DataBind();
         }
 
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
