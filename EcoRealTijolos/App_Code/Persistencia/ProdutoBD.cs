@@ -14,13 +14,14 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario) VALUES (?id, ?nome, ?quantidade, ?valorUnitario)";
+            string sql = "INSERT INTO tbl_produto(prod_id, prod_nome, prod_quantTotal, prod_valorUnitario, prod_estoqueMinimo) VALUES (?id, ?nome, ?quantidade, ?valorUnitario, ?estoqueMinimo)";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?id", produto.Id));
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?valorUnitario", produto.ValorUnitario));
+            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", produto.EstoqueMinimo));
             objCommand.ExecuteNonQuery();
             objConexao.Close();
             objCommand.Dispose();
@@ -93,6 +94,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Nome = Convert.ToString(objDataReader["prod_nome"]);
                 obj.QuantidadeTotal = Convert.ToInt32(objDataReader["prod_quantTotal"]);
                 obj.ValorUnitario = Convert.ToDouble(objDataReader["prod_valorUnitario"]);
+                obj.EstoqueMinimo = Convert.ToInt32(objDataReader["prod_estoqueMinimo"]);
             }
             objDataReader.Close();
             objConexao.Close();

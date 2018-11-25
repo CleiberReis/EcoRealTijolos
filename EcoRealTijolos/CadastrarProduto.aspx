@@ -32,6 +32,8 @@
                                 <br />
                                 <label>QUANTIDADE</label>
                                 <asp:TextBox ID="txtQuantidade" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
+                                 <label>Quant. Minima:</label>
+                                <asp:TextBox ID="txtMinimo" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                     </div>
