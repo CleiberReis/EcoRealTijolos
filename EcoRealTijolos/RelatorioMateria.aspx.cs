@@ -30,7 +30,7 @@ namespace EcoRealTijolos
 
                 Carrega();
                 Calculo();
-                CapacidadeProducao();
+                CapacidadeProducao(); 
             }
         }
 

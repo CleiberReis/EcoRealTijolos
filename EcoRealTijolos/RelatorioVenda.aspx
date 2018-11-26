@@ -35,6 +35,6 @@
         <div id="chart_div" style="width: 900px; height: 500px;"></div>
     </section>
 </asp:Content>
-
+ 
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

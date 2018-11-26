@@ -34,7 +34,7 @@ namespace EcoRealTijolos
 
                 CarregaEstados();
                 CarregaCidades();
-                ddlEstado.Focus();
+                txtNome.Focus();
 
             }
         }
