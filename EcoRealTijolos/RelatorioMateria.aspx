@@ -23,6 +23,46 @@
                 </div>
             </div>
         </div>
+        <div class="content">
+            <asp:Label ID="Label1" runat="server" Text="Capacidade de traços com estoque atual:"></asp:Label>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Cimento: "></asp:Label>
+            <asp:TextBox ID="txtCimento" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Label ID="Label4" runat="server" Text="Areia: "></asp:Label>
+            <asp:TextBox ID="txtAreia" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Label ID="Label5" runat="server" Text="Terra: "></asp:Label>
+            <asp:TextBox ID="txtTerra" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label6" runat="server" Text="Capacidade possível de produção com o estoque atual:"></asp:Label>
+            <br />
+            <br />
+            <asp:Label ID="Label2" runat="server" Text="Tijolos ecológicos:"></asp:Label>
+            <br />
+
+            <asp:Label ID="Label7" runat="server" Text="Cimento: "></asp:Label>
+            <asp:TextBox ID="txtCpCimento" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Label ID="Label8" runat="server" Text="Areia: "></asp:Label>
+            <asp:TextBox ID="txtCpAreia" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <asp:Label ID="Label9" runat="server" Text="Terra: "></asp:Label>
+            <asp:TextBox ID="txtCpTerra" runat="server" Visible="True" ReadOnly="True"></asp:TextBox>
+
+            <br />
+            <br />
+        </div>
     </section>
 </asp:Content>
 

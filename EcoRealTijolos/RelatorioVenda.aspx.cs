@@ -12,8 +12,6 @@ namespace EcoRealTijolos
 {
     public partial class RelatorioVenda : System.Web.UI.Page
     {
-        private object lblMensagem;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -39,7 +37,17 @@ namespace EcoRealTijolos
                 dados = dados + "['" + Convert.ToDateTime(dr["datapedido"]).ToShortDateString() + "', " + Convert.ToInt32(dr["quantidade"]) + "],";
             }
 
-            GerarGrafico(dados);
+            if (dados == "['Data do pedido', 'Quantidade de Pedidos'],")
+            {
+                txtMensagem.Text = "Não existem pedidos cadastrados.";
+                txtInicial.Text = "";
+                txtFinal.Text = "";
+                txtInicial.Focus();
+            }
+            else
+            {
+                GerarGrafico(dados);
+            }
         }
 
         void GerarGrafico(string dados)
@@ -95,7 +103,10 @@ namespace EcoRealTijolos
 
                 if (dados == "['Data do pedido', 'Quantidade de Pedidos'],")
                 {
-                    txtMensagem.Text = "Não existem pedidos nesse intervalo de busca.";
+                    txtMensagem.Text = "Não existem pedidos nesse intervalo de busca, tente uma nova consulta";
+                    txtInicial.Text = "";
+                    txtFinal.Text = "";
+                    txtInicial.Focus();
                 }
                 else
                 {
