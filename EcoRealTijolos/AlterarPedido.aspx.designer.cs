@@ -13,6 +13,15 @@ namespace EcoRealTijolos {
     public partial class AlterarPedido {
         
         /// <summary>
+        /// Controle ddlCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCliente;
+        
+        /// <summary>
         /// Controle txtLogradouro.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,13 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.TextBox txtData;
         
         /// <summary>
-        /// Controle txtObsPedido.
+        /// Controle txtObs.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtObsPedido;
+        protected global::System.Web.UI.WebControls.TextBox txtObs;
         
         /// <summary>
         /// Controle BtnAlterar.

@@ -10,9 +10,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-primary">
-                   <%-- <label>CLIENTE:</label>
+                    <label>CLIENTE:</label>
                     <asp:DropDownList ID="ddlCliente" Width="500px" runat="server" CssClass="form-control">
-                    </asp:DropDownList>--%>
+                    </asp:DropDownList>
                 </div>
                 <div class="form-group">
                     <label style="font-weight: bold">DADOS DA ENTREGA</label>
@@ -36,22 +36,24 @@
                 </div>
                 <div class="form-group">
                     <label>OBSERVAÇÃO DO PEDIDO:</label>
-                    <asp:TextBox ID="txtObsPedido" runat="server" Width="500px" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtObs" runat="server" Width="500px" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="form-group">
-                    <table>
-                        <tr>
-                            <td>
-                                <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnAlterar_Click" Text="Alterar" />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div align="center">
-                    <div class="form-group">
-                        <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="BtnAlterar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnAlterar_Click" Text="Alterar" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div align="center">
+            <div class="form-group">
+                <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
+            </div>
+        </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
