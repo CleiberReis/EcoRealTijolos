@@ -18,15 +18,15 @@ namespace EcoRealTijolos
 
         }
 
-        protected void btnLogar_Click(object sender, EventArgs e)
-        {
-            senhav = txtSenhav.Text;
-            confsenha = txtConfSenha.Text;
+        //protected void btnLogar_Click(object sender, EventArgs e)
+        //{
+        //    senhav = txtSenhav.Text;
+        //    confsenha = txtConfSenha.Text;
 
-            if (senhav == Login.senha && )
-            {
+        //    if (senhav == Login.senha && )
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }
