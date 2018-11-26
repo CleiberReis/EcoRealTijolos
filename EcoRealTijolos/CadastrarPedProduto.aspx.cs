@@ -33,12 +33,17 @@ namespace EcoRealTijolos
             DataSet ds = bd.SelectAllByID(idpedido);
             GridView2.DataSource = ds.Tables[0].DefaultView;
             GridView2.DataBind();
+
         }
 
-       
 
         private void Carregar()
         {
+            ProdutoBD bd = new ProdutoBD();
+            DataSet ds = bd.SelectAll();
+            GridView1.DataSource = ds.Tables[0].DefaultView;
+            GridView1.DataBind();
+
             PedidoBD pedidobd = new PedidoBD();
             DataSet pedidods = pedidobd.SelectAllPedidos();
             ddlPedido.DataSource = pedidods.Tables[0].DefaultView;
@@ -60,7 +65,7 @@ namespace EcoRealTijolos
             ddlCliente.DataTextField = "cli_nome";
             ddlCliente.DataValueField = "ped_id";
             ddlCliente.DataBind();
-           
+
         }
 
         private void LimparCampos()
@@ -152,10 +157,10 @@ namespace EcoRealTijolos
 
         protected void btnFinalizar_Click(object sender, EventArgs e)
         {
-            
+
             CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             Response.Redirect("Orcamento.aspx");
-           
+
         }
 
         protected void ddlProduto_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,5 +178,6 @@ namespace EcoRealTijolos
         {
 
         }
+
     }
 }
