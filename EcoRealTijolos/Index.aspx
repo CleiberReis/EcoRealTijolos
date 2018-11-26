@@ -222,7 +222,7 @@
                         </div>
                         &nbsp;
                         <div class="col-sm-6 col-lg-4">
-                            <div class="overview-item overview-item--c4">
+                            <div class="overview-item overview-item--c3">
                                 <div class="overview__inner">
                                     <div class="overview-box clearfix">
                                         <div class="icon">
@@ -234,6 +234,24 @@
                                         </div>
                                         <div class="text">
                                             <asp:Label ID="lblAviso" runat="server" Font-Bold="True"></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="overview-item overview-item--c3">
+                                <div class="overview__inner">
+                                    <div class="overview-box clearfix">
+                                        <div class="icon">
+                                            <i class="zmdi zmdi-alert-triangle">
+                                                <div class="text">
+                                                    <h2>ALERTA</h2>
+                                                </div>
+                                            </i>
+                                        </div>
+                                        <div class="text">
+                                            <asp:Label ID="lblAvisoMateria" runat="server" Font-Bold="True"></asp:Label>
                                         </div>
                                     </div>
                                 </div>

@@ -8,7 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
 
     <section class="content-header">
-        <h1 style="text-align: center">RELÁTORIO DE VENDAS</h1>
+        <h1 style="text-align: center">RELATÓRIO DE VENDAS</h1>
     </section>
     <section class="content">
         <div>

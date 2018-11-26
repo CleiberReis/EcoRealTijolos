@@ -26,7 +26,7 @@ namespace EcoRealTijolos
             if (!Page.IsPostBack)
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
-                lblOptionMenu.Text = "Relátorio de Matéria Prima";
+                lblOptionMenu.Text = "Relatório de Matéria Prima";
 
                 Carrega();
                 Calculo();
