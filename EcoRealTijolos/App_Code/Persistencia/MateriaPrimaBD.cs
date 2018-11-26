@@ -18,13 +18,14 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_materia(mat_nome, mat_quantidade) VALUES (?nome, ?quantidade)";
+            string sql = "INSERT INTO tbl_materia(mat_nome, mat_quantidade, mat_estoqueMinimo) VALUES (?nome, ?quantidade, ?estoqueMinimo)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
             objCommand.Parameters.Add(Mapped.Parameter("?nome", materia.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", materia.Quantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", materia.EstoqueMin));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -107,6 +108,22 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return ds;
         }
 
+        public DataSet GetEstoqueMin()
+        {
+            DataSet dst = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_materia where mat_quantidade < mat_estoqueMinimo;", objConexao);
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(dst);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return dst;
+        }
+
         //select
         public MateriaPrima Select(int id)
         {
@@ -127,6 +144,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Id = Convert.ToInt32(objDataReader["mat_id"]);
                 obj.Nome = Convert.ToString(objDataReader["mat_nome"]);
                 obj.Quantidade = Convert.ToInt32(objDataReader["mat_quantidade"]);
+                obj.EstoqueMin = Convert.ToInt32(objDataReader["mat_estoqueMinimo"]);
             }
 
             objDataReader.Close();

@@ -41,9 +41,22 @@ namespace EcoRealTijolos
                     produtos = produtos + nome + ",";
                 }
                 lblAviso.Text = "Produtos abaixo do estoque mínimo: " + produtos;
-            
 
+            MateriaPrimaBD materiaPrimaBD = new MateriaPrimaBD();
+            DataSet dst = materiaPrimaBD.GetEstoqueMin();
+            int quantidadeLinha = dst.Tables[0].Rows.Count;
+            string materia = "";
+
+            for (int i=0; i<quantidadeLinha; i++)
+            {
+                DataRow dr = dst.Tables[0].Rows[i];
+                string nome = Convert.ToString(dr["mat_nome"]);
+                materia = materia + nome + ",";
+            }
+            lblAvisoMateria.Text = "Matéria Prima abaixo do estoque mínimo: " + materia;
+            
         }
+
         private bool IsAdministrador(int tipo)
         {
             bool retorno = false;
