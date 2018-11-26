@@ -39,6 +39,12 @@ namespace EcoRealTijolos
 
         private void Carregar()
         {
+            PedidoBD pedidobd = new PedidoBD();
+            DataSet pedidods = pedidobd.SelectAllPedidos();
+            ddlPedido.DataSource = pedidods.Tables[0].DefaultView;
+            ddlPedido.DataTextField = "ped_id";
+            ddlPedido.DataValueField = "ped_id";
+            ddlPedido.DataBind();
 
             ProdutoBD produtobd = new ProdutoBD();
             DataSet produtods = produtobd.SelectAll();
@@ -54,13 +60,7 @@ namespace EcoRealTijolos
             ddlCliente.DataTextField = "cli_nome";
             ddlCliente.DataValueField = "ped_id";
             ddlCliente.DataBind();
-
-            PedidoBD pedidobd = new PedidoBD();
-            DataSet pedidods = pedidobd.SelectAllPedidos();
-            ddlPedido.DataSource = pedidods.Tables[0].DefaultView;
-            ddlPedido.DataTextField = "ped_id";
-            ddlPedido.DataValueField = "ped_id";
-            ddlPedido.DataBind();
+           
         }
 
         private void LimparCampos()
@@ -109,13 +109,11 @@ namespace EcoRealTijolos
 
         protected void btnIncluir_Click(object sender, EventArgs e)
         {
-
-            ProdutoBD produtobd = new ProdutoBD();
-            Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
-
             PedidoBD pedidobd = new PedidoBD();
             Pedido pedido = pedidobd.Select(Convert.ToInt32(ddlPedido.SelectedItem.Value));
 
+            ProdutoBD produtobd = new ProdutoBD();
+            Produto produto = produtobd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
 
             PedidoProduto pedidoproduto = new PedidoProduto();
             pedidoproduto.Quantidade = Convert.ToInt32(txtQuantidade.Text);
@@ -169,6 +167,11 @@ namespace EcoRealTijolos
                 Produto produto = bd.Select(Convert.ToInt32(ddlProduto.SelectedItem.Value));
                 txtValorUnitario.Text = produto.ValorUnitario.ToString();
             }
+        }
+
+        protected void ddlCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

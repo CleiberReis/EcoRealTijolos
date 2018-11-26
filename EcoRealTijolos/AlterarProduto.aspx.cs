@@ -23,6 +23,7 @@ namespace EcoRealTijolos
                 txtNome.Text = produto.Nome;
                 txtValor.Text = produto.ValorUnitario.ToString();
                 txtQuantidade.Text = produto.QuantidadeTotal.ToString();
+                txtMinimo.Text = produto.EstoqueMinimo.ToString();
             }
         }
 
@@ -33,6 +34,7 @@ namespace EcoRealTijolos
             produto.Nome = txtNome.Text;
             produto.ValorUnitario = Convert.ToDouble(txtValor.Text);
             produto.QuantidadeTotal = Convert.ToInt32(txtQuantidade.Text);
+            produto.EstoqueMinimo = Convert.ToInt32(txtMinimo.Text);
             if (bd.Update(produto))
             {
                 lblMensagem.Text = "Produto alterado com sucesso";

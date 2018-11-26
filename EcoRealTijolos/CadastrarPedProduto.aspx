@@ -18,9 +18,9 @@
                                 </div>
                                 <asp:Label ID="lblTitulo" runat="server"></asp:Label>
                                 <label>Cliente: </label>
-                                <asp:DropDownList ID="ddlCliente" runat="server" Enabled="False"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlCliente" runat="server" Enabled="False" OnSelectedIndexChanged="ddlCliente_SelectedIndexChanged"></asp:DropDownList>
                             </div>
-                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False" Visible="False"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlPedido" runat="server" Enabled="False"></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <label>Selecione o Produto:</label>

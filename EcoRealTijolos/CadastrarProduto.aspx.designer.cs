@@ -49,6 +49,15 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
         
         /// <summary>
+        /// Controle txtMinimo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMinimo;
+        
+        /// <summary>
         /// Controle lblMensagem.
         /// </summary>
         /// <remarks>

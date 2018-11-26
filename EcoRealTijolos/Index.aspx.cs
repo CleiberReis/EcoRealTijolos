@@ -14,16 +14,18 @@ namespace EcoRealTijolos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(Session["ID"]);
+            /*int codigo = Convert.ToInt32(Session["ID"]);
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = bd.Select(codigo);
+
+
             if (!IsAdministrador(usuarios.Tipo))
             {
-                Response.Redirect("../Erro/AcessoNegado.aspx");
+                Response.Redirect("AcessoNegado.aspx");
             }
             else
             {
-                lblTitulo.Text = "Bem vindo (Administrador) : " + usuarios.Nome;
+                lblTitulo.Text = "" + usuarios.Nome;*/
 
 
                 ProdutoBD produtoBD = new ProdutoBD();
@@ -38,16 +40,18 @@ namespace EcoRealTijolos
                     string nome = Convert.ToString(dr["prod_nome"]);
                     produtos = produtos + nome + ",";
                 }
-
                 lblAviso.Text = "Produtos abaixo do estoque mínimo: " + produtos;
-            }
+            
 
         }
         private bool IsAdministrador(int tipo)
         {
-            bool retorno = false; if (tipo == 0) { retorno = true; }
+            bool retorno = false;
+            if (tipo == 0)
+            {
+                retorno = true;
+            }
             return retorno;
-
         }
 
         protected void lbSair_Click(object sender, EventArgs e)

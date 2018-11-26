@@ -39,9 +39,9 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 objCommand.Dispose();
                 objConexao.Dispose();
             }
-            catch (MySql.Data.MySqlClient.MySqlException /*ex*/)
+            catch (MySql.Data.MySqlClient.MySqlException ex)
             {
-                //.Write(ex.ToString());
+                Console.Write(ex.ToString());
                 retorno = -1;
             }
             catch (Exception)

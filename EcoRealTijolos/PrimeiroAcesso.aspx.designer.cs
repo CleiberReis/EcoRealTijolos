@@ -10,25 +10,7 @@
 namespace EcoRealTijolos {
     
     
-    public partial class Index {
-        
-        /// <summary>
-        /// Controle lblTitulo.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
-        
-        /// <summary>
-        /// Controle lblOptionMenu.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOptionMenu;
+    public partial class PrimeiroAcesso {
         
         /// <summary>
         /// Controle form1.
@@ -40,21 +22,39 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle lbSair.
+        /// Controle txtSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button lbSair;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha;
         
         /// <summary>
-        /// Controle lblAviso.
+        /// Controle txtSenhav.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAviso;
+        protected global::System.Web.UI.WebControls.TextBox txtSenhav;
+        
+        /// <summary>
+        /// Controle txtConfSenha.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConfSenha;
+        
+        /// <summary>
+        /// Controle btnLogar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogar;
     }
 }

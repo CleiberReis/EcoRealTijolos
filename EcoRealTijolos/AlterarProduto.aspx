@@ -8,25 +8,17 @@
         <h1 style="text-align: center">ALTERAÇÃO DE PRODUTOS</h1>
     </section>
     <section class="content">
-        <div class="row">
+       <div class="row">
             <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
-
                         <div class="form-group">
-                            <label>NOME DO PRODUTO</label>
+                            <label>NOME DO PRODUTO:</label>
+                            <asp:TextBox ID="txtNome" runat="server" Width="169px" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
-
-                        <div class="form-group">
-                            <label>VALOR DO PRODUTO</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label>VALOR UNITÁRIO:</label>
+                            <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -35,10 +27,14 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>QUANTIDADE EM ESTOQUE:</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                            <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
+                            <div class="form-group">
+                                <br />
+                                <label>QUANTIDADE</label>
+                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
+                                 <label>Quant. Minima:</label>
+                                <asp:TextBox ID="txtMinimo" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
                     </div>
                 </div>

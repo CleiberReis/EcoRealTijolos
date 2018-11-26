@@ -14,11 +14,11 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>NOME DO PRODUTO:</label>
-                            <asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
+                            <asp:TextBox ID="txtNome" runat="server" Width="169px" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>VALOR UNITÁRIO:</label>
-                            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,9 @@
                             <div class="form-group">
                                 <br />
                                 <label>QUANTIDADE</label>
-                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
+                                 <label>Quant. Minima:</label>
+                                <asp:TextBox ID="txtMinimo" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                     </div>

@@ -94,6 +94,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Nome = Convert.ToString(objDataReader["prod_nome"]);
                 obj.QuantidadeTotal = Convert.ToInt32(objDataReader["prod_quantTotal"]);
                 obj.ValorUnitario = Convert.ToDouble(objDataReader["prod_valorUnitario"]);
+                obj.EstoqueMinimo = Convert.ToInt32(objDataReader["prod_estoqueMinimo"]);
             }
             objDataReader.Close();
             objConexao.Close();
@@ -108,13 +109,12 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_produto SET prod_nome=?nome, prod_quantTotal=?quantidade, prod_valorUnitario=?valor, prod_estoqueMinimo=?estoqueMinimo WHERE prod_id=?codigo";
+            string sql = "UPDATE tbl_produto SET prod_nome=?nome, prod_quantTotal=?quantidade, prod_valorUnitario=?valor WHERE prod_id=?codigo";
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
             objCommand.Parameters.Add(Mapped.Parameter("?nome", produto.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?quantidade", produto.QuantidadeTotal));
             objCommand.Parameters.Add(Mapped.Parameter("?valor", produto.ValorUnitario));
-            objCommand.Parameters.Add(Mapped.Parameter("?estoqueMinimo", produto.EstoqueMinimo));
             objCommand.Parameters.Add(Mapped.Parameter("?codigo", produto.Id));
             objCommand.ExecuteNonQuery();
             objConexao.Close();

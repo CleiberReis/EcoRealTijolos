@@ -8,7 +8,7 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
@@ -20,12 +20,20 @@
                             <label style="font-weight: bold">DADOS DA ENTREGA</label>
                         </div>
                         <div class="form-group">
-                           <label>LOGRADOURO:</label>
+                            <label>LOGRADOURO:</label>
                             <asp:TextBox ID="txtLogradouro" Width="500px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                             <label>BAIRRO:</label>
                             <asp:TextBox ID="txtBairro" Width="500px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                             <label>Nº:</label>
                             <asp:TextBox ID="txtNumero" Width="100px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
                             <label>ESTADO:</label>
                             <asp:DropDownList ID="ddlEstado" Width="500px" runat="server" CssClass="form-control"></asp:DropDownList>&nbsp
                             <label>CIDADE:</label>
@@ -40,20 +48,20 @@
                             <label>OBSERVAÇÃO DO PEDIDO:</label>
                             <asp:TextBox ID="txtObsPedido" runat="server" Width="500px" CssClass="form-control"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <asp:Button ID="BtnSalvar" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="BtnSalvar_Click" Text="Salvar" />
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div align="center">
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btnProximo" runat="server" CssClass="btn btn-primary" Width="200px" OnClick="btnProximo_Click" Text="Próximo" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="form-group">
                 <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
             </div>
