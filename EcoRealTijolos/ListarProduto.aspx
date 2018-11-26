@@ -17,6 +17,7 @@
                             <asp:BoundField DataField="prod_nome" HeaderText="Nome do Produto" />
                             <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário" />
                             <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
+                            <asp:BoundField DataField="prod_estoqueMinimo" HeaderText="Quantidade Total" />
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%# Bind("prod_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"

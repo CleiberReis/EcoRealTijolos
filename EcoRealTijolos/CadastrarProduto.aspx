@@ -30,9 +30,9 @@
                             <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
                             <div class="form-group">
                                 <br />
-                                <label>QUANTIDADE</label>
+                                <label>QUANTIDADE EM ESTOQUE:</label>
                                 <asp:TextBox ID="txtQuantidade" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
-                                 <label>Quant. Minima:</label>
+                                 <label>QUANTIDADE DE ESTOQUE MINIMO:</label>
                                 <asp:TextBox ID="txtMinimo" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
