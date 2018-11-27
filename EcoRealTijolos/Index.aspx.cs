@@ -14,7 +14,7 @@ namespace EcoRealTijolos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*int codigo = Convert.ToInt32(Session["ID"]);
+            int codigo = Convert.ToInt32(Session["ID"]);
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = bd.Select(codigo);
 
@@ -25,7 +25,7 @@ namespace EcoRealTijolos
             }
             else
             {
-                lblTitulo.Text = "" + usuarios.Nome;*/
+                lblTitulo.Text = "" + usuarios.Nome;
 
 
                 ProdutoBD produtoBD = new ProdutoBD();
@@ -41,8 +41,9 @@ namespace EcoRealTijolos
                     produtos = produtos + nome + ",";
                 }
                 lblAviso.Text = "Produtos abaixo do estoque mínimo: " + produtos;
-            
 
+
+            }
         }
         private bool IsAdministrador(int tipo)
         {

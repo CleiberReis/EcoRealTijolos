@@ -57,9 +57,25 @@ namespace EcoRealTijolos
             Usuarios usuarios = new Usuarios();
             usuarios.Nome = txtUser.Text;
             usuarios.Email = txtEmail.Text;
-            usuarios.Tipo = Convert.ToInt32(value1);
+            if (cbxAdmSim.Checked)
+            {
+                usuarios.Tipo = 1;
+            } else
+            {
+                usuarios.Tipo = 0;
+            }
+
+            
             usuarios.Login = txtLogin.Text;
-            usuarios.Ativo =Convert.ToInt32(value2);
+            if (cbxAtivo.Checked)
+            {
+                usuarios.Ativo = 1;
+            }
+            else
+            {
+                usuarios.Ativo = 0;
+            }
+            
             usuarios.Senha = senha;
 
             UsuariosBD bd = new UsuariosBD();
