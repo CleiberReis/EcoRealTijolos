@@ -66,6 +66,9 @@ namespace EcoRealTijolos
                 case 0:
                     Response.Redirect("Index.aspx");
                     break;
+                case 1:
+                    Response.Redirect("IndexUser.aspx");
+                    break;
                 default:
                     break;
             }

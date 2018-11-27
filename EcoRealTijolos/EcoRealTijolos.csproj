@@ -134,6 +134,13 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IndexUser.aspx.cs">
+      <DependentUpon>IndexUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexUser.aspx.designer.cs">
+      <DependentUpon>IndexUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListarUsuarios.aspx.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,6 +237,7 @@
     <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="css\theme.css" />
     <Content Include="Index.aspx" />
+    <Content Include="IndexUser.aspx" />
     <Content Include="jAlert\images\error-icon.png" />
     <Content Include="jAlert\images\help.gif" />
     <Content Include="jAlert\images\important.gif" />

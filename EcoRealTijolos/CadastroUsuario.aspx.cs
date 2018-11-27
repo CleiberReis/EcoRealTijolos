@@ -24,9 +24,9 @@ namespace EcoRealTijolos
             }
         }
 
-        protected void cbxAdmSim_CheckedChanged(object sender, EventArgs e)
+        protected void CbxAdmSim_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAdmSim.Checked)
+            if (CbxAdmSim.Checked)
             {
                 value1 = 0; //administrador
             }
@@ -36,9 +36,9 @@ namespace EcoRealTijolos
             }
         }
 
-        protected void cbxAtivo_CheckedChanged(object sender, EventArgs e)
+        protected void CbxAtivo_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAtivo.Checked)
+            if (CbxAtivo.Checked)
             {
                 value2 = 0; //ativo
             }
@@ -57,9 +57,9 @@ namespace EcoRealTijolos
             Usuarios usuarios = new Usuarios();
             usuarios.Nome = txtUser.Text;
             usuarios.Email = txtEmail.Text;
-            usuarios.Tipo = Convert.ToInt32(value1);
+            usuarios.Tipo = Convert.ToInt32(CbxAdmSim.Checked);
             usuarios.Login = txtLogin.Text;
-            usuarios.Ativo =Convert.ToInt32(value2);
+            usuarios.Ativo =Convert.ToInt32(CbxAtivo.Checked);
             usuarios.Senha = senha;
 
             UsuariosBD bd = new UsuariosBD();

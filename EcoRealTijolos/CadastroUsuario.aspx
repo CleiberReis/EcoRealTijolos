@@ -33,9 +33,9 @@
                         </div>
                         &nbsp;
                         <div class="form-group">
-                            <label>ADMINISTRADOR?</label><asp:CheckBox ID="cbxAdmSim" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="cbxAdmSim_CheckedChanged" BorderStyle="None" BorderWidth="0px" Font-Bold="True" Width="89px"></asp:CheckBox>
+                            <label>ADMINISTRADOR?</label><asp:CheckBox ID="CbxAdmSim" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="CbxAdmSim_CheckedChanged" BorderStyle="None" BorderWidth="0px" Font-Bold="True" Width="89px"></asp:CheckBox>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <label>ATIVO?        </label><asp:CheckBox ID="cbxAtivo" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="cbxAtivo_CheckedChanged" BorderStyle="None" BorderWidth="0px" Width="85px">
+                            <label>ATIVO?        </label><asp:CheckBox ID="CbxAtivo" Text="Sim" runat="server" CssClass="form-control" OnCheckedChanged="CbxAtivo_CheckedChanged" BorderStyle="None" BorderWidth="0px" Width="85px">
                             </asp:CheckBox>
                         </div>
                     </div>

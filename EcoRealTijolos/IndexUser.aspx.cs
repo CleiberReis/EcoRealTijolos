@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
+using System.Data;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -10,23 +10,20 @@ using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class IndexUser : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*int codigo = Convert.ToInt32(Session["ID"]);
+            int codigo = Convert.ToInt32(Session["ID"]);
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = bd.Select(codigo);
-
-
-            if (!IsAdministrador(usuarios.Tipo))
+            if (!IsUser(usuarios.Tipo))
             {
                 Response.Redirect("AcessoNegado.aspx");
             }
             else
             {
-                lblTitulo.Text = "" + usuarios.Nome;*/
-
+                lblTitulo.Text = "" + usuarios.Nome;
 
                 ProdutoBD produtoBD = new ProdutoBD();
                 DataSet ds = produtoBD.GetEstoqueMinimo();
@@ -54,14 +51,13 @@ namespace EcoRealTijolos
                     materia = materia + nome + ",";
                 }
                 lblAvisoMateria.Text = "Matéria Prima abaixo do estoque mínimo: " + materia;
-            
-
+            }
         }
 
-        private bool IsAdministrador(int tipo)
+        private bool IsUser(int tipo)
         {
             bool retorno = false;
-            if (tipo == 0)
+            if (tipo == 1)
             {
                 retorno = true;
             }
