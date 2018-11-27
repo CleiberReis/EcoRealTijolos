@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EcoRealTijolos.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IndexUser.aspx.cs" Inherits="EcoRealTijolos.IndexUser" %>
 
 <!DOCTYPE html>
 
@@ -178,32 +178,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-line-chart"></i>
-                            <span>Relatórios</span>
-                            <i class="fa fa-angle-right pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="RelatorioVenda.aspx"><i class="fa fa-angle-double-right"></i>Relatório de Vendas</a>
-                                <a href="RelatorioMateria.aspx"><i class="fa fa-angle-double-right"></i>Relatório de Matéria Prima</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-gear"></i>
-                            <span>Área do Admim</span>
-                            <i class="fa fa-angle-right pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="CadastroUsuario.aspx"><i class="fa fa-angle-double-right"></i>Cadastrar Usuários</a>
-                                <a href="ListarUsuarios.aspx"><i class="fa fa-angle-double-right"></i>Listar Usuários</a>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </section>
         </aside>
@@ -273,3 +247,4 @@
     <script src="js/plugins/datatables/dataTables.bootstrap.js"></script>
 </body>
 </html>
+

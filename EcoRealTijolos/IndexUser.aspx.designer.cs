@@ -10,7 +10,7 @@
 namespace EcoRealTijolos {
     
     
-    public partial class Index {
+    public partial class IndexUser {
         
         /// <summary>
         /// Controle lblTitulo.

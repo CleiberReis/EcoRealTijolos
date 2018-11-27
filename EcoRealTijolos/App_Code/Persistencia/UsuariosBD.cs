@@ -109,7 +109,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Login = Convert.ToString(objDataReader["usu_login"]);
                 obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
                 obj.Ativo = Convert.ToInt32(objDataReader["usu_ativo"]);
-                obj.Ativo = Convert.ToInt32(objDataReader["usu_senha"]);
+                obj.Senha = Convert.ToString(objDataReader["usu_senha"]);
             }
 
             objDataReader.Close();

@@ -3154,9 +3154,9 @@ section {
 }
 
 .overview-item--c3 {
-    background-image: -moz-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-    background-image: -webkit-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-    background-image: -ms-linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+    background-image: -moz-linear-gradient(90deg, #fc6619 0%, #ff6a00 100%);
+    background-image: -webkit-linear-gradient(90deg, #941c0a 0%, #ff6a00 100%);
+    background-image: -ms-linear-gradient(90deg, #fc6619 0%, #ff6a00 100%);
 }
 
 .overview-item--c4 {
