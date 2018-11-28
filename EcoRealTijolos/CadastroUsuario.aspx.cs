@@ -61,21 +61,21 @@ namespace EcoRealTijolos
             //Funcoes.enviaEmail(" ecoreal925@gmail.com", txtEmail.Text, "Bem vindo", senha);
             if (CbxAdmSim.Checked)
             {
-                usuarios.Tipo = 1;
+                usuarios.Tipo = 0;
             } else
             {
-                usuarios.Tipo = 0;
+                usuarios.Tipo = 1;
             }
 
             
             usuarios.Login = txtLogin.Text;
             if (CbxAtivo.Checked)
             {
-                usuarios.Ativo = 1;
+                usuarios.Ativo = 0;
             }
             else
             {
-                usuarios.Ativo = 0;
+                usuarios.Ativo = 1;
             }
             
             usuarios.Senha = senha;
