@@ -27,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             &nbsp;&nbsp;
-                            <asp:TextBox ID="txtConfSenha" runat="server" CssClass="form-group" placeholder="Insira novamente sua nova senha" TextMode="Password" Width="290px" OnTextChanged="txtConfSenha_TextChanged"></asp:TextBox>
+                            <asp:TextBox ID="txtConfSenha" runat="server" CssClass="form-group" placeholder="Insira novamente sua nova senha" TextMode="Password" Width="290px"></asp:TextBox>
                         &nbsp;<asp:Label ID="lblMensagem" runat="server" Width="250px"></asp:Label>
                         </div>
                     </div>

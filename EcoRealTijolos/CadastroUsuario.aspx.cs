@@ -66,7 +66,6 @@ namespace EcoRealTijolos
             {
                 usuarios.Tipo = 1;
             }
-
             
             usuarios.Login = txtLogin.Text;
             if (CbxAtivo.Checked)

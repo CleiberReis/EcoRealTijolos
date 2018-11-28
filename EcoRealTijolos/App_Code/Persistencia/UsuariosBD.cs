@@ -134,6 +134,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
+            
             objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
             objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
             objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
