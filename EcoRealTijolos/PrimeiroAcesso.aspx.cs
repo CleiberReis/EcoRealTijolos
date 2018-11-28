@@ -1,32 +1,73 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using EcoRealTijolos.App_Code.Persistencia;
+using EcoRealTijolos.App_Code.Classes;
+
 
 namespace EcoRealTijolos
 {
     public partial class PrimeiroAcesso : System.Web.UI.Page
     {
-        Login senha = new Login();
-        string senhav;
-        string confsenha;
+        
+        public string senhav;
+        public string confsenha;
+        public string senhafeita;
+        public string zero = "0";
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            senhav = Session["senha"].ToString();
+            UsuariosBD bd = new UsuariosBD();
+            Usuarios usuario = bd.Select(Convert.ToInt32(Session["ID"]));
+
+            senhafeita = usuario.Senha;
+            zero = usuario.PriAcesso;
 
         }
 
-        //protected void btnLogar_Click(object sender, EventArgs e)
-        //{
-        //    senhav = txtSenhav.Text;
-        //    confsenha = txtConfSenha.Text;
 
-        //    if (senhav == Login.senha && )
-        //    {
 
-        //    }
-        //}
+
+        protected void btnSalvaEntra_Click(object sender, EventArgs e)
+        {
+            
+            //Login passando = new Login();
+            //try
+            //{
+             //   passando.senha = senhav;
+            //}
+            //finally
+            //{
+              //  passando.Dispose();
+            //}
+            senhafeita = txtSenhav.Text.Trim();
+            confsenha = txtConfSenha.Text.Trim();
+
+            if (senhav == txtSenha1.Text && senhafeita == confsenha)
+            {
+                UsuariosBD bd = new UsuariosBD();
+                Usuarios usuario = bd.Select(Convert.ToInt32(Session["ID"]));
+
+                usuario.Senha = senhafeita;
+                usuario.PriAcesso = "0";
+
+                
+
+
+                Response.Redirect("Index.aspx", true);
+                
+            }
+        }
+
+        protected void txtConfSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

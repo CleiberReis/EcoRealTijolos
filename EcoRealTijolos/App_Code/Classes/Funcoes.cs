@@ -12,20 +12,20 @@ namespace EcoRealTijolos.App_Code.Classes
     public class Funcoes
     {
 
-        public static void enviaEmail(string from, string to, string subject, string body)
-        {
-            MailMessage msgMail = new MailMessage();
+       // public static void enviaEmail(string from, string to, string subject, string body)
+        //{
+          //  MailMessage msgMail = new MailMessage();
 
-            msgMail.To.Add(new MailAddress(to));
-            msgMail.From = new MailAddress(from);
-            msgMail.Subject = subject;
+            //msgMail.To.Add(new MailAddress(to));
+            //msgMail.From = new MailAddress(from);
+            //msgMail.Subject = subject;
 
-            msgMail.IsBodyHtml = true;
-            msgMail.Body = body;
+            //msgMail.IsBodyHtml = true;
+            //msgMail.Body = body;
 
-            SmtpClient client = new SmtpClient();
-            client.Send(msgMail);
-        }
+            //SmtpClient client = new SmtpClient();
+            //client.Send(msgMail);
+        //}
 
 
 

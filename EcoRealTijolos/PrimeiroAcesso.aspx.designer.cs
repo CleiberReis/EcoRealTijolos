@@ -22,13 +22,13 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle txtSenha.
+        /// Controle txtSenha1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSenha;
+        protected global::System.Web.UI.WebControls.TextBox txtSenha1;
         
         /// <summary>
         /// Controle txtSenhav.
@@ -49,12 +49,21 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.TextBox txtConfSenha;
         
         /// <summary>
-        /// Controle btnLogar.
+        /// Controle lblMensagem.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogar;
+        protected global::System.Web.UI.WebControls.Label lblMensagem;
+        
+        /// <summary>
+        /// Controle btnSalvaEntra.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalvaEntra;
     }
 }

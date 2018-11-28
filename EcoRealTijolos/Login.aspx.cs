@@ -9,11 +9,17 @@ using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos
 {
+
     public partial class Login : System.Web.UI.Page
     {
+
+        
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private bool IsPreenchido(string str)
@@ -35,46 +41,82 @@ namespace EcoRealTijolos
             return retorno;
         }
 
+
+
+
         protected void btnLogar_Click(object sender, EventArgs e)
         {
+            UsuariosBD usuDB = new UsuariosBD();
+
             string login = txtLogin.Text.Trim();
             string senha = txtSenha.Text.Trim();
-            if (!IsPreenchido(login))
+
+            Session["senha"] = txtSenha.Text;
+            
+
+
+            Usuarios usuarios = usuDB.Autentica(login, senha);
+
+                Session["ID"] = usuarios.Codigo;
+
+            if (usuarios != null)
             {
-                lblMensagem.Text = "Preencha o login";
-                txtLogin.Focus();
-                return;
+                
+
+                if (usuarios.PriAcesso == "0")
+                {
+                    Session["ID"] = usuarios.Codigo;
+
+                    if (!IsPreenchido(login))
+                    {
+                        lblMensagem.Text = "Preencha o login";
+                        txtLogin.Focus();
+                        return;
+                    }
+                    if (!IsPreenchido(senha))
+                    {
+                        lblMensagem.Text = "Preencha a senha";
+                        txtSenha.Focus();
+                        return;
+                    }
+                    UsuariosBD bd = new UsuariosBD();
+
+                    usuarios = bd.Autentica(login, senha);
+                    if (!UsuarioEncontrado(usuarios))
+                    {
+                        lblMensagem.Text = "Usuário não encontrado";
+                        txtLogin.Focus();
+                        return;
+                    }
+                    Session["ID"] = usuarios.Codigo;
+                    switch (usuarios.Tipo)
+                    {
+
+                        case 0:
+                            Response.Redirect("Index.aspx");
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+
+
+
+
+                else
+                {
+
+                    Response.Redirect("PrimeiroAcesso.aspx");
+                }
             }
-            if (!IsPreenchido(senha))
-            {
-                lblMensagem.Text = "Preencha a senha";
-                txtSenha.Focus();
-                return;
-            }
-            UsuariosBD bd = new UsuariosBD();
-            Usuarios usuarios = new Usuarios();
-            usuarios = bd.Autentica(login, senha);
-            if (!UsuarioEncontrado(usuarios))
+            else
             {
                 lblMensagem.Text = "Usuário não encontrado";
                 txtLogin.Focus();
                 return;
             }
-            Session["ID"] = usuarios.Codigo;
-            switch (usuarios.Tipo)
-            {
-                case 0:
-                    Response.Redirect("Index.aspx");
-                    break;
-                case 1:
-                    Response.Redirect("IndexUser.aspx");
-                    break;
-                default:
-                    break;
-            }
 
         }
     }
-    
-
 }
