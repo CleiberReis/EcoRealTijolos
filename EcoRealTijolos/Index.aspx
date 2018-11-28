@@ -127,7 +127,8 @@
                     </div>
                     <div class="pull-left info">
                         <p>
-                            Bem vindo sr(a)<br /><asp:Label runat="server" ID="lblTitulo"></asp:Label>
+                            Bem vindo sr(a)<br />
+                            <asp:Label runat="server" ID="lblTitulo"></asp:Label>
                         </p>
                     </div>
                 </div>
