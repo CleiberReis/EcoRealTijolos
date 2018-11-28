@@ -129,19 +129,20 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_usuario SET usu_nome=?nome, usu_email=?email, usu_login=?login, usu_tipo=?tipo, usu_ativo=?ativo, usu_senha=?senha, usu_priacesso=?priacesso WHERE usu_id=?codigo";
+            string sql = "UPDATE tbl_usuario SET usu_senha=?senha, usu_priacesso=?priacesso WHERE usu_id=?codigo";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
             
-            objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
-            objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
-            objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
-            objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+            //objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
+            //objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
+            //objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
+            //objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
+            //objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
             objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
             objCommand.Parameters.Add(Mapped.Parameter("?priacesso", usuario.PriAcesso));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", usuario.Codigo));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();

@@ -6,30 +6,37 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-
-    <section class="content-header">
-        <h1 style="text-align: center">RELATÓRIO DE VENDAS</h1>
-    </section>
     <section class="content">
         <div>
-            <label>Período de busca do relatório</label>
+            <h3>Período de Busca do Relatório</h3>
             <br />
-            <br />
-            <label>Data Inicial:</label>
-            <br />
-            <asp:TextBox ID="txtInicial" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            <label>Data Final:</label>
-            <br />
-            <asp:TextBox ID="txtFinal" runat="server"></asp:TextBox>
-            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-primary">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label>Data Inicial:</label>
+                                    <br />
+                                    <asp:TextBox ID="txtInicial" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Data Final:</label>
+                                    <br />
+                                    <asp:TextBox ID="txtFinal" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="col-md-4">
+                                    <label></label>
+                                    <br />
+                                    <asp:Button ID="btnEnviar" runat="server" CssClass="btn btn-primary" Text="Gerar Relatório" OnClick="btnEnviar_Click" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <br />
             <asp:Label ID="txtMensagem" runat="server" Text=""></asp:Label>
-            <br />
-            <br />
-            <asp:Button ID="btnEnviar" runat="server" Text="Gerar Relatório" OnClick="btnEnviar_Click" />
-            <br />
             <br />
         </div>
         <div id="chart_div" style="width: 900px; height: 500px;"></div>
