@@ -44,7 +44,7 @@
                                                         <Columns>
                                                             <asp:BoundField DataField="prod_nome" HeaderText="Produto" />
                                                             <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
-                                                            <asp:BoundField DataField="prod_estoqueMinimo" HeaderText="Quantidade Total" />
+                                                            <asp:BoundField DataField="prod_estoqueMinimo" HeaderText="Estoque Mínimo" />
                                                         </Columns>
                                                     </asp:GridView>
                                                 </div>
