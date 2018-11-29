@@ -26,12 +26,7 @@ namespace EcoRealTijolos
                 
             }
             
-            
-
         }
-        
-
-
 
         protected void btnSalvaEntra_Click(object sender, EventArgs e)
         {
@@ -49,7 +44,7 @@ namespace EcoRealTijolos
             {
                 if (usuario.Tipo == 0)
                 {
-                    Response.Redirect("Index.aspx");
+                    Response.Redirect("Indeex.aspx");
                 }
                 else
                 {

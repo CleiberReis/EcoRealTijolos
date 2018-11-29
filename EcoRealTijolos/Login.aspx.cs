@@ -81,7 +81,7 @@ namespace EcoRealTijolos
             }
             else if (usuario.PriAcesso == "0")
             {
-                Response.Redirect("Index.aspx");
+                Response.Redirect("Indeex.aspx");
             }
             else
             {

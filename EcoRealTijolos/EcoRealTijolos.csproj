@@ -127,6 +127,13 @@
     <Compile Include="CadastroUsuario.aspx.designer.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Indeex.aspx.cs">
+      <DependentUpon>Indeex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indeex.aspx.designer.cs">
+      <DependentUpon>Indeex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,6 +243,7 @@
     <Content Include="css\mdi-font\css\material-design-iconic-font.min.css" />
     <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="css\theme.css" />
+    <Content Include="Indeex.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="IndexUser.aspx" />
     <Content Include="jAlert\images\error-icon.png" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EcoRealTijolos.Index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Indeex.aspx.cs" Inherits="EcoRealTijolos.Indeex" %>
 
 <!DOCTYPE html>
 
@@ -127,8 +127,8 @@
                     </div>
                     <div class="pull-left info">
                         <p>
-                            <!--Bem vindo sr(a)<br />
-                            <asp:Label runat="server" ID="lblTitulo"></asp:Label> -->
+                            Bem vindo sr(a)<br />
+                            <asp:Label runat="server" ID="lblTitulo"></asp:Label>
                         </p>
                     </div>
                 </div>
