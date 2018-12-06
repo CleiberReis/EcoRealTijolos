@@ -31,13 +31,31 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.DropDownList ddlPedido;
         
         /// <summary>
-        /// Controle btnOrcamento.
+        /// Controle lblCliente.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnOrcamento;
+        protected global::System.Web.UI.WebControls.Label lblCliente;
+        
+        /// <summary>
+        /// Controle ddlCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCliente;
+        
+        /// <summary>
+        /// Controle Repeater1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
         
         /// <summary>
         /// Controle lblTotal.
@@ -49,12 +67,12 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.Label lblTotal;
         
         /// <summary>
-        /// Controle GridView1.
+        /// Controle btnOrcamento.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnOrcamento;
     }
 }

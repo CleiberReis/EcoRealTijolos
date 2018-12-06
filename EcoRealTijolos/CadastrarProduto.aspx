@@ -14,11 +14,11 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>NOME DO PRODUTO:</label>
-                            <asp:TextBox ID="txtNome" runat="server" Width="169px"></asp:TextBox>
+                            <asp:TextBox ID="txtNome" runat="server" Width="169px" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>VALOR UNITÁRIO:</label>
-                            <asp:TextBox ID="txtValor" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtValor" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -30,8 +30,10 @@
                             <asp:Label ID="lblQuantidade" runat="server" Text="QUANTIDADE EM ESTOQUE:"></asp:Label>
                             <div class="form-group">
                                 <br />
-                                <label>QUANTIDADE</label>
-                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px"></asp:TextBox>
+                                <label>QUANTIDADE EM ESTOQUE:</label>
+                                <asp:TextBox ID="txtQuantidade" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
+                                 <label>QUANTIDADE DE ESTOQUE MINIMO:</label>
+                                <asp:TextBox ID="txtMinimo" runat="server" Width="170px" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                     </div>

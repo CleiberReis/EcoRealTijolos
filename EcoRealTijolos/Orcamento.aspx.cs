@@ -20,7 +20,17 @@ namespace EcoRealTijolos
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
                 Carregar();
+                CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
             }
+        }
+
+        private void CarregaProdutos(int idpedido)
+        {
+
+            PedidoProdutoBD bd = new PedidoProdutoBD();
+            DataSet ds = bd.SelectProductID(idpedido);
+            Repeater1.DataSource = ds.Tables[0].DefaultView;
+            Repeater1.DataBind();
         }
 
         private void Carregar()
@@ -31,6 +41,13 @@ namespace EcoRealTijolos
             ddlPedido.DataTextField = "ped_id";
             ddlPedido.DataValueField = "ped_id";
             ddlPedido.DataBind();
+
+            ProdutoBD clientebd = new ProdutoBD();
+            DataSet clienteds = clientebd.SelectClientByID();
+            ddlCliente.DataSource = clienteds.Tables[0].DefaultView;
+            ddlCliente.DataTextField = "cli_nome";
+            ddlCliente.DataValueField = "ped_id";
+            ddlCliente.DataBind();
         }
         protected void ddlPedido_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -42,16 +59,20 @@ namespace EcoRealTijolos
         protected void btnOrcamento_Click(object sender, EventArgs e)
         {
             int pedidoTotal = Convert.ToInt32(ddlPedido.SelectedItem.Value);
-            PedidoBD bd = new PedidoBD();
-            DataSet ds = bd.SelectAll();
             PedidoProdutoBD db = new PedidoProdutoBD();
             double total = db.GetSomaTotal(pedidoTotal);
-            lblTotal.Text = total.ToString("C2");
+            CarregaProdutos(Convert.ToInt32(Session["pedidoID"]));
+            lblTotal.Text = "Valor Final Total " + total.ToString("C2");
 
-            PedidoProdutoBD pedprodbd = new PedidoProdutoBD();
-            DataSet pedprodds = pedprodbd.SelectAll();
-            GridView1.DataSource = pedprodds.Tables[0].DefaultView;
-            GridView1.DataBind();
+            //PedidoProdutoBD bd = new PedidoProdutoBD();
+            //DataSet ds = bd.SelectProductID(pedidoTotal);
+            //Repeater1.DataSource = ds.Tables[0].DefaultView;
+            //Repeater1.DataBind();
+        }
+
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
         }
     }
 }

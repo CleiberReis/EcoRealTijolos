@@ -13,24 +13,30 @@ namespace EcoRealTijolos.App_Code.Persistencia
     {
         //métodos
 
-        public Usuarios Autentica(string email, string senha)
+        public Usuarios Autentica(string login, string senha)
         {
             Usuarios obj = null;
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
             System.Data.IDataReader objDataReader;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_usuario WHERE usu_email = ?email and usu_senha = ?senha", objConexao);
-            objCommand.Parameters.Add(Mapped.Parameter("?email", email)); objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
+            objCommand = Mapped.Command("SELECT * FROM tbl_usuario WHERE usu_login = ?login and usu_senha = ?senha", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?login", login));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", senha));
             objDataReader = objCommand.ExecuteReader();
             while (objDataReader.Read())
             {
-                obj = new Usuarios(); obj.Codigo = Convert.ToInt32(objDataReader["usu_id"]);
-                obj.Nome = Convert.ToString(objDataReader["usu_nome"]); obj.Email = Convert.ToString(objDataReader["usu_email"]);
+                obj = new Usuarios();
+                obj.Codigo = Convert.ToInt32(objDataReader["usu_id"]);
+                obj.Nome = Convert.ToString(objDataReader["usu_nome"]);
+                obj.Login = Convert.ToString(objDataReader["usu_login"]);
                 obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
             }
-            objDataReader.Close(); objConexao.Close();
-            objCommand.Dispose(); objConexao.Dispose(); objDataReader.Dispose();
+            objDataReader.Close();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            objDataReader.Dispose();
             return obj;
         }
         //insert
@@ -38,7 +44,7 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "INSERT INTO tbl_usuario(usu_nome, usu_email, usu_login, usu_tipo, usu_ativo) VALUES (?nome, ?email, ?login, ?tipo, ?ativo)";
+            string sql = "INSERT INTO tbl_usuario(usu_nome, usu_email, usu_login, usu_tipo, usu_ativo, usu_senha, usu_priacesso) VALUES (?nome, ?email, ?login, ?tipo, ?ativo, ?senha, ?priacesso)";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
@@ -48,6 +54,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
             objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
             objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
+            objCommand.Parameters.Add(Mapped.Parameter("?priacesso", usuario.PriAcesso));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();
@@ -102,6 +110,8 @@ namespace EcoRealTijolos.App_Code.Persistencia
                 obj.Login = Convert.ToString(objDataReader["usu_login"]);
                 obj.Tipo = Convert.ToInt32(objDataReader["usu_tipo"]);
                 obj.Ativo = Convert.ToInt32(objDataReader["usu_ativo"]);
+                obj.Senha = Convert.ToString(objDataReader["usu_senha"]);
+                obj.PriAcesso = Convert.ToString(objDataReader["usu_priacesso"]);
             }
 
             objDataReader.Close();
@@ -119,16 +129,20 @@ namespace EcoRealTijolos.App_Code.Persistencia
         {
             System.Data.IDbConnection objConexao;
             System.Data.IDbCommand objCommand;
-            string sql = "UPDATE tbl_usuario SET usu_nome=?nome, usu_email=?email, usu_login=?login, usu_tipo=?tipo, usu_ativo=?ativo WHERE usu_id=?codigo";
+            string sql = "UPDATE tbl_usuario SET usu_senha=?senha, usu_priacesso=?priacesso WHERE usu_id=?codigo";
 
             objConexao = Mapped.Connection();
             objCommand = Mapped.Command(sql, objConexao);
 
-            objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
-            objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
-            objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
-            objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
-            objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+            
+            //objCommand.Parameters.Add(Mapped.Parameter("?nome", usuario.Nome));
+            //objCommand.Parameters.Add(Mapped.Parameter("?email", usuario.Email));
+            //objCommand.Parameters.Add(Mapped.Parameter("?login", usuario.Login));
+            //objCommand.Parameters.Add(Mapped.Parameter("?tipo", usuario.Tipo));
+            //objCommand.Parameters.Add(Mapped.Parameter("?ativo", usuario.Ativo));
+            objCommand.Parameters.Add(Mapped.Parameter("?senha", usuario.Senha));
+            objCommand.Parameters.Add(Mapped.Parameter("?priacesso", usuario.PriAcesso));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", usuario.Codigo));
 
             objCommand.ExecuteNonQuery();
             objConexao.Close();

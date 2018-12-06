@@ -40,22 +40,22 @@ namespace EcoRealTijolos {
         protected global::System.Web.UI.WebControls.TextBox txtLogin;
         
         /// <summary>
-        /// Controle cbxAdmSim.
+        /// Controle CbxAdmSim.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxAdmSim;
+        protected global::System.Web.UI.WebControls.CheckBox CbxAdmSim;
         
         /// <summary>
-        /// Controle cbxAtivo.
+        /// Controle CbxAtivo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxAtivo;
+        protected global::System.Web.UI.WebControls.CheckBox CbxAtivo;
         
         /// <summary>
         /// Controle lblMensagem.

@@ -47,6 +47,42 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return retorno;
         }
 
+        public DataSet SelectAllByID(int idpedido)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN " +
+                "tbl_produto on tbl_pedidoproduto.prod_id = tbl_produto.prod_id INNER JOIN " +
+                "tbl_pedido ON tbl_pedido.ped_id = tbl_pedidoproduto.ped_id WHERE tbl_pedidoproduto.ped_id=?codigo", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", idpedido));
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
+        public DataSet SelectProductID(int idpedido)
+        {
+            DataSet ds = new DataSet();
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            System.Data.IDataAdapter objDataAdapter;
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN tbl_produto ON tbl_produto.prod_id = tbl_pedidoproduto.prod_id WHERE tbl_pedidoproduto.ped_id=?codigo", objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", idpedido));
+            objDataAdapter = Mapped.Adapter(objCommand);
+            objDataAdapter.Fill(ds);
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return ds;
+        }
+
         //selectall
         public DataSet SelectAll()
         {
@@ -126,6 +162,24 @@ namespace EcoRealTijolos.App_Code.Persistencia
             return true;
         }
 
+        //subtrai quantidade da tbl_produto
+        public bool UpdateQuantidade(int quantidade, int produtoid)
+        {
+            System.Data.IDbConnection objConexao;
+            System.Data.IDbCommand objCommand;
+            string sql = "UPDATE tbl_produto SET prod_quantTotal = prod_quantTotal - ?quantidade where prod_id = ?codigo;";
+            objConexao = Mapped.Connection();
+            objCommand = Mapped.Command(sql, objConexao);
+            objCommand.Parameters.Add(Mapped.Parameter("?quantidade", quantidade));
+            objCommand.Parameters.Add(Mapped.Parameter("?codigo", produtoid));
+
+            objCommand.ExecuteNonQuery();
+            objConexao.Close();
+            objCommand.Dispose();
+            objConexao.Dispose();
+            return true;
+        }
+
         //calculoValorTotal
         public double GetSomaTotal(int idPedido)
         {
@@ -145,7 +199,6 @@ namespace EcoRealTijolos.App_Code.Persistencia
             objConexao.Dispose();
             return total;
         }
-
 
         public PedidoProdutoBD()
         {

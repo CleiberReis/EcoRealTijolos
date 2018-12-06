@@ -18,7 +18,8 @@ namespace EcoRealTijolos
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
                 lblOptionMenu.Text = "Pedidos";
-
+                CarregaEstados();
+                CarregaCidades();
                 CarregaClientes();
                 ddlCliente.Focus();
             }
@@ -35,9 +36,33 @@ namespace EcoRealTijolos
             ddlCliente.Items.Insert(0, "Selecione um cliente");
         }
 
+        private void CarregaEstados()
+        {
+            EstadoBD bd = new EstadoBD();
+            DataSet ds = bd.SelectAll();
+            ddlEstado.DataSource = ds.Tables[0].DefaultView;
+            ddlEstado.DataTextField = "nome";
+            ddlEstado.DataValueField = "nome";
+            ddlEstado.DataBind();
+            ddlEstado.Items.Insert(0, "Selecione um Estado");
+        }
+
+        private void CarregaCidades()
+        {
+            CidadeBD bd = new CidadeBD();
+            DataSet ds = bd.SelectAll();
+            ddlCidade.DataSource = ds.Tables[0].DefaultView;
+            ddlCidade.DataTextField = "nome";
+            ddlCidade.DataValueField = "nome";
+            ddlCidade.DataBind();
+            ddlCidade.Items.Insert(0, "Selecione uma Cidade");
+        }
+
         private void LimparCampos()
         {
-            txtEndereco.Text = "";
+            txtLogradouro.Text = "";
+            txtBairro.Text = "";
+            txtData.Text = "";
             txtObsPedido.Text = "";
             //remove seleção do ddl
             for (int i = 0; i < ddlCliente.Items.Count; i++)
@@ -46,24 +71,44 @@ namespace EcoRealTijolos
             }
             //coloca o "Selecione" selecionado
             ddlCliente.Items[0].Selected = true;
+
+            //remove seleção do ddl
+            for (int i = 0; i < ddlCidade.Items.Count; i++)
+            {
+                ddlCidade.Items[i].Selected = false;
+            }
+            //coloca o "Selecione" selecionado
+            ddlCidade.Items[0].Selected = true;
+
+            //remove seleção do ddl
+            for (int i = 0; i < ddlEstado.Items.Count; i++)
+            {
+                ddlEstado.Items[i].Selected = false;
+            }
+            //coloca o "Selecione" selecionado
+            ddlEstado.Items[0].Selected = true;
         }
 
-        protected void BtnSalvar_Click(object sender, EventArgs e)
+        protected void btnProximo_Click(object sender, EventArgs e)
         {
             ClienteBD clienteBD = new ClienteBD();
             Cliente cliente = clienteBD.Select(Convert.ToInt32(ddlCliente.SelectedItem.Value));
 
             Pedido pedido = new Pedido();
 
-            pedido.EnderecoEntrega = Convert.ToString(txtEndereco.Text);
             pedido.Data = Convert.ToDateTime(txtData.Text);
+            pedido.Logradouro = Convert.ToString(txtLogradouro.Text);
             pedido.Observacao = Convert.ToString(txtObsPedido.Text);
+            pedido.Cidade = Convert.ToString(ddlCidade.Text);
+            pedido.Estado = Convert.ToString(ddlEstado.Text);
+            pedido.Bairro = Convert.ToString(txtBairro.Text);
+            pedido.Numero = Convert.ToString(txtNumero.Text);
 
             pedido.Cliente = cliente;
 
             PedidoBD pedidobd = new PedidoBD();
             int retorno = pedidobd.Insert(pedido);
-            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id, pedido.EnderecoEntrega, pedido.Observacao);
+            int pedidoID = pedidobd.GetID(pedido.Data, pedido.Cliente.Id, pedido.Logradouro, pedido.Observacao, pedido.Cidade, pedido.Estado, pedido.Bairro, pedido.Numero);
             Session["pedidoID"] = pedidoID;
             Response.Redirect("CadastrarPedProduto.aspx");
 

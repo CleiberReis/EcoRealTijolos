@@ -74,13 +74,20 @@
     <Reference Include="Arction.WinForms.Charting.LightningChartUltimate, Version=8.3.2.4001, Culture=neutral, PublicKeyToken=6484d7bb14b95dd3, processorArchitecture=MSIL">
       <HintPath>..\packages\LightningChartUltimateWinForms8.8.3.2.1\lib\net40-client\Arction.WinForms.Charting.LightningChartUltimate.dll</HintPath>
     </Reference>
+    <Reference Include="Caliburn.Micro, Version=1.5.2.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="Caliburn.Micro.Telerik, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Telerik.2.1.9\lib\net40\Caliburn.Micro.Telerik.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\Tutoriais Guarino\Materiais de Apoio\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -90,6 +97,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.1.5.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -117,6 +127,27 @@
     <Compile Include="CadastroUsuario.aspx.designer.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Indeex.aspx.cs">
+      <DependentUpon>Indeex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Indeex.aspx.designer.cs">
+      <DependentUpon>Indeex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexUser.aspx.cs">
+      <DependentUpon>IndexUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexUser.aspx.designer.cs">
+      <DependentUpon>IndexUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListarUsuarios.aspx.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,6 +168,13 @@
     </Compile>
     <Compile Include="Orcamento.aspx.designer.cs">
       <DependentUpon>Orcamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrimeiroAcesso.aspx.cs">
+      <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrimeiroAcesso.aspx.designer.cs">
+      <DependentUpon>PrimeiroAcesso.aspx</DependentUpon>
     </Compile>
     <Compile Include="RelatorioMateria.aspx.cs">
       <DependentUpon>RelatorioMateria.aspx</DependentUpon>
@@ -197,10 +235,17 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\font-face.css" />
     <Content Include="css\images\logo_icon.png" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="css\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="css\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="css\theme.css" />
+    <Content Include="Indeex.aspx" />
     <Content Include="Index.aspx" />
+    <Content Include="IndexUser.aspx" />
     <Content Include="jAlert\images\error-icon.png" />
     <Content Include="jAlert\images\help.gif" />
     <Content Include="jAlert\images\important.gif" />
@@ -365,13 +410,6 @@
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\sql\bancoecoreal.sql" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Content Include="AlterarCliente.aspx" />
     <Content Include="CadastrarCliente.aspx" />
     <Content Include="ListarCliente.aspx" />
@@ -391,6 +429,7 @@
     <Content Include="ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Orcamento.aspx" />
+    <Content Include="PrimeiroAcesso.aspx" />
     <Content Include="RelatorioMateria.aspx" />
     <Content Include="RelatorioVenda.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -432,6 +471,10 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="css\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
