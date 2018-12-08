@@ -17,7 +17,7 @@ namespace EcoRealTijolos
             if (!Page.IsPostBack)
             {
                 Label lblOptionMenu = Master.FindControl("lblOptionMenu") as Label;
-                lblOptionMenu.Text = "Relátorio de Vendas";
+                lblOptionMenu.Text = "Relatório de Vendas";
 
                 Carrega();
             }

@@ -18,17 +18,21 @@
                     <div class="body bg-gray">
                         
                         <div class="form-group">
-                            <asp:TextBox ID="txtSenha" runat="server" CssClass="form-group" style="width:100%" placeholder="Insira a senha recebida no seu E-mail" TextMode="Password"></asp:TextBox>
+                            &nbsp;
+                            <asp:TextBox ID="txtSenha1" runat="server" CssClass="form-group" placeholder="Insira a senha recebida no seu E-mail" TextMode="Password" Height="20px" Width="296px"></asp:TextBox>
+                        &nbsp;</div>
+                        <div class="form-group">
+                            &nbsp;&nbsp;
+                            <asp:TextBox ID="txtSenhav" runat="server" CssClass="form-group" placeholder="Insira sua nova senha" TextMode="Password" Width="289px"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtSenhav" runat="server" CssClass="form-group" style="width:100%" placeholder="Insira sua nova senha" TextMode="Password"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtConfSenha" runat="server" CssClass="form-group" style="width:100%" placeholder="Insira novamente sua nova senha" TextMode="Password"></asp:TextBox>
+                            &nbsp;&nbsp;
+                            <asp:TextBox ID="txtConfSenha" runat="server" CssClass="form-group" placeholder="Insira novamente sua nova senha" TextMode="Password" Width="290px"></asp:TextBox>
+                        &nbsp;<asp:Label ID="lblMensagem" runat="server" Width="250px"></asp:Label>
                         </div>
                     </div>
                     <div class="footer">
-                        <asp:Button ID="btnLogar" runat="server" CssClass="btn bg-olive btn-block" OnClick="btnLogar_Click" Text="Salvar e entrar" />
+                        <asp:Button ID="btnSalvaEntra" runat="server" CssClass="btn bg-olive btn-block" OnClick="btnSalvaEntra_Click" Text="Salvar e entrar" />
                 
                     </div>
                 </layouttemplate>

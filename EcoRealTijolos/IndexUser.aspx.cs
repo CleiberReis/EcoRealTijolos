@@ -19,7 +19,7 @@ namespace EcoRealTijolos
             Usuarios usuarios = bd.Select(codigo);
             if (!IsUser(usuarios.Tipo))
             {
-                Response.Redirect("AcessoNegado.aspx");
+                Response.Redirect("IndexUser.aspx");
             }
             else
             {

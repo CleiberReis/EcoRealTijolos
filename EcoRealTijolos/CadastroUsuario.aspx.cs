@@ -57,6 +57,8 @@ namespace EcoRealTijolos
             Usuarios usuarios = new Usuarios();
             usuarios.Nome = txtUser.Text;
             usuarios.Email = txtEmail.Text;
+            usuarios.PriAcesso = "1";
+            //Funcoes.enviaEmail(" ecoreal925@gmail.com", txtEmail.Text, "Bem vindo", senha);
             if (CbxAdmSim.Checked)
             {
                 usuarios.Tipo = 0;
@@ -64,7 +66,6 @@ namespace EcoRealTijolos
             {
                 usuarios.Tipo = 1;
             }
-
             
             usuarios.Login = txtLogin.Text;
             if (CbxAtivo.Checked)

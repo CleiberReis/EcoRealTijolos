@@ -4,10 +4,6 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="contentBody" runat="server">
-
-    <section class="content-header">
-        <h1 style="text-align: center">RELATÓRIO DE MATÉRIA PRIMA</h1>
-    </section>
     <section class="content">
         <div class="row">
             <div class="col-md-12">

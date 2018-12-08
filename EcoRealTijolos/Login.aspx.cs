@@ -9,11 +9,12 @@ using EcoRealTijolos.App_Code.Persistencia;
 
 namespace EcoRealTijolos
 {
+
     public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private bool IsPreenchido(string str)
@@ -37,8 +38,18 @@ namespace EcoRealTijolos
 
         protected void btnLogar_Click(object sender, EventArgs e)
         {
+            //UsuariosBD usuDB = new UsuariosBD();
+            
+
             string login = txtLogin.Text.Trim();
             string senha = txtSenha.Text.Trim();
+
+            Session["senha"] = txtSenha.Text;
+
+            //Usuarios usuarios = usuDB.Autentica(login, senha);
+
+            //Session["ID"] = usuarios.Codigo;
+
             if (!IsPreenchido(login))
             {
                 lblMensagem.Text = "Preencha o login";
@@ -51,6 +62,7 @@ namespace EcoRealTijolos
                 txtSenha.Focus();
                 return;
             }
+
             UsuariosBD bd = new UsuariosBD();
             Usuarios usuarios = new Usuarios();
             usuarios = bd.Autentica(login, senha);
@@ -61,20 +73,37 @@ namespace EcoRealTijolos
                 return;
             }
             Session["ID"] = usuarios.Codigo;
-            switch (usuarios.Tipo)
+            UsuariosBD carregabd = new UsuariosBD();
+            Usuarios usuario = carregabd.Select(usuarios.Codigo);
+            if (usuario.PriAcesso == "1")
             {
-                case 0:
-                    Response.Redirect("Index.aspx");
-                    break;
-                case 1:
-                    Response.Redirect("IndexUser.aspx");
-                    break;
-                default:
-                    break;
+                Response.Redirect("PrimeiroAcesso.aspx");
             }
+            else if (usuario.PriAcesso == "0")
+            {
+                Response.Redirect("Indeex.aspx");
+            }
+            else
+            {
+                lblMensagem.Text = "Usuário não encontrado";
+                txtLogin.Focus();
+                return;
+            }
+            //switch (usuarios.Tipo)
+            //{
+
+            //    case 0:
+            //        Response.Redirect("Index.aspx");
+            //        break;
+            //    case 1:
+            //        Response.Redirect("IndexUser.aspx");
+            //        break;
+            //    default:
+            //        break;
+            //}
+
+           
 
         }
     }
-    
-
 }
