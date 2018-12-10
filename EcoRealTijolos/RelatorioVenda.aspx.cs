@@ -61,8 +61,10 @@ namespace EcoRealTijolos
             grafico = grafico + dados;
             grafico = grafico + "]);";
             grafico = grafico + "var options = {";
-            grafico = grafico + "title: 'Pedidos realizados',";
+            grafico = grafico + "title: 'Pedidos realizados', fontSize: 16,";
             grafico = grafico + "vAxis: {format: 'decimal'},";
+            grafico = grafico + "hAxis: {title: 'Data da realização do pedido', textStyle: {color: '#333'}},";
+            grafico = grafico + "vAxis: {title: 'Quantidade de pedidos por dia', textStyle: {color: 'red'}},";
             grafico = grafico + "colors: ['#1b9e77']";
             grafico = grafico + "};";
             grafico = grafico + "var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));";
@@ -92,6 +94,7 @@ namespace EcoRealTijolos
             }
             else
             {
+                txtMensagem.Text = "";
                 string dados = "";
                 //varre linhas do dataset
                 dados = dados + "['Data do pedido', 'Quantidade de Pedidos'],";
@@ -110,6 +113,7 @@ namespace EcoRealTijolos
                 }
                 else
                 {
+                    txtMensagem.Text = "";
                     GerarGrafico(dados);
                 }
             }

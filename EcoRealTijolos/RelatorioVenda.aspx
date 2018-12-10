@@ -36,10 +36,11 @@
                 </div>
             </div>
             <br />
-            <asp:Label ID="txtMensagem" runat="server" Text=""></asp:Label>
+            <asp:Label ID="txtMensagem" runat="server" BackColor="#00FF99" ForeColor="Red"></asp:Label>
+            <br />
             <br />
         </div>
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="chart_div" style="width: 1000px; height: 500px;"></div>
     </section>
 </asp:Content>
 
