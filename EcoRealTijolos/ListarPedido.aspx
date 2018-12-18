@@ -25,7 +25,7 @@
                             <asp:BoundField DataField="ped_data" HeaderText="Data de Entrega" />
                             <asp:BoundField DataField="ped_obs" HeaderText="Observações do Pedido" />
                             <asp:BoundField DataField="pedpro_quantidade" HeaderText="Quant.Produto" />
-                            <asp:BoundField DataField="pedpro_subtotal" HeaderText="Subtotal Pedido" />
+                            <asp:BoundField DataField="pedpro_subtotal" HeaderText="Subtotal Pedido R$" />
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lbAlterar" runat="server" CssClass="btn btn-dark" CommandName="Alterar" CommandArgument='<%#Bind("ped_id")%>'><i class="fa fa-check-square-o" aria-hidden="true"></i></asp:LinkButton>&nbsp;<asp:LinkButton ID="lbExcluir" runat="server" CssClass="btn btn-danger" CommandName="Excluir"

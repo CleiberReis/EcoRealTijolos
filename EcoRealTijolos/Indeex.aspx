@@ -205,6 +205,12 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="active">
+                        <a href="Login.aspx">
+                            <i class="fa fa-close"></i>
+                            <span>Sair do Sistema</span>
+                        </a>
+                    </li>
                 </ul>
             </section>
         </aside>
@@ -217,10 +223,11 @@
             <section class="content">
                 <form id="form1" runat="server">
                     <div id="container">
-                        <div class="text" style="align-content: center">
+                        <%--Comentei só pra ficar esteticamente mais bonito kkk--%>
+                        <%--<div class="text" style="align-content: center">
                             <asp:Button ID="lbSair" runat="server" CssClass="btn btn-sm" OnClick="lbSair_Click" Text="Sair"></asp:Button>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        </div>
+                        </div>--%>
                         &nbsp;
                         <div class="col-sm-6 col-lg-4">
                             <div class="overview-item overview-item--c3">

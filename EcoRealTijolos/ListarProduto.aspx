@@ -15,7 +15,7 @@
                     <asp:GridView ID="GridView1" runat="server" OnRowCommand="GridView1_RowCommand" CssClass="table table-bordered table-hover" AutoGenerateColumns="False">
                         <Columns>
                             <asp:BoundField DataField="prod_nome" HeaderText="Nome do Produto" />
-                            <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário" />
+                            <asp:BoundField DataField="prod_valorUnitario" HeaderText="Valor Unitário R$" />
                             <asp:BoundField DataField="prod_quantTotal" HeaderText="Quantidade Total" />
                             <asp:BoundField DataField="prod_estoqueMinimo" HeaderText="Estoque Mínimo" />
                             <asp:TemplateField>
