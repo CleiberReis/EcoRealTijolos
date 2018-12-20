@@ -89,7 +89,10 @@ namespace EcoRealTijolos.App_Code.Persistencia
             System.Data.IDbCommand objCommand;
             System.Data.IDataAdapter objDataAdapter;
             objConexao = Mapped.Connection();
-            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN tbl_pedido ON tbl_pedido.ped_id = tbl_pedidoproduto.ped_id", objConexao);
+            objCommand = Mapped.Command("SELECT * FROM tbl_pedidoproduto INNER JOIN " +
+                "tbl_pedido ON tbl_pedido.ped_id = tbl_pedidoproduto.ped_id INNER JOIN " +
+                "tbl_cliente ON tbl_cliente.cli_id = tbl_pedido.ped_idCliente INNER JOIN " +
+                "tbl_produto ON tbl_produto.prod_id = tbl_pedidoproduto.prod_id ORDER BY cli_nome;", objConexao);
             objDataAdapter = Mapped.Adapter(objCommand);
             objDataAdapter.Fill(ds);
             objConexao.Close();

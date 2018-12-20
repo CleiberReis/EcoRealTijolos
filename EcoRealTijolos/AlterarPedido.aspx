@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-primary">
-                   <%-- <label>CLIENTE:</label>
+                    <%-- <label>CLIENTE:</label>
                     <asp:DropDownList ID="ddlCliente" Width="500px" runat="server" CssClass="form-control">
                     </asp:DropDownList>--%>
                 </div>
@@ -25,9 +25,9 @@
                     <label>Nº:</label>
                     <asp:TextBox ID="txtNumero" Width="100px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                     <label>ESTADO:</label>
-                    <asp:DropDownList ID="ddlEstado" Width="500px" runat="server" CssClass="form-control"></asp:DropDownList>&nbsp
+                    <asp:DropDownList ID="ddlEstado" Width="500px" runat="server" CssClass="form-control" AppendDataBoundItems="True"></asp:DropDownList>&nbsp
                             <label>CIDADE:</label>
-                    <asp:DropDownList ID="ddlCidade" Width="500px" runat="server" CssClass="form-control">
+                    <asp:DropDownList ID="ddlCidade" Width="500px" runat="server" CssClass="form-control" AppendDataBoundItems="True">
                     </asp:DropDownList>
                 </div>
                 <div class="form-group">
@@ -52,6 +52,8 @@
                         <asp:Label ID="lblMensagem" runat="server" Font-Bold="True" Font-Names="Arial" ForeColor="Blue"></asp:Label>
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">

@@ -35,9 +35,9 @@
                             <label>Nº:</label>
                             <asp:TextBox ID="txtNumero" Width="100px" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                             <label>ESTADO:</label>
-                            <asp:DropDownList ID="ddlEstado" Width="500px" runat="server" CssClass="form-control"></asp:DropDownList>&nbsp
+                            <asp:DropDownList ID="ddlEstado" Width="500px" runat="server" CssClass="form-control" AppendDataBoundItems="True"></asp:DropDownList>&nbsp
                             <label>CIDADE:</label>
-                            <asp:DropDownList ID="ddlCidade" Width="500px" runat="server" CssClass="form-control">
+                            <asp:DropDownList ID="ddlCidade" Width="500px" runat="server" CssClass="form-control" AppendDataBoundItems="True">
                             </asp:DropDownList>
                         </div>
                     </div>
