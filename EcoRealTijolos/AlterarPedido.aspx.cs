@@ -22,11 +22,12 @@ namespace EcoRealTijolos
 
                 PedidoBD bd = new PedidoBD();
                 Pedido pedido = bd.Select(Convert.ToInt32(Session["ID"]));
+                //ddlCliente.Text = pedido.Cliente.ToString();
                 txtLogradouro.Text = pedido.Logradouro.ToString();
                 txtBairro.Text = pedido.Bairro.ToString();
                 txtNumero.Text = pedido.Numero.ToString();
-                ddlCidade.Text = pedido.Estado;
-                ddlEstado.Text = pedido.Cidade;
+                //ddlCidade.Text = pedido.Estado;
+                //ddlEstado.Text = pedido.Cidade;
                 txtData.Text = pedido.Data.ToString();
                 txtObsPedido.Text = pedido.Observacao;
 
@@ -77,8 +78,8 @@ namespace EcoRealTijolos
                 txtLogradouro.Text = "";
                 txtBairro.Text = "";
                 txtNumero.Text = "";
-                ddlCidade.Text = "";
-                ddlEstado.Text = "";
+                //ddlCidade.Text = "";
+                //ddlEstado.Text = "";
                 txtData.Text = "";
                 txtObsPedido.Text = "";
                 txtLogradouro.Focus();

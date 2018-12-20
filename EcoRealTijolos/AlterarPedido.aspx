@@ -9,11 +9,11 @@
     <section class="content">
         <div class="row">
             <div class="col-md-12">
-                <div class="box box-primary">
-                    <%-- <label>CLIENTE:</label>
-                    <asp:DropDownList ID="ddlCliente" Width="500px" runat="server" CssClass="form-control">
-                    </asp:DropDownList>--%>
-                </div>
+                <%--<div class="box box-primary">
+                     <label>CLIENTE:</label>
+                    <asp:DropDownList ID="ddlCliente" Width="500px" runat="server" CssClass="form-control" Enabled="False">
+                    </asp:DropDownList>
+                </div>--%>
                 <div class="form-group">
                     <label style="font-weight: bold">DADOS DA ENTREGA</label>
                 </div>
