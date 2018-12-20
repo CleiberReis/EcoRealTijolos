@@ -205,7 +205,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="active">
+                    <li class="active" style="background-color:darkred">
                         <a href="Login.aspx">
                             <i class="fa fa-close"></i>
                             <span>Sair do Sistema</span>
